@@ -1,1 +1,2 @@
 # Homework3
+In this assignment, I will create a personal website using GitHub Pages. The website will showcase information about the gym, a hobby i am passionate about. This assignment will help you become familiar with GitHub Pages, HTML, CSS, and how to deploy your website online.
