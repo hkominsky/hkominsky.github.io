@@ -1,13 +1,19 @@
+/* Header layout styling */
+header {
+    display: flex; /* Use flexbox to align buttons horizontally */
+    justify-content: stretch; /* Ensure buttons stretch across */
+    width: 100%; /* Make sure header spans the full width */
+}
+
 /* Buttons inside the header */
 .tablink {
     background-color: #1288ff;
     color: white;
-    float: left;
     border: none;
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
-    font-size: 17px;
+    font-size: 20px;
     width: 50%;
 }
 
@@ -31,9 +37,11 @@
     margin-top: -5px; /* Reduced margin between image and description */
 }
 
-/* Image description with smaller margin */
+/* Center headers */
 .centeredheaders {
     text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px; /* Adds space between the header and the image/paragraph */
 }
 
 /* Flexbox container to arrange About Me and Connect With Me side by side */
@@ -45,21 +53,18 @@
     margin-bottom: 30px; /* Add space beneath this container */
 }
 
-/* Social Icons Styling */
+/* Center the social icons horizontally */
 .social-icons {
     display: flex;
-    justify-content: space-between; /* Space icons equally */
-    max-width: 300px; /* Set a max width for the icons container */
-    margin: 0px auto; /* Center the icons container */
+    justify-content: center; /* Center the icons horizontally */
+    gap: 15px; /* Add spacing between the icons */
+    margin-top: 10px; /* Space between the image and the icons */
 }
 
-/* Styling for individual social media icons */
-.social-icons a img {
-    transition: transform 0.3s; /* Smooth hover effect */
-}
-
-.social-icons a img:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
+/* Image styling */
+.picture {
+    display: block;
+    margin: 0 auto; /* Center the image */
 }
 
 /* Footer styling */
