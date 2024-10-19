@@ -1,49 +1,61 @@
+/* Make the header stretch across the full width and remove gaps */
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1288ff;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
 .tablink {
     background-color: #1288ff;
     color: white;
-    float: left;
     border: none;
     outline: none;
     cursor: pointer;
     font-size: 20px;
+    padding: 14px;
     width: 50%;
-  }
-  
+}
+
 .tablink:hover {
     background-color: #40a0ff;
-  }
+}
 
-.aboutmeheader {
-    color: black;
-    display: none;
-    padding: 50px;
-    text-align: center;
-  }
-
+/* Style the image, reduce its size, and center it */
 .picture {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+    display: block;
+    max-width: 300px; /* Image size reduced */
+    width: 100%;
+    margin: 20px auto; /* Center the image */
 }
 
+/* Style the description below the image */
 .picturedesc {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
+    font-size: 14px; /* Smaller text */
+    color: grey;
+    margin-top: -10px; /* Bring it closer to the image */
+}
+
+/* About Me section styling */
+main {
+    margin-top: 100px; /* Add margin to push content below the fixed header */
+}
+
+section {
     padding: 20px;
-    text-align: center;
-    position: relative;
-    bottom: 0;
 }
 
-.welcome {
-    text-align: center;
-    margin-top: 200px;
-}
-
+/* Footer styling */
 .footer {
-    width: 100vw;
+    width: 100%;
     color: black;
     text-align: center;
     padding: 10px;
