@@ -7,16 +7,31 @@
     cursor: pointer;
     padding: 14px 16px;
     font-size: 17px;
-    width: 25%;
+    width: 50%;
   }
   
-  .tablink:hover {
+.tablink:hover {
     background-color: #777;
   }
 
-  .aboutmeheader {
+.aboutmeheader {
     color: white;
     display: none;
     padding: 50px;
     text-align: center;
   }
+
+.welcome {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer {
+    width: 100vw;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+}
