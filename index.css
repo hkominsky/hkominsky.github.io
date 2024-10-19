@@ -2,12 +2,13 @@
 .tablink {
     background-color: #1288ff;
     color: white;
+    float: left;
     border: none;
     outline: none;
     cursor: pointer;
-    font-size: 20px;
-    width: 50%; /* Each button takes 50% of the header */
-    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 50%;
 }
 
 /* Hover effect on buttons */
@@ -30,6 +31,11 @@
     margin-top: -5px; /* Reduced margin between image and description */
 }
 
+/* Image description with smaller margin */
+.centeredheaders {
+    text-align: center;
+}
+
 /* Flexbox container to arrange About Me and Connect With Me side by side */
 .about-connect-container {
     display: flex;
@@ -44,7 +50,7 @@
     display: flex;
     justify-content: space-between; /* Space icons equally */
     max-width: 300px; /* Set a max width for the icons container */
-    margin: 20px auto; /* Center the icons container */
+    margin: 0px auto; /* Center the icons container */
 }
 
 /* Styling for individual social media icons */
