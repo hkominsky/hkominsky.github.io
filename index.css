@@ -51,6 +51,10 @@
     margin-top: -10px;
 }
 
+.pictureoffset {
+    margin-top: 40px;
+}
+
 /* Flexbox container to arrange About Me and Connect With Me side by side */
 .about-connect-container {
     display: flex;
