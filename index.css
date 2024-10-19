@@ -13,6 +13,7 @@ header {
     z-index: 1000;
 }
 
+/* Style the tablinks */
 .tablink {
     background-color: #1288ff;
     color: white;
@@ -21,27 +22,26 @@ header {
     cursor: pointer;
     font-size: 20px;
     padding: 14px;
-    width: 50%;
+    flex: 1; /* Make buttons fill space evenly */
+    text-align: center;
 }
 
-.tablink:hover {
+/* When hovering over the tablink, change the background of the entire header */
+header:hover {
     background-color: #40a0ff;
 }
 
-/* Style the image, reduce its size, and center it */
-.picture {
-    display: block;
-    max-width: 300px; /* Image size reduced */
-    width: 100%;
-    margin: 20px auto; /* Center the image */
+/* Also ensure individual buttons keep their own hover state */
+.tablink:hover {
+    background-color: transparent;
 }
 
 /* Style the description below the image */
 .picturedesc {
     text-align: center;
-    font-size: 14px; /* Smaller text */
+    font-size: 13px; 
     color: grey;
-    margin-top: -10px; /* Bring it closer to the image */
+    margin-top: -10px;
 }
 
 /* About Me section styling */
