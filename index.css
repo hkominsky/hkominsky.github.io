@@ -60,7 +60,7 @@
     justify-content: space-between; /* Space between sections */
     align-items: flex-start; /* Align both sections at the top */
     gap: 40px; /* Add space between the two sections */
-    margin-top: 200px; /* Add space beneath this container */
+    margin-top: 50px; /* Add space beneath this container */
     margin-bottom: 30px; /* Add space beneath this container */
     max-width: 100%; /* Ensure the image doesn't exceed screen width */
 }
