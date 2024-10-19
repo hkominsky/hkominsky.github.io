@@ -14,6 +14,12 @@
     background-color: #40a0ff;
 }
 
+.picture {
+    display: block;
+    width: 100%;
+    margin: 20px auto;
+}
+
 /* Style the description below the image */
 .picturedesc {
     text-align: center;
