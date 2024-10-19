@@ -1,8 +1,15 @@
 /* Ensure all elements don't exceed 100% width */
 * {
     margin: 0;
-    padding: 20px;
+    padding-left: 10px; /* Add 20px padding to the left */
+    padding-right: 10px; /* Add 20px padding to the right */
     box-sizing: border-box; /* Include padding and border in element's width and height */
+}
+
+/* Remove horizontal padding from centered text, tab buttons, and footer */
+.centeredtext, .tablink, .footer, .button-container {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 /* Container for buttons to ensure they take the full width */
