@@ -1,41 +1,57 @@
+/* Header with buttons stretching across the full width */
+header {
+    display: flex;
+    justify-content: space-around;
+    background-color: #1288ff;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+/* Buttons inside the header */
 .tablink {
     background-color: #1288ff;
     color: white;
-    float: left;
     border: none;
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
     font-size: 17px;
-    width: 25%;
+    width: 50%; /* Each button takes 50% of the header */
+    text-align: center;
 }
 
-/* When hovering over the button, change its own background color */
+/* Hover effect on buttons */
 .tablink:hover {
     background-color: #40a0ff;
 }
 
+/* Add space between the header and the main content */
+main {
+    margin-top: 80px; /* Space to push down content below header */
+}
+
+/* Image styling with smaller margins */
 .picture {
     display: block;
     width: 100%;
-    margin: 50px auto;
+    margin: 20px auto; /* Smaller margin between the image and other content */
 }
 
-/* Style the description below the image */
+/* Image description with smaller margin */
 .picturedesc {
     text-align: center;
     font-size: 12px;
     color: grey;
-    margin-top: 0px;
+    margin-top: -5px; /* Reduced margin between image and description */
 }
 
-/* About Me section styling */
-main {
-    margin-top: 20px;
-}
-
+/* Section styling with smaller padding */
 section {
-    padding: 20px;
+    padding: 10px;
 }
 
 /* Footer styling */
