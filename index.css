@@ -1,5 +1,5 @@
 .tablink {
-    background-color: #555;
+    background-color: #1288ff;
     color: white;
     float: left;
     border: none;
@@ -11,25 +11,41 @@
   }
   
 .tablink:hover {
-    background-color: #777;
+    background-color: #3ebff7;
   }
 
 .aboutmeheader {
-    color: white;
+    color: black;
     display: none;
     padding: 50px;
     text-align: center;
   }
 
+.picture {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Vertically center */
+    padding: 20px;
+}
+
+.picturedesc {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Vertically center */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
 .welcome {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 .footer {
     width: 100vw;
-    background-color: #333;
-    color: white;
+    color: black;
     text-align: center;
     padding: 10px;
     position: relative;
