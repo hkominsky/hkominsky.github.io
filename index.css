@@ -60,10 +60,6 @@
     max-width: 100%; /* Ensure the text doesn't exceed screen width */
 }
 
-.pictureoffset {
-    margin-top: 40px;
-}
-
 /* Flexbox container to arrange About Me and Connect With Me side by side */
 .about-connect-container {
     display: flex;
@@ -74,6 +70,7 @@
     margin-top: 50px;
     margin-bottom: 30px;
     max-width: 100%; /* Prevent container from exceeding screen width */
+    margin: 20px auto;
 }
 
 /* Center the social icons horizontally */
@@ -102,6 +99,7 @@
 .footer {
     width: 100%;
     color: black;
+    margin: 20px auto;
     text-align: center;
     position: relative;
     bottom: 0;
