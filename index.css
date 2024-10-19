@@ -22,7 +22,10 @@ main {
 }
 
 .padding {
-    padding: 20px auto;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
 }
 
 /* Container for buttons to ensure they take the full width */
