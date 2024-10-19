@@ -9,6 +9,7 @@
     padding: 14px 16px;
     font-size: 17px;
     width: 25%;
+    margin-bottom: 20px;
 }
 
 /* Hover effect on buttons */
@@ -51,7 +52,7 @@
     display: flex;
     justify-content: space-between; /* Space between sections */
     align-items: flex-start; /* Align both sections at the top */
-    gap: 40px; /* Add space between the two sections */
+    gap: 60px; /* Add space between the two sections */
     margin-top: 50px; /* Add space beneath this container */
     margin-bottom: 30px; /* Add space beneath this container */
     max-width: 100%; /* Ensure the image doesn't exceed screen width */
