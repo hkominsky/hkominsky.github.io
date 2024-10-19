@@ -5,8 +5,8 @@
 }
 
 .padding {
-    padding-left: 10px; /* Add 20px padding to the left */
-    padding-right: 10px; /* Add 20px padding to the right */ 
+    padding-left: 20px; /* Add 20px padding to the left */
+    padding-right: 20px; /* Add 20px padding to the right */ 
 }
 
 /* Container for buttons to ensure they take the full width */
@@ -69,11 +69,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 50px;
+    gap: 40px;
     margin-top: 50px;
     margin-bottom: 30px;
     max-width: 100%; /* Prevent container from exceeding screen width */
-    margin: 10px auto;
+    margin: 20px auto;
 }
 
 /* Center the social icons horizontally */
@@ -95,17 +95,17 @@
 }
 
 .social-icons a img:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    transform: scale(1.15); /* Slightly enlarge on hover */
 }
 
 /* Footer styling */
 .footer {
     width: 100%;
     color: black;
-    margin: 20px auto;
     text-align: center;
     position: relative;
     bottom: 0;
     max-width: 100%; /* Prevent container from exceeding screen width */
+    margin-top: 70px auto;
     margin-bottom: 10px;
 }
