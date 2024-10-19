@@ -4,9 +4,25 @@
     box-sizing: border-box; /* Include padding and border in element's width and height */
 }
 
+/* Make sure html and body take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Use flexbox to arrange the main content and footer */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content should take the remaining space, pushing the footer down */
+main {
+    flex: 1; /* This will allow the main content to grow and take up space */
+}
+
 .padding {
-    padding-left: 20px; /* Add 20px padding to the left */
-    padding-right: 20px; /* Add 20px padding to the right */ 
+    padding: 20px auto;
 }
 
 /* Container for buttons to ensure they take the full width */
