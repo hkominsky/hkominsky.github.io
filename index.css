@@ -42,14 +42,6 @@
     max-width: 100%; /* Ensure the image doesn't exceed screen width */
 }
 
-/* Center headers */
-.centeredheaders {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px; /* Adds space between the header and the image/paragraph */
-    max-width: 100%; /* Ensure the image doesn't exceed screen width */
-}
-
 .pictureoffset {
     margin-top: 50px; /* Add space beneath this container */
 }
