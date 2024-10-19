@@ -84,12 +84,26 @@
     margin-top: 10px;
 }
 
+/* Hover effect on buttons */
+.tablink:hover {
+    background-color: #40a0ff;
+}
+
+/* Styling for individual social media icons */
+.social-icons a img {
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.social-icons a img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
 /* Footer styling */
 .footer {
     width: 100%;
     color: black;
     text-align: center;
-    padding: 10px;
     position: relative;
     bottom: 0;
+    max-width: 100%; /* Prevent container from exceeding screen width */
 }
