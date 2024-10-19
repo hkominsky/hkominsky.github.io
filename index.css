@@ -1,15 +1,12 @@
 /* Ensure all elements don't exceed 100% width */
 * {
     margin: 0;
-    padding-left: 10px; /* Add 20px padding to the left */
-    padding-right: 10px; /* Add 20px padding to the right */
     box-sizing: border-box; /* Include padding and border in element's width and height */
 }
 
-/* Remove horizontal padding from centered text, tab buttons, and footer */
-.centeredtext, .tablink, .footer, .button-container {
-    padding-left: 0;
-    padding-right: 0;
+.padding {
+    padding-left: 10px; /* Add 20px padding to the left */
+    padding-right: 10px; /* Add 20px padding to the right */ 
 }
 
 /* Container for buttons to ensure they take the full width */
@@ -70,14 +67,13 @@
 /* Flexbox container to arrange About Me and Connect With Me side by side */
 .about-connect-container {
     display: flex;
-    flex-wrap: wrap; /* Ensure content wraps if it exceeds screen width */
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     gap: 50px;
     margin-top: 50px;
     margin-bottom: 30px;
     max-width: 100%; /* Prevent container from exceeding screen width */
-    margin: 20px auto;
+    margin: 10px auto;
 }
 
 /* Center the social icons horizontally */
@@ -111,4 +107,5 @@
     position: relative;
     bottom: 0;
     max-width: 100%; /* Prevent container from exceeding screen width */
+    margin-bottom: 10px;
 }
