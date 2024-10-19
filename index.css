@@ -60,7 +60,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 60px;
+    gap: 50px;
     margin-top: 50px;
     margin-bottom: 30px;
     max-width: fit-content;
