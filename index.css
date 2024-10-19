@@ -22,6 +22,14 @@ header {
     background-color: #40a0ff;
 }
 
+.centeredtext {
+    display: flex; /* Use flexbox to align buttons horizontally */
+    justify-content: stretch; /* Ensure buttons stretch across */
+    width: 100%; /* Make sure header spans the full width */
+    margin-bottom: 20px; /* Adds space between the header and the image/paragraph */
+    text-align: center;
+}
+
 /* Image styling with smaller margins */
 .picture {
     display: block;
