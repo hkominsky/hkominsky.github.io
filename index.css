@@ -1,12 +1,13 @@
 .tablink {
     background-color: #1288ff;
     color: white;
+    float: left;
     border: none;
     outline: none;
     cursor: pointer;
-    font-size: 20px;
-    flex: 1; /* Make buttons evenly stretch across header */
-    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
 }
 
 /* When hovering over the button, change its own background color */
@@ -17,20 +18,20 @@
 .picture {
     display: block;
     width: 100%;
-    margin: 20px auto;
+    margin: 50px auto;
 }
 
 /* Style the description below the image */
 .picturedesc {
     text-align: center;
-    font-size: 14px; /* Smaller text */
+    font-size: 12px;
     color: grey;
-    margin-top: 5px;
+    margin-top: 0px;
 }
 
 /* About Me section styling */
 main {
-    margin-top: 100px; /* Add margin to push content below the fixed header */
+    margin-top: 20px;
 }
 
 section {
