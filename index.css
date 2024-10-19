@@ -3,6 +3,7 @@ header {
     display: flex; /* Use flexbox to align buttons horizontally */
     justify-content: stretch; /* Ensure buttons stretch across */
     width: 100%; /* Make sure header spans the full width */
+    margin-bottom: 20px; /* Adds space between the header and the image/paragraph */
 }
 
 /* Buttons inside the header */
@@ -14,7 +15,6 @@ header {
     cursor: pointer;
     padding: 14px 16px;
     font-size: 20px;
-    width: 50%;
 }
 
 /* Hover effect on buttons */
