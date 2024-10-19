@@ -1,24 +1,14 @@
-/* Header layout styling */
-header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    background-color: #1288ff;
-    height: 300px; /* Increase height of the header for better visibility */
-    align-items: center; /* Center buttons vertically */
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Buttons inside the header */
 .tablink {
     flex-grow: 1; /* Make buttons equally divide the header space */
     background-color: #1288ff;
+    height: 100px; /* Increase height of the header for better visibility */
     color: white;
     border: none;
     outline: none;
     cursor: pointer;
     font-size: 17px;
+    box-sizing: border-box;
 }
 
 /* Hover effect on buttons */
@@ -29,6 +19,7 @@ header {
 /* Centered text class */
 .centeredtext {
     width: 80%;
+    max-width: 100%; /* Ensure the image doesn't exceed screen width */
     margin: 0 auto;  
     margin-bottom: 20px;
     text-align: center;
@@ -48,6 +39,7 @@ header {
     font-size: 12px;
     color: grey;
     margin-top: -5px;
+    max-width: 100%; /* Ensure the image doesn't exceed screen width */
 }
 
 /* Center headers */
@@ -55,6 +47,11 @@ header {
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px; /* Adds space between the header and the image/paragraph */
+    max-width: 100%; /* Ensure the image doesn't exceed screen width */
+}
+
+.pictureoffset {
+    margin-top: 50px; /* Add space beneath this container */
 }
 
 /* Flexbox container to arrange About Me and Connect With Me side by side */
@@ -65,6 +62,7 @@ header {
     gap: 40px; /* Add space between the two sections */
     margin-top: 200px; /* Add space beneath this container */
     margin-bottom: 30px; /* Add space beneath this container */
+    max-width: 100%; /* Ensure the image doesn't exceed screen width */
 }
 
 /* Center the social icons horizontally */
@@ -73,6 +71,7 @@ header {
     justify-content: center; /* Center the icons horizontally */
     gap: 15px; /* Add spacing between the icons */
     margin-top: 10px; /* Space between the image and the icons */
+    max-width: 100%; /* Ensure the image doesn't exceed screen width */
 }
 
 /* Styling for individual social media icons */
@@ -82,6 +81,7 @@ header {
 
 .social-icons a img:hover {
     transform: scale(1.1); /* Slightly enlarge on hover */
+    max-width: 100%; /* Ensure the image doesn't exceed screen width */
 }
 
 
@@ -89,6 +89,7 @@ header {
 .picture {
     display: block;
     margin: 0 auto; /* Center the image */
+    max-width: 100%; /* Ensure the image doesn't exceed screen width */
 }
 
 /* Footer styling */
