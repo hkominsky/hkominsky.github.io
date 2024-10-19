@@ -5,8 +5,7 @@
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 14px 16px;
-    font-size: 17px;
+    font-size: 20px;
     width: 50%; /* Each button takes 50% of the header */
     text-align: center;
 }
@@ -14,11 +13,6 @@
 /* Hover effect on buttons */
 .tablink:hover {
     background-color: #40a0ff;
-}
-
-/* Add space between the header and the main content */
-main {
-    margin-top: 80px; /* Space to push down content below header */
 }
 
 /* Image styling with smaller margins */
@@ -36,11 +30,6 @@ main {
     margin-top: -5px; /* Reduced margin between image and description */
 }
 
-/* Section styling with smaller padding */
-section {
-    padding: 10px;
-}
-
 /* Flexbox container to arrange About Me and Connect With Me side by side */
 .about-connect-container {
     display: flex;
@@ -48,17 +37,6 @@ section {
     align-items: flex-start; /* Align both sections at the top */
     gap: 20px; /* Add space between the two sections */
     margin-bottom: 30px; /* Add space beneath this container */
-}
-
-/* About section styling */
-.about {
-    flex: 1; /* Allow About section to take more space */
-    padding-right: 20px; /* Add a little padding on the right */
-}
-
-/* Connect section styling */
-.connect {
-    flex: 0.4; /* Allow Connect section to take less space */
 }
 
 /* Social Icons Styling */
