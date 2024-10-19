@@ -1,15 +1,24 @@
+/* Container for buttons to ensure they take the full width */
+.button-container {
+    display: flex;
+    width: 100%;
+    height: 100px; /* Adjust this for vertical size of the buttons */
+    overflow: hidden;
+}
+
 /* Buttons inside the header */
 .tablink {
+    width: 50%; /* Make each button take up 50% of the screen */
+    height: 100%; /* Make the buttons take up the full height of the container */
     background-color: #1288ff;
     color: white;
-    float: left;
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 14px 16px;
-    font-size: 17px;
-    width: 25%;
-    margin-bottom: 20px;
+    font-size: 24px; /* Increase font size for better readability */
+    text-align: center;
+    line-height: 100px; /* Vertically center text within the button */
+    display: inline-block;
 }
 
 /* Hover effect on buttons */
@@ -20,7 +29,6 @@
 /* Centered text class */
 .centeredtext {
     width: 80%;
-    max-width: 100%; /* Ensure the image doesn't exceed screen width */
     margin: 0 auto;  
     margin-bottom: 20px;
     text-align: center;
@@ -29,7 +37,7 @@
 /* Image styling */
 .picture {
     display: block;
-    max-width: 100%; /* Ensure the image doesn't exceed screen width */
+    max-width: 100%;
     height: auto;
     margin: 20px auto;
 }
@@ -40,49 +48,16 @@
     font-size: 12px;
     color: grey;
     margin-top: -5px;
-    max-width: 100%; /* Ensure the image doesn't exceed screen width */
-}
-
-.pictureoffset {
-    margin-top: 50px; /* Add space beneath this container */
 }
 
 /* Flexbox container to arrange About Me and Connect With Me side by side */
 .about-connect-container {
     display: flex;
-    justify-content: space-between; /* Space between sections */
-    align-items: flex-start; /* Align both sections at the top */
-    gap: 60px; /* Add space between the two sections */
-    margin-top: 50px; /* Add space beneath this container */
-    margin-bottom: 30px; /* Add space beneath this container */
-    max-width: 100%; /* Ensure the image doesn't exceed screen width */
-}
-
-/* Center the social icons horizontally */
-.social-icons {
-    display: flex;
-    justify-content: center; /* Center the icons horizontally */
-    gap: 15px; /* Add spacing between the icons */
-    margin-top: 10px; /* Space between the image and the icons */
-    max-width: 100%; /* Ensure the image doesn't exceed screen width */
-}
-
-/* Styling for individual social media icons */
-.social-icons a img {
-    transition: transform 0.3s; /* Smooth hover effect */
-}
-
-.social-icons a img:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
-    max-width: 100%; /* Ensure the image doesn't exceed screen width */
-}
-
-
-/* Image styling */
-.picture {
-    display: block;
-    margin: 0 auto; /* Center the image */
-    max-width: 100%; /* Ensure the image doesn't exceed screen width */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
 
 /* Footer styling */
