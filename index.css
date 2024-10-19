@@ -1,16 +1,10 @@
-/* Remove horizontal scrolling */
-body {
-    margin: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
 /* Header layout styling */
 header {
     display: flex;
     justify-content: space-between;
     width: 100%;
     background-color: #1288ff;
-    height: 60px; /* Increase height of the header for better visibility */
+    height: 300px; /* Increase height of the header for better visibility */
     align-items: center; /* Center buttons vertically */
     padding: 0;
     box-sizing: border-box;
@@ -25,10 +19,6 @@ header {
     outline: none;
     cursor: pointer;
     font-size: 17px;
-    height: 100%; /* Ensure buttons are full height of the header */
-    padding: 0;
-    text-align: center;
-    line-height: 60px; /* Vertically center text within buttons */
 }
 
 /* Hover effect on buttons */
@@ -38,9 +28,10 @@ header {
 
 /* Centered text class */
 .centeredtext {
-    text-align: center;
-    font-size: 24px;
+    width: 80%;
+    margin: 0 auto;  
     margin-bottom: 20px;
+    text-align: center;
 }
 
 /* Image styling */
@@ -71,7 +62,8 @@ header {
     display: flex;
     justify-content: space-between; /* Space between sections */
     align-items: flex-start; /* Align both sections at the top */
-    gap: 20px; /* Add space between the two sections */
+    gap: 40px; /* Add space between the two sections */
+    margin-top: 200px; /* Add space beneath this container */
     margin-bottom: 30px; /* Add space beneath this container */
 }
 
@@ -82,6 +74,16 @@ header {
     gap: 15px; /* Add spacing between the icons */
     margin-top: 10px; /* Space between the image and the icons */
 }
+
+/* Styling for individual social media icons */
+.social-icons a img {
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.social-icons a img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
 
 /* Image styling */
 .picture {
