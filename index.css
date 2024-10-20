@@ -30,7 +30,7 @@
     cursor: pointer;
     font-size: 24px; /* Increase font size for better readability */
     text-align: center;
-    line-height: 100px; /* Vertically center text within the button */
+    line-height: 75px; /* Vertically center text within the button */
     display: inline-block;
 }
 
@@ -71,7 +71,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
     margin-top: 50px;
     margin-bottom: 30px;
     max-width: 100%; /* Prevent container from exceeding screen width */
