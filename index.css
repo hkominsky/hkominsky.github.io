@@ -57,7 +57,7 @@ html, body {
     width: 80%;
     margin: 0 auto;  
     margin-top: 90px;
-    margin-bottom: -20px;
+    margin-bottom: -10px;
     text-align: center;
     max-width: 100%; /* Ensure the container doesn't exceed screen width */
 }
