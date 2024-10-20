@@ -109,6 +109,6 @@
     position: relative;
     bottom: 0;
     max-width: 100%; /* Prevent container from exceeding screen width */
-    margin-top: 75px;
+    margin-top: 50px;
     margin-bottom: 10px;
 }
