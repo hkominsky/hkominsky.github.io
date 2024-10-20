@@ -1,50 +1,50 @@
-.padding {
-    padding-left: 20px;
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-}
-
-/* Container for buttons to ensure they take the full width */
-.button-container {
-    display: flex;
+/* Ensure the page takes up full height and width */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
     width: 100%;
-    height: 75px; /* Adjust this for vertical size of the buttons */
-    overflow: hidden;
-    position: fixed;
 }
 
-/* Buttons inside the header */
+/* Ensure the container is fixed at the top */
+.button-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px; /* Adjust based on button size */
+    display: flex;
+    background-color: white; /* Avoid overlap issues by making it opaque */
+    z-index: 1000; /* Ensure it appears on top of everything */
+    border-bottom: 1px solid #ccc; /* Optional: Adds a border to separate from content */
+    padding: 0; /* Ensure no extra padding is added */
+}
+
+/* Ensure the buttons fill the container correctly */
 .tablink {
-    flex: 1; /* Make each button take equal width */
-    height: 100%; /* Make the buttons take up the full height of the container */
+    flex-grow: 1; /* Make buttons fill the container evenly */
+    height: 100%;
     background-color: #1288ff;
     color: white;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 24px; /* Increase font size for better readability */
     text-align: center;
-    line-height: 75px; /* Vertically center text within the button */
-    display: inline-block;
+    font-size: 24px;
+    line-height: 75px; /* Vertically center the text */
+    cursor: pointer;
+    border: none;
+    margin: 0;
 }
 
-/* Hover effect on buttons */
+/* Add hover effects */
 .tablink:hover {
     background-color: #40a0ff;
 }
 
-/* Centered text class */
-.centeredtext {
-    width: 80%;
-    margin: 0 auto;  
-    margin-top: 30px;
-    margin-bottom: 20px;
-    text-align: center;
-    max-width: 100%; /* Ensure the container doesn't exceed screen width */
+/* Ensure the content starts below the button container */
+main {
+    margin-top: 75px; /* Push content below the fixed header */
 }
 
-/* Image styling */
+/* Styling for images */
 .picture {
     display: block;
     margin: 20px auto;
@@ -52,7 +52,7 @@
     height: auto; /* Maintain aspect ratio */
 }
 
-/* Image description */
+/* Image description styling */
 .picturedesc {
     text-align: center;
     font-size: 12px;
@@ -67,7 +67,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-    margin-top: 75px;
+    margin-top: 50px;
     margin-bottom: 30px;
     max-width: 100%; /* Prevent container from exceeding screen width */
 }
@@ -96,12 +96,32 @@
 
 /* Footer styling */
 .footer {
-    width: 100%;
-    color: black;
+    margin-top: 75px; /* Ensure there's space for the buttons */
     text-align: center;
     position: relative;
-    bottom: 0;
-    max-width: 100%; /* Prevent container from exceeding screen width */
-    margin-top: 75px;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+/* Centered text class */
+.centeredtext {
+    width: 80%;
+    margin: 0 auto;  
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 100%; /* Ensure the container doesn't exceed screen width */
+}
+
+/* Padding class for sections */
+.padding {
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+/* Ensure that sections have padding and don't overlap with fixed header */
+section {
+    margin-top: 20px; /* Extra margin to prevent overlap */
+    padding: 20px;
 }
