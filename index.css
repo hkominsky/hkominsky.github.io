@@ -73,7 +73,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-    margin-top: 50px;
+    margin-top: 75px;
     margin-bottom: 30px;
     max-width: 100%; /* Prevent container from exceeding screen width */
 }
