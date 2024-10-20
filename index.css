@@ -106,8 +106,6 @@ main {
 .centeredtext {
     width: 80%;
     margin: 0 auto;  
-    margin-top: 30px;
-    margin-bottom: 20px;
     text-align: center;
     max-width: 100%; /* Ensure the container doesn't exceed screen width */
 }
@@ -115,9 +113,7 @@ main {
 /* Padding class for sections */
 .padding {
     padding-left: 20px;
-    padding-top: 20px;
     padding-right: 20px;
-    padding-bottom: 20px;
 }
 
 /* Ensure that sections have padding and don't overlap with fixed header */
