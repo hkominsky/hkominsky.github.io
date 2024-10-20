@@ -1,7 +1,6 @@
 /* Ensure all elements don't exceed 100% width */
 * {
     margin: 0;
-    padding: 0;
     box-sizing: border-box; /* Include padding and border in element's width and height */
 }
 
@@ -15,15 +14,10 @@
 /* Container for buttons to ensure they take the full width */
 .button-container {
     display: flex;
-    justify-content: space-between; /* Ensure buttons are spaced equally */
-    width: 100%; /* Make sure the container spans the entire width */
+    width: 100%;
     height: 75px; /* Adjust this for vertical size of the buttons */
-    position: fixed; /* Fix container to the top of the screen */
-    top: 0; /* Align it to the very top */
-    left: 0; /* Align it to the left */
-    z-index: 999; /* Ensure it's above other elements */
-    margin: 0; /* Remove any margin */
-    padding: 0; /* Remove padding */}
+    overflow: hidden;
+}
 
 /* Buttons inside the header */
 .tablink {
@@ -37,7 +31,8 @@
     font-size: 24px; /* Increase font size for better readability */
     text-align: center;
     line-height: 75px; /* Vertically center text within the button */
-    display: block; /* Ensure buttons take up block level space */}
+    display: inline-block;
+}
 
 /* Hover effect on buttons */
 .tablink:hover {
@@ -48,7 +43,7 @@
 .centeredtext {
     width: 80%;
     margin: 0 auto;  
-    margin-top: 100px; /* Adjust for the height of fixed button container */
+    margin-top: 30px;
     margin-bottom: 20px;
     text-align: center;
     max-width: 100%; /* Ensure the container doesn't exceed screen width */
@@ -91,6 +86,11 @@
     margin-top: 10px;
 }
 
+/* Hover effect on buttons */
+.tablink:hover {
+    background-color: #40a0ff;
+}
+
 /* Styling for individual social media icons */
 .social-icons a img {
     transition: transform 0.3s; /* Smooth hover effect */
@@ -108,6 +108,6 @@
     position: relative;
     bottom: 0;
     max-width: 100%; /* Prevent container from exceeding screen width */
-    margin-top: 50px;
+    margin-top: 75px;
     margin-bottom: 10px;
 }
