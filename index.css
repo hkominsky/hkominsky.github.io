@@ -17,6 +17,7 @@
     width: 100%;
     height: 75px; /* Adjust this for vertical size of the buttons */
     overflow: hidden;
+    position: fixed;
 }
 
 /* Buttons inside the header */
