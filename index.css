@@ -13,11 +13,6 @@ html, body {
     overflow-x: hidden; /* Prevent horizontal scrolling issues */
 }
 
-main {
-    margin-top: 75px;
-    padding: 20px; /* Adds spacing to the content */
-}
-
 .padding {
     padding-left: 20px;
     padding-top: 20px;
