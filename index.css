@@ -16,9 +16,9 @@ html, body {
 
 .padding {
     padding-left: 20px;
-    padding-top: 15px;
+    padding-top: 10px;
     padding-right: 20px;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 
 /* Button container that is fixed at the top of the viewport */
@@ -56,7 +56,7 @@ html, body {
 .centeredtext {
     width: 80%;
     margin: 0 auto;  
-    margin-top: 100px;
+    margin-top: 90px;
     margin-bottom: -20px;
     text-align: center;
     max-width: 100%; /* Ensure the container doesn't exceed screen width */
@@ -85,8 +85,8 @@ html, body {
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-    margin-top: 75px;
-    margin-bottom: 30px;
+    margin-top: 100px;
+    margin-bottom: 50px;
     max-width: 100%; /* Prevent container from exceeding screen width */
 }
 
@@ -95,7 +95,7 @@ html, body {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 /* Hover effect on buttons */
