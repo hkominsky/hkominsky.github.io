@@ -39,11 +39,6 @@ html, body {
     background-color: #40a0ff;
 }
 
-/* Ensure the content starts below the button container */
-main {
-    margin-top: 75px; /* Push content below the fixed header */
-}
-
 /* Styling for images */
 .picture {
     display: block;
