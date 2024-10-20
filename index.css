@@ -23,6 +23,7 @@ main {
     height: 75px; /* Adjust this for vertical size of the buttons */
     overflow: hidden;
     position: fixed;
+    top: 0; /* Align buttons at the top */
 }
 
 /* Buttons inside the header */
