@@ -5,8 +5,17 @@
     box-sizing: border-box; /* Include padding and border in element's width and height */
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling issues */
+}
+
 main {
     margin-top: 75px;
+    padding: 20px; /* Adds spacing to the content */
 }
 
 .padding {
