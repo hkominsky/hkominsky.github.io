@@ -1,7 +1,12 @@
 /* Ensure all elements don't exceed 100% width */
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box; /* Include padding and border in element's width and height */
+}
+
+main {
+    margin-top: 75px;
 }
 
 .padding {
