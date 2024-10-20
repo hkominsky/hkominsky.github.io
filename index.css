@@ -105,7 +105,7 @@
     width: 100%;
     color: black;
     text-align: center;
-    position: fixed;
+    position: relative;
     bottom: 0;
     max-width: 100%; /* Prevent container from exceeding screen width */
     margin-top: 75px;
