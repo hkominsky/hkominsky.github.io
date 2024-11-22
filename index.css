@@ -56,9 +56,19 @@
 .container {
     align-items: center;
     display: flex;
+    flex-direction: column;
+    width: 100%
 }
 
 .image {
-    flex: 0 0 65%;
-    margin-right: 20px;
+    flex: 1;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.fitted-iframe {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 16 /9;
+    border: none;
 }
