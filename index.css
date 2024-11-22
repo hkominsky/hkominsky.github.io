@@ -38,7 +38,7 @@ html, body {
 .tablink {
     flex: 1; /* Make each button take equal width */
     height: 100%; /* Make the buttons fill the container height */
-    background-color: #1288ff;
+    background-color: #062039;
     color: white;
     border: none;
     font-size: 24px; /* Increase font size for better readability */
