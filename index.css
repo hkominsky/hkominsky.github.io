@@ -60,3 +60,8 @@
     width: 100%;
     max-width: 100%; /* Ensures no additional constraints */
 }
+
+.image {
+    flex: 0 0 65%; /* Don't allow the image to grow or shrink */
+    margin-right: 20px; /* Add some space between image and text */
+}
