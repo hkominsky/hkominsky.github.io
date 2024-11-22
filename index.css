@@ -23,7 +23,7 @@
 .tablink {
     flex: 1;
     height: 100%;
-    background-color: #5dffbb;
+    background-color: #106ac5;
     color: white;
     border: none;
     font-size: 24px;
@@ -34,12 +34,12 @@
 
 /* Hover effect on buttons */
 .tablink:hover {
-    background-color: #000e1c;;
+    background-color: #106ac5;;
 }
 
 /* Hover effect on buttons */
 .tablink:active {
-    background-color: #920c0c;;
+    background-color: #0c4f92;;
 }
 
 /* Centered text class */
