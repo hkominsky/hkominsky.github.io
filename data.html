@@ -6,6 +6,8 @@
     <title>My Website</title>
     <link rel="stylesheet" href="index.css">
 </head>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="main.js" defer></script>
 <body>
     <div class="button-container">
         <button class="tablink" onclick="location.href='index.html'"><b>Introduction</b></button>
@@ -20,7 +22,7 @@
 
         <section class="padding">
             <h3 class="padding">Visualization 1</h3>
-            <p class="padding">blah blah blah</p>
+            <svg id="visualization" width="800" height="500"></svg>
         </section>
 
         <section class="padding">
