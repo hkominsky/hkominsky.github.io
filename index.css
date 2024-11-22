@@ -38,7 +38,7 @@ html, body {
 .tablink {
     flex: 1; /* Make each button take equal width */
     height: 100%; /* Make the buttons fill the container height */
-    background-color: #062039;
+    background-color: #1288ff;
     color: white;
     border: none;
     font-size: 24px; /* Increase font size for better readability */
@@ -49,12 +49,12 @@ html, body {
 
 /* Hover effect on buttons */
 .tablink:hover {
-    background-color: #0f74d8;;
+    background-color: #106ac5;;
 }
 
 /* Hover effect on buttons */
 .tablink:active {
-    background-color: #0d66c0;;
+    background-color: #06417b;;
 }
 
 /* Centered text class */
