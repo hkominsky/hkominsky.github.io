@@ -10,16 +10,22 @@
 <body>
     <div class="button-container">
         <button class="tablink" onclick="location.href='index.html'"><b>Introduction</b></button>
-        <button class="tablink" onclick="location.href='data.html'"><b>Visualizations</b></button>
+        <button class="tablink" onclick="location.href='data.html'"><b>Data Analysis</b></button>
         <button class="tablink" onclick="location.href='summary.html'"><b>Summary</b></button>
     </div>
 
     <main>
-        <section class="padding">
-            <h3 class="padding">Data Overview</h3>
-            <p class="padding"> example text </p>
+        <section>
+            <h1 class="centeredtext">Data Overview</h1>
+        </section>
 
-        <h2 class="center">Bar Plot of Food Rating vs Tuition Increase</h2>
+        <section>
+            <h1 class="center">Visualizations</h1>
+        </section>
+
+        <h2 class="center">Food Rating and Tuition Increase</h2>
+
+        <h3 class="center">Bar Plot of Food Rating vs Tuition Increase</h3>
         <div class = 'container'>
             <div class = 'image'>
                 <iframe src="D3 Graph Project\Barplot\index.html" width="100%" height="500px" frameborder="0"></iframe>
@@ -41,28 +47,22 @@
             </div>  
         </div>  
 
-        <h2 class="center">Scatterplot of Food Rating vs Tuition Increase</h2>
+        <h3 class="center">Scatterplot of Food Rating vs Tuition Increase</h3>
         <div class = 'container'>
             <div class = 'image'>
                 <iframe src="D3 Graph Project\Scatterplot\index.html" width="100%" height="500px" frameborder="0"></iframe>
             </div>
             <div class = 'text'>
-                <p> First, we present an overview of the unemployment rate
-                    for all 50 states. Alaska is the one with the 
-                    highest unemployment rate, which may due to the seasonal 
-                    business in the state. The effectiveness of labor market 
-                    policies and governance structures can influence unemployment 
-                    rates. Washington, D.C., being the seat of government, may 
-                    experience fluctuations in employment related to government 
-                    spending and policies. Mississippi and Louisiana have economies 
-                    that are heavily reliant on sectors such as agriculture, 
-                    manufacturing, and energy. Economic downturns or fluctuations 
-                    in these industries can impact employment opportunities. 
-                    Connecticut, South Dakota and Virginia have the lowest 
-                    unemplyment rate. These states often have diverse economies 
-                    with strong sectors such as technology, healthcare, finance, 
-                    and tourism. A diverse economy can provide more resilience to 
-                    economic downturns.
+                <p> After examining the relationship between average tuition increase
+                    and food rating, we wanted to further investigate the relationship by
+                    examining the relationship with a series of scatter plots. Unlike the previous
+                    visualization, this no longer evaluates the different buckets of food ratings by an 
+                    average, but instead by displaying each instiution as a data point on the graph. What we discovered
+                    is that the scatter plot reinofrced the conlcusion that there was no clear correlation between
+                    a university's food rating and tuition increase over a five year period. What we found is that
+                    each food rating similarly displayed a very wide range of tuition changes. As a result, it is 
+                    apparent that the lack of correlation is not due to a sufficiently diverse selection of colleges, but 
+                    because food rating is independent of the movement of tuition changes over a short term period.
                 </p>
             </div>  
         </div>  
