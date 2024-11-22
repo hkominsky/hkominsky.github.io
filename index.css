@@ -37,11 +37,6 @@
     background-color: #106ac5;;
 }
 
-/* Hover effect on buttons */
-.tablink:active {
-    background-color: #06417b;;
-}
-
 /* Centered text class */
 .centeredtext {
     width: 80%;
