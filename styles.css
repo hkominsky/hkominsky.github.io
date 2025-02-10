@@ -116,6 +116,11 @@ h1 {
                 border-radius: 5px;
             }
         }
+        .location {
+            display: inline-flex;
+            align-items: baseline;
+            gap: 5px;
+        }
     }
     .hero-picture {
         flex: 1;
