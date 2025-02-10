@@ -1,1 +1,126 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+:root {
+    --base: #f1f1f1;
+    --base-100: #F1E9DB;
+    --base-400: #7c7c7c;
+    --base-800: #261C15;
+    --kelly-green: #4CBB17;
+}
+
+body {
+    font-family: "League Spartan", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--base-800);
+    &:hover {
+        text-decoration: underline;
+        text-decoration-color: var(--kelly-green);
+        text-underline-offset: 4px;
+        color: var(--kelly-green);
+    }
+}
+
+header {
+    padding-top:20px;
+    padding-bottom:10px;
+    display:flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin:auto;
+
+    .logo-holder {
+        display:flex;
+        padding: 10px;
+        align-items: center;
+        font-weight: 600;
+        color: var(--base-800);
+
+        .logo-text {
+            color: var(--kelly-green);
+            font-size: 30px;
+            flex: 1;
+        }
+    }
+
+    nav {
+        display: flex;
+        ul {
+            display: flex;
+            list-style-type: none;
+            gap: 5px;
+            li {
+                display: inline-block;
+                a {
+                    display: inline-block;
+                    padding: 10px 20px;
+                }
+            }
+        }
+    }
+}
+
+section {
+	margin:auto;
+	gap:25px;
+	margin-top:30px;
+	margin-bottom:30px;
+}
+
+h1 {
+	font-size:64px;
+	margin-bottom:10px;
+    color: var(--kelly-green);
+	small {
+        color: var(--base-800);
+		font-weight:300;
+	}
+}
+
+.hero {
+    display: flex;
+    max-width:1440px;
+    .hero-content {
+        flex:1;
+		padding:20px;
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+        .socials {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 35px;
+            margin-bottom: 10px;
+            a {
+                transition: transform 0.3s ease;
+                &:hover {
+                    text-decoration: none;
+                    transform: scale(0.94);
+                }
+            }
+            .resume-button {
+                margin-top: -2px;
+                padding: 12px 20px;
+                background-color: var(--kelly-green);
+                color: var(--base);
+                border-radius: 5px;
+            }
+        }
+    }
+    .hero-picture {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+    }
+}
 
