@@ -20,14 +20,9 @@ body {
 }
 
 a {
+    position: relative;
     text-decoration: none;
     color: var(--base-800);
-    &:hover {
-        text-decoration: underline;
-        text-decoration-color: var(--kelly-green);
-        text-underline-offset: 4px;
-        color: var(--kelly-green);
-    }
 }
 
 header {
@@ -66,6 +61,21 @@ header {
                 }
             }
         }
+    }
+
+    a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 0;
+        height: 2px;
+        background-color: var(--kelly-green);
+        transition: width 0.3s ease;
+    }
+    
+    a:hover::after {
+        width: 100%;
     }
 }
 
