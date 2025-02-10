@@ -6,10 +6,11 @@
 
 :root {
     --base: #f1f1f1;
-    --base-400: #eaeaeaf0;
+    --base-400: #f5f5f5;
     --base-600: #00000066;
     --base-800: #261C15;
     --kelly-green: #4CBB17;
+    --kelly-green-800: #409f14;
 }
 
 body {
@@ -165,6 +166,9 @@ h2 {
             flex: 1;
             transition: ease 0.3s all;
             box-shadow: 0 7px 15px var(--base-600);
+            &:hover {
+                transform: translateY(-15px);
+            }
             h3 {
                 margin-top: 20px;
                 margin-bottom: 10px;
@@ -212,9 +216,55 @@ h2 {
 					}
 				}
             }
-            &:hover {
-                transform: translateY(-15px);
-            }
         }
     }
 }
+
+.contact-me {
+    .form-content {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        background-color: var(--base-400);
+        border-radius: 10px;
+        transition: ease 0.3s all;
+        box-shadow: 0 7px 15px var(--base-600);
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid var(--base-600);
+                border-radius: 5px;
+                font-size: 16px;
+                font-family: inherit;
+            }
+        
+            input[type="text"]::placeholder,
+            input[type="email"]::placeholder,
+            textarea::placeholder {
+                color: var(--base-600);
+            }
+        
+            input[type="submit"] {
+                padding: 10px 20px;
+                background-color: var(--kelly-green);
+                color: var(--base);
+                border: none;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+        
+            input[type="submit"]:hover {
+                background-color: var(--kelly-green-800);
+            } 
+        }
+    }
+}
+
