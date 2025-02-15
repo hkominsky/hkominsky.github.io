@@ -1,142 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="./styles.css">
-    <script src="./scripts.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./scripts.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <a href="#" class="logo-holder">
-            <div class="logo"></div>
-            <div class="logo-text">Hugh Kominsky</div>
-        </a>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Experience</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact Me</a></li>
-        </nav>
-    </header>
+  <header>
+    <div class="header-content">
+      <a href="#" class="logo-holder">
+        <div class="logo"></div>
+        <div class="logo-text">Hugh Kominsky</div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <section class="hero container">
-            <div class="hero-picture">
-                <img src=images\me.jpg alt="Me">
+  <main>
+    <section class="hero container" id="hero">
+      <div class="hero-picture">
+        <img src="images/me.jpg" alt="Me">
+      </div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1><small>Hi, I'm </small>Hugh</h1>
+          <p>
+            I specialize in Python, Java, SQL, and C++, having applied my skills in real-world projects 
+            such as game development and data analysis. My professional experience includes a co-op with Marsh McLennan, where I utilized advanced 
+            data analysis to optimize client portfolios, as well as a data analyst internship where I improved inventory systems with dynamic 
+            visualizations and SQL queries.
+          </p>
+        </div>
+        <div class="socials">
+          <a href="resume/HughKominskyResume.pdf" class="resume-button" target="_blank">
+            My Resume
+          </a>
+          <a href="https://www.linkedin.com/in/hughkominsky/" class="btn" target="_blank">
+            <img src="images/linkedin-logo.png" alt="LinkedIn" width="35px">
+          </a>
+          <a href="https://github.com/hkominsky" class="btn" target="_blank">
+            <img src="images/github-sign.png" alt="GitHub" width="35px">
+          </a>
+        </div>
+        <div class="location">
+          <img src="images/location.png" alt="Pin" width="14px">
+          <p>New York City, NY</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience container" id="experience">
+      <h2><small>About Me</small> Work Experience</h2>
+      <div class="roles">
+        <article>
+          <figure>
+            <div>
+              <img src="images/scotia.png" alt="Scotia" width="100%">
+              <figcaption>Scotiabank</figcaption>
             </div>
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1><small>Hi, I'm </small>
-                        Hugh
-                    </h1>
-                    <p>
-                        I specialize in Python, Java, SQL, and C++, having applied my skills in real-world projects 
-                        such as game development and data analysis. My professional experience includes a co-op with Marsh McLennan, where I utilized advanced 
-                        data analysis to optimize client portfolios, as well as a data analyst internship where I improved inventory systems with dynamic 
-                        visualizations and SQL queries.
-                    </p>
-                </div>
-                <div class="socials">
-                    <a href="resume\HughKominskyResume.pdf" class="resume-button" target="_blank">
-                        My Resume
-                    </a>
-                    <a href="https://www.linkedin.com/in/hughkominsky/" class="btn" target="_blank">
-                        <img src=images\linkedin-logo.png alt="LinkedIn" width="35px">
-                    </a>
-                    <a href="https://github.com/hkominsky" class="btn" target="_blank">
-                        <img src=images\github-sign.png alt="GitHub" width="35px">
-                    </a>
-                </div>
-                <div class="location">
-                    <img src=images\location.png alt="Pin" width="14px">
-                    <p>
-                        New York City, NY
-                    </p> 
-                </div>
+          </figure>
+          <h3>Quantitative Developer Co-Op</h3>
+          <div>Dec. 2024 - Present</div>
+          <p>
+            As a software developer intern, I worked on a team that developed a new mobile banking application. 
+            I was responsible for implementing new features and fixing bugs in the application. I also worked on 
+            the backend of the application, writing code in Java and SQL.
+          </p>
+        </article>
 
+        <article>
+          <figure>
+            <div>
+              <img src="images/mmc.png" alt="MMC" width="100%">
+              <figcaption>Marsh McLennan</figcaption>
             </div>
-        </section>
-        <section class="about-me container">
-            <h2> <small>About Me</small>
-                Work Experience
-            </h2>
-            <div class="experience">
-                <article>
-                    <figure>
-                        <div>
-                            <img src=images\scotia.png alt="Scotia" width="100%">
-                            <figcaption>Scotiabank</figcaption>
-                        </div>
-                    </figure>
-                    <h3>Quantitative Developer Co-Op</h3>
-                    <div>Dec. 2024 - Present</div>
-                    <p>
-                        As a software developer intern, I worked on a team that developed a new mobile banking application. 
-                        I was responsible for implementing new features and fixing bugs in the application. I also worked on 
-                        the backend of the application, writing code in Java and SQL.
-                    </p>
-                </article>
+          </figure>
+          <h3>Reinsurance Modeling Co-Op</h3>
+          <div>Jan. 2024 - July 2024</div>
+          <p>
+            As a data analyst intern, I worked on a team that developed a new inventory system for the company. 
+            I was responsible for creating dynamic visualizations of the data and writing SQL queries to optimize 
+            the system. I also worked on the backend of the system, writing code in Python and SQL.
+          </p>
+        </article>
 
-                <article>
-                    <figure>
-                        <div>
-                            <img src=images\mmc.png alt="MMC" width="100%">
-                            <figcaption>Marsh McLennan</figcaption>
-                        </div>
-                    </figure>
-                    <h3>Reinsurance Modeling Co-Op</h3>
-                    <div>Jan. 2024 - July 2024</div>
-                    <p>
-                        As a data analyst intern, I worked on a team that developed a new inventory system for the company. 
-                        I was responsible for creating dynamic visualizations of the data and writing SQL queries to optimize 
-                        the system. I also worked on the backend of the system, writing code in Python and SQL.
-                    </p>
-                </article>
-
-                <article>
-                    <figure>
-                        <div>
-                            <img src=images\j&k.png alt="Scotia" width="100%">
-                            <figcaption>J&K Seminars</figcaption>
-                        </div>
-                    </figure>
-                    <h3>Data Engineer Intern</h3>
-                    <div>Apr. 2023 - July 2024</div>
-                    <p>
-                        As a software developer intern, I worked on a team that developed a new mobile banking application. 
-                        I was responsible for implementing new features and fixing bugs in the application. I also worked on 
-                        the backend of the application, writing code in Java and SQL.
-                    </p>
-                </article>
+        <article>
+          <figure>
+            <div>
+              <img src="images/j&k.png" alt="J&K Seminars" width="100%">
+              <figcaption>J&K Seminars</figcaption>
             </div>
-        </section>
-        <section class="project container">
-            <h2> <small>My work</small>
-                Projects
-            </h2>
-        </section>
-        <section class="contact-me container">
-            <h2> <small>Contact Me</small>
-                Get In Touch
-            </h2>
-            <form action="mailto:hugh.kominsky@gmail.com" class="form-content">
-                <div class="form-group">
-                    <h3>Send me a message!</h3>
-                    <p>I am available for full-time roles in August 2025!</p>
-                    <input type="text" name="name" id="name" required placeholder="Name">
-                    <input type="email" name="email" id="email" required placeholder="E-Mail">
-                    <textarea rows="10" name="message" id="message" required placeholder="Your Message"></textarea>
-                    <input type="submit" value="Send Message">
-                </div>
-            </form>
-        </section>
-    </main>
+          </figure>
+          <h3>Data Engineer Intern</h3>
+          <div>Apr. 2023 - July 2024</div>
+          <p>
+            As a software developer intern, I worked on a team that developed a new mobile banking application. 
+            I was responsible for implementing new features and fixing bugs in the application. I also worked on 
+            the backend of the application, writing code in Java and SQL.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="projects container" id="projects">
+      <h2><small>My work</small> Projects</h2>
+      <div class="bento-grid">
+        <div class="item">
+          <div class="tag-container">
+            <h5 class="tag-item">Verse</h5>
+            <h5 class="tag-item">Unreal Engine 5</h5>
+            <h5 class="tag-item">Niagara</h5>
+          </div>
+          <div class="text-container">
+            <h4>Pickaxe Knockout</h4>
+          </div>
+        </div>
+        <div class="item">
+          <div class="tag-container">
+            <h5 class="tag-item">Typescript</h5>
+            <h5 class="tag-item">HTML</h5>
+            <h5 class="tag-item">CSS</h5>
+          </div>
+          <div class="text-container">
+            <h4>Husky Overflow</h4>
+          </div>
+        </div>
+        <div class="item">
+          <div class="tag-container">
+            <h5 class="tag-item">Python</h5>
+            <h5 class="tag-item">Docker</h5>
+          </div>
+          <div class="text-container">
+            <h4>Endzone Analytics</h4>
+          </div>
+        </div>
+        <div class="item">
+          <div class="tag-container">
+            <h5 class="tag-item">Python</h5>
+          </div>
+          <div class="text-container">
+            <h4>Crytocurrency Predicter</h4>
+          </div>
+        </div>
+        <div class="item">
+          <div class="tag-container">
+            <h5 class="tag-item">TBD</h5>
+            <h5 class="tag-item">TBD</h5>
+          </div>
+          <div class="text-container">
+            <h4>TBD</h4>
+          </div>
+        </div>
+        <div class="item">
+          <div class="tag-container">
+            <h5 class="tag-item">TBD</h5>
+            <h5 class="tag-item">TBD</h5>
+          </div>
+          <div class="text-container">
+            <h4>TBD</h4>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-me container" id="contact">
+      <h2><small>Contact Me</small> Get In Touch</h2>
+      <form action="mailto:hugh.kominsky@gmail.com" class="form-content">
+        <div class="form-group">
+          <h3>Send me a message!</h3>
+          <p>I am available for full-time roles in August 2025!</p>
+          <input type="text" name="name" id="name" required placeholder="Name">
+          <input type="email" name="email" id="email" required placeholder="E-Mail">
+          <textarea rows="10" name="message" id="message" required placeholder="Your Message"></textarea>
+          <input type="submit" value="Send Message">
+        </div>
+      </form>
+    </section>
+  </main>
 </body>
 </html>
