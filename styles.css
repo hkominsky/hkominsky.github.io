@@ -12,6 +12,7 @@
     --base-800: #261C15;
     --kelly-green: #4CBB17;
     --kelly-green-800: #409f14;
+    --error: #ff0000;
   }
   
   html {
@@ -365,8 +366,13 @@
           box-sizing: border-box;
           z-index: 2;
           display: flex;
-          justify-content: left;
+          flex-direction: column;
+          justify-content: flex-start;
           align-items: flex-start;
+
+          p {
+            margin-top:10px;
+          }
         }
   
         &:nth-child(1) {
@@ -396,7 +402,7 @@
   
   .contact-me {
     .form-content {
-      max-width: 600px;
+      max-width: 700px;
       margin: auto;
       padding: 20px;
       background-color: var(--base-400);
@@ -441,6 +447,19 @@
           background-color: var(--kelly-green-800);
         }
       }
+      .contact-api-response {
+        display: none;
+        margin-top: 1em;
+        padding: 0.5em;
+        text-align: left;
+        font-weight: bold;
+        }
+        .success {
+            color: var(--kelly-green)
+        }
+        .error {
+            color: var(--error)
+        }
     }
   }
   

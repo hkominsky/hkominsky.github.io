@@ -115,70 +115,77 @@
     </section>
 
     <section class="projects container" id="projects">
-      <h2><small>My work</small> Projects</h2>
-      <div class="bento-grid">
-        <div class="item">
-          <div class="tag-container">
-            <h5 class="tag-item">Verse</h5>
-            <h5 class="tag-item">Unreal Engine 5</h5>
-            <h5 class="tag-item">Niagara</h5>
+        <h2><small>My work</small> Projects</h2>
+        <div class="bento-grid">
+          <div class="item">
+            <div class="tag-container">
+              <h5 class="tag-item">Verse</h5>
+              <h5 class="tag-item">UEFN</h5>
+              <h5 class="tag-item">Niagara</h5>
+            </div>
+            <div class="text-container">
+              <h4>Pickaxe Knockout</h4>
+              <p>A fast-paced game leveraging Unreal Engine 5 and Niagara effects.</p>
+            </div>
           </div>
-          <div class="text-container">
-            <h4>Pickaxe Knockout</h4>
+          <div class="item">
+            <div class="tag-container">
+              <h5 class="tag-item">React</h5>
+              <h5 class="tag-item">TypeScript</h5>
+              <h5 class="tag-item">HTML</h5>
+              <h5 class="tag-item">CSS</h5>
+            </div>
+            <div class="text-container">
+              <h4>Husky Overflow</h4>
+              <p>A responsive web app built with Typescript, HTML, and CSS for seamless user experience.</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="tag-container">
+              <h5 class="tag-item">Python</h5>
+            </div>
+            <div class="text-container">
+              <h4>Crytocurrency Predicter</h4>
+              <p>Utilized a predictive model to forecast cryptocurrency trends.</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="tag-container">
+              <h5 class="tag-item">Java</h5>
+            </div>
+            <div class="text-container">
+              <h4>Photo Editor</h4>
+              <p>A recreation of the application.</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="tag-container">
+              <h5 class="tag-item">Python</h5>
+              <h5 class="tag-item">SQL</h5>
+            </div>
+            <div class="text-container">
+              <h4>Endzone Analytics</h4>
+              <p>A comprehensive data analysis tool.</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="tag-container">
+              <h5 class="tag-item">Verse</h5>
+              <h5 class="tag-item">UEFN</h5>
+              <h5 class="tag-item">Niagara</h5>
+              <h5 class="tag-item">Blender</h5>
+            </div>
+            <div class="text-container">
+              <h4>Perks FFA</h4>
+              <p>Project details coming soon.</p>
+            </div>
           </div>
         </div>
-        <div class="item">
-          <div class="tag-container">
-            <h5 class="tag-item">Typescript</h5>
-            <h5 class="tag-item">HTML</h5>
-            <h5 class="tag-item">CSS</h5>
-          </div>
-          <div class="text-container">
-            <h4>Husky Overflow</h4>
-          </div>
-        </div>
-        <div class="item">
-          <div class="tag-container">
-            <h5 class="tag-item">Python</h5>
-            <h5 class="tag-item">Docker</h5>
-          </div>
-          <div class="text-container">
-            <h4>Endzone Analytics</h4>
-          </div>
-        </div>
-        <div class="item">
-          <div class="tag-container">
-            <h5 class="tag-item">Python</h5>
-          </div>
-          <div class="text-container">
-            <h4>Crytocurrency Predicter</h4>
-          </div>
-        </div>
-        <div class="item">
-          <div class="tag-container">
-            <h5 class="tag-item">TBD</h5>
-            <h5 class="tag-item">TBD</h5>
-          </div>
-          <div class="text-container">
-            <h4>TBD</h4>
-          </div>
-        </div>
-        <div class="item">
-          <div class="tag-container">
-            <h5 class="tag-item">TBD</h5>
-            <h5 class="tag-item">TBD</h5>
-          </div>
-          <div class="text-container">
-            <h4>TBD</h4>
-          </div>
-        </div>
-        </div>
-      </div>
-    </section>
+      </section>      
 
     <section class="contact-me container" id="contact">
       <h2><small>Contact Me</small> Get In Touch</h2>
-      <form action="mailto:hugh.kominsky@gmail.com" class="form-content">
+      <form class="form-content" id="contactForm">
         <div class="form-group">
           <h3>Send me a message!</h3>
           <p>I am available for full-time roles in August 2025!</p>
@@ -187,6 +194,7 @@
           <textarea rows="10" name="message" id="message" required placeholder="Your Message"></textarea>
           <input type="submit" value="Send Message">
         </div>
+        <div class="contact-api-response" id="apiResponse"></div>
       </form>
     </section>
   </main>
