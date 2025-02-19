@@ -82,4 +82,63 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("contactForm not found in the DOM!");
     }
   });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const gridItems = document.querySelectorAll('.bento-grid .item');
+    const modal = document.getElementById('modal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDescription = document.getElementById('modalDescription');
+    const closeBtn = document.querySelector('.close-btn');
+  
+    const projectsData = [
+      {
+        title: "Pickaxe Knockout",
+        description: "A fast-paced game leveraging Unreal Engine 5 and Niagara effects."
+      },
+      {
+        title: "Husky Overflow",
+        description: "A responsive web app built with Typescript, HTML, and CSS for seamless user experience."
+      },
+      {
+        title: "Cryptocurrency Predicter",
+        description: "Utilized a predictive model to forecast cryptocurrency trends."
+      },
+      {
+        title: "Photo Editor",
+        description: "A recreation of the application."
+      },
+      {
+        title: "Endzone Analytics",
+        description: "A comprehensive data analysis tool."
+      },
+      {
+        title: "Perks FFA",
+        description: "Project details coming soon."
+      }
+    ];
+  
+    // Attach click events to each project grid item
+    gridItems.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        modalTitle.textContent = projectsData[index].title;
+        modalDescription.textContent = projectsData[index].description;
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      });
+    });
+  
+    // Close the modal when the close button is clicked
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    });
+  
+    // Optionally, close the modal when clicking outside the modal-content
+    window.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+    });
+  });  
   
