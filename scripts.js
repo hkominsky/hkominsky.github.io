@@ -1,3 +1,13 @@
+const changeTheme = () => {
+  const toggle = document = document.querySelector(".toggle");
+  const currTheme = document.documentElement.getAttribute("page-theme");
+  const newTheme = currTheme === "dark" ? "light" : "dark";
+
+  toggle.classList.toggle("active");
+  document.documentElement.setAttribute("page-theme", newTheme);
+  localStorage.setItem("theme", newTheme);
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const offset = 150;
     document.querySelectorAll("a[href^='#']").forEach(anchor => {
