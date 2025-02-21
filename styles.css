@@ -7,7 +7,7 @@
   :root {
     --base: #ffffff;
     --base-200: #cdcdcd;
-    --base-400: #989898;
+    --base-400: #c1c1c1;
     --base-text: #261C15;
     --accent-color: #4CBB17;
     --accent-color-400: #409f14;
@@ -16,8 +16,8 @@
 
   [page-theme="dark"] {
     --base: #1f1f1f;
-    --base-200: #515151;
-    --base-400: #818181;
+    --base-200: #151515;
+    --base-400: #242424;
     --base-text: #EAEAEA;
     --accent-color: #004953;
     --accent-color-400: #003e46;
@@ -127,13 +127,13 @@
           background-color: var(--base);
           border-radius: 50%;
           position: absolute;
-          top: 2px;
-          left: 2px;
+          top: 8%;
+          left: 5%;
           transition: transform 0.3s;
       }
 
       .toggle.active::before {
-        transform: translateX(30px);
+        transform: translateX(130%);
       }
     }
   }
@@ -239,7 +239,7 @@
         border-radius: 20px;
         flex: 1;
         transition: ease 0.3s all;
-        box-shadow: 0 7px 15px var(--base-200);
+        box-shadow: 0 2px 20px var(--base-200);
   
         &:hover {
           transform: translateY(-15px);
@@ -283,7 +283,7 @@
             left: 0;
             right: 0;
             background-color: var(--base-400);
-            color: var(--base);
+            color: var(--base-text);
             text-align: center;
             padding: 10px;
             opacity: 0;
@@ -515,11 +515,8 @@
     .form-content {
       max-width: 700px;
       margin: auto;
-      padding: 20px;
       background-color: var(--base);
-      border-radius: 10px;
       transition: ease 0.3s all;
-      box-shadow: 0 7px 15px var(--base-200);
   
       .form-group {
         display: flex;
@@ -549,12 +546,12 @@
         }
   
         input[type="submit"] {
-          padding: 10px 20px;
+          padding: 12px 20px;
           background-color: var(--accent-color);
           color: var(--base-text);
           border: none;
           border-radius: 5px;
-          font-size: 16px;
+          font-size: 18px;
           cursor: pointer;
           transition: background-color 0.3s ease;
         }
