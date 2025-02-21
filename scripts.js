@@ -1,12 +1,15 @@
 const changeTheme = () => {
-  const toggle = document = document.querySelector(".toggle");
   const currTheme = document.documentElement.getAttribute("page-theme");
   const newTheme = currTheme === "dark" ? "light" : "dark";
-
-  toggle.classList.toggle("active");
+  
+  document.querySelector(".toggle").classList.toggle("active");
   document.documentElement.setAttribute("page-theme", newTheme);
   localStorage.setItem("theme", newTheme);
-}
+
+  ["location", "linkedin", "github"].forEach(id => {
+    document.getElementById(`${id}-icon`).src = `images/${id}${newTheme === "dark" ? "-dark" : "-light"}.png`;
+  });
+};
 
 document.addEventListener("DOMContentLoaded", function () {
     const offset = 150;
