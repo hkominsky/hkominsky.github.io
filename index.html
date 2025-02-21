@@ -30,9 +30,9 @@
   </header>
 
   <main>
-    <section class="hero container" id="hero">
+    <section id="hero" class="hero container">
       <div class="hero-picture">
-        <img src="images/me.jpg" alt="Me">
+        <img id="me-icon" src="images/me-light.png" alt="Me">
       </div>
       <div class="hero-content">
         <div class="hero-text">
@@ -49,20 +49,20 @@
             My Resume
           </a>
           <a href="https://www.linkedin.com/in/hughkominsky/" class="btn" target="_blank">
-            <img src="images/linkedin-light.png" alt="LinkedIn" width="35px" id="linkedin-icon">
+            <img id="linkedin-icon" src="images/linkedin-light.png" alt="LinkedIn" width="35px">
           </a>
           <a href="https://github.com/hkominsky" class="btn" target="_blank">
-            <img src="images/github-light.png" alt="GitHub" width="35px" id="github-icon">
+            <img id="github-icon" src="images/github-light.png" alt="GitHub" width="35px">
           </a>
         </div>
         <div class="location">
-          <img src="images/location-light.png" alt="📍" width="14px" id="location-icon">
+          <img id="location-icon" src="images/location-light.png" alt="📍" width="14px">
           <p> New York City, NY</p>
         </div>
       </div>
     </section>
 
-    <section class="experience container" id="experience">
+    <section id="experience" class="experience container" >
       <h2><small>About Me</small> Work Experience</h2>
       <div class="roles">
         <article>
@@ -115,7 +115,7 @@
       </div>
     </section>
 
-    <section class="projects container" id="projects">
+    <section id="projects" class="projects container">
         <h2><small>My work</small> Projects</h2>
         <div class="bento-grid">
           <div class="item">
@@ -183,7 +183,7 @@
           </div>
         </div>
 
-        <div class="modal" id="modal">
+        <div id="modal" class="modal">
           <div class="modal-content">
             <span class="close-btn">&times;</span>
             <h4 id="modalTitle"></h4>
@@ -192,17 +192,17 @@
         </div>
       </section>      
 
-    <section class="contact-me container" id="contact">
+    <section id="contact" class="contact-me container">
       <h2><small>Contact Me</small> Get In Touch</h2>
-      <form class="form-content" id="contactForm">
+      <form id="contactForm" class="form-content">
         <div class="form-group">
           <p>I am available for full-time roles starting in August 2025! Additionally, feel free to reach out at <span>hugh.kominsky@gmail.com</span>.</p>
-          <input type="text" name="name" id="name" required placeholder="Name">
-          <input type="email" name="email" id="email" required placeholder="E-Mail">
-          <textarea rows="10" name="message" id="message" required placeholder="Your Message"></textarea>
+          <input id="name" type="text" name="name" required placeholder="Name">
+          <input id="email" type="email" name="email" required placeholder="E-Mail">
+          <textarea id="message" rows="10" name="message" required placeholder="Your Message"></textarea>
           <input type="submit" value="Submit">
         </div>
-        <div class="contact-api-response" id="apiResponse"></div>
+        <div id="apiResponse" class="contact-api-response"></div>
       </form>
     </section>
   </main>

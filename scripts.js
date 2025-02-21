@@ -6,7 +6,7 @@ const changeTheme = () => {
   document.documentElement.setAttribute("page-theme", newTheme);
   localStorage.setItem("theme", newTheme);
 
-  ["location", "linkedin", "github"].forEach(id => {
+  ["location", "linkedin", "github", "me"].forEach(id => {
     document.getElementById(`${id}-icon`).src = `images/${id}${newTheme === "dark" ? "-dark" : "-light"}.png`;
   });
 };
