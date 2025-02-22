@@ -253,17 +253,14 @@
         h3 {
           color: var(--base-text);
           margin-top: 20px;
-          margin-bottom: 10px;
+          margin-bottom: 5px;
         }
   
         div {
-          font-weight: 600;
-          margin-bottom: 5px;
+          font-size: 18px;
+          font-weight: 550;
+          margin-bottom: 15px;
           color: var(--base-text);
-        }
-  
-        p {
-          margin-bottom: 10px;
         }
   
         figure {
@@ -408,6 +405,7 @@
             border-radius: 25px;
             background-color: var(--accent-color);
             color: var(--base-text);
+
             &::before {
               content: "";
               position: absolute;
@@ -442,21 +440,25 @@
             url('images/pickaxe-knockout.png');
           grid-area: hero;
         }
+
         &:nth-child(2) {
           background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
             url('images/me.jpg');
           grid-area: aside2;
         }
+
         &:nth-child(3) {
           background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
             url('images/endzone-analytics.jpg');
           grid-area: aside3;
         }
+
         &:nth-child(4) {
           background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
             url('images/code-scout.png');
           grid-area: aside4;
         }
+        
         &:nth-child(5) {
           background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
             url('images/perks-ffa.png');
@@ -499,9 +501,11 @@
         font-size: 60px;
         font-weight: bold;
         cursor: pointer;
+
         &:hover {
           color: var(--accent-color-400);
         }
+
         &:active {
           transform: scale(0.96);
         }
@@ -520,7 +524,7 @@
       .form-group {
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
   
         input[type="text"],
         input[type="email"],
@@ -531,18 +535,13 @@
           border-radius: 5px;
           font-size: 16px;
           font-family: inherit;
+          background-color: var(--base-200);
+          color: var(--base-text);
         }
 
         span {
           font-weight: bold;
           color: var(--accent-color);
-        }
-
-        input[type="text"],
-        input[type="email"],
-        textarea {
-          background-color: var(--base-200);
-          color: var(--base-text);
         }
   
         input[type="submit"] {
@@ -554,23 +553,28 @@
           font-size: 18px;
           cursor: pointer;
           transition: 0.3s ease;
+
           &:hover {
             background-color: var(--accent-color-400);
           }
+
           &:active {
             transform: scale(0.98);
           }
         }
       }
+
       .contact-api-response {
         display: none;
         margin-top: 25px;
         text-align: left;
         font-weight: bold;
         }
+
         .success {
             color: var(--accent-color)
         }
+
         .error {
             color: var(--error)
         }

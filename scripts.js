@@ -15,14 +15,14 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   /** SMOOTH SCROLL FUNCTIONALITY **/
-  const offset = 150;
+  const redirectOffset = 100;
   document.querySelectorAll("a[href^='#']").forEach(anchor => {
     anchor.addEventListener("click", (e) => {
       e.preventDefault();
       const targetElement = document.getElementById(anchor.getAttribute("href").substring(1));
 
       if (targetElement) {
-        window.scrollTo({ top: targetElement.offsetTop - offset, behavior: "smooth" });
+        window.scrollTo({ top: targetElement.offsetTop - redirectOffset, behavior: "smooth" });
       }
     });
   });
