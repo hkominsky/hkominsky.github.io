@@ -407,6 +407,7 @@
             padding: 15px;
             border-radius: 25px;
             background-color: var(--accent-color);
+            color: var(--base-text);
             &::before {
               content: "";
               position: absolute;
