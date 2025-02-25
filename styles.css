@@ -166,7 +166,6 @@
     margin-top: -5px;
     display: flex;
     max-width: 1440px;
-    padding: 0px 50px;
   
     .hero-content {
       flex: 2;
@@ -215,21 +214,43 @@
   }
   
   h2 {
+    position: relative;
     font-size: 48px;
-    line-height: 1;
-    margin-bottom: 25px;
     text-align: center;
     color: var(--base-text);
+    display: table;
+    margin: 0 auto;
+    padding: 0 100px;
+    margin-bottom: 25px;
   
     small {
-      margin-top: 50px;
-      margin-bottom: 5px;
       display: block;
       font-size: 34px;
-      color: var(--accent-color);
       font-weight: 325;
+      color: var(--accent-color);
+      margin-top: 50px;
+      margin-bottom: 5px;
+    }
+  
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 65%;
+      width: 100px;
+      height: 1px;
+      background-color: var(--base-text);
+    }
+  
+    &::before {
+      left: -60px;
+    }
+  
+    &::after {
+      right: -60px;
     }
   }
+  
 
   h3 {
     color: var(--base-text);
