@@ -8,7 +8,7 @@
     root.setAttribute("page-theme", newTheme);
     localStorage.setItem("theme", newTheme);
 
-    ["location", "linkedin", "github", "me"].forEach(id => {
+    ["location", "linkedin", "github", "me", "logo"].forEach(id => {
       document.getElementById(`${id}-icon`).src = `images/${id}-${newTheme}.png`;
     });
   };
