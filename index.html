@@ -67,7 +67,7 @@
     <section id="experience" class="experience container" >
       <h2><small>About Me</small> Work Experience</h2>
       <div class="roles">
-        <article>
+        <article data-index="0">
           <figure>
             <div>
               <img src="images/j&k.png" alt="J&K Seminars" width="100%">
@@ -77,13 +77,13 @@
           <h3>Data Engineer Intern</h3>
           <div>Apr. 2023 - July 2024</div>
           <p>
-            As a software developer intern, I worked on a team that developed a new mobile banking application. 
-            I was responsible for implementing new features and fixing bugs in the application. I also worked on 
-            the backend of the application, writing code in Java and SQL.
+            Worked on data pipelines and automation to enhance processing efficiency.
           </p>
+          <div class="article-footer">
+            <span>Learn More...</span>
+          </div>
         </article>
-
-        <article>
+        <article data-index="1">
           <figure>
             <div>
               <img src="images/mmc.png" alt="MMC" width="100%">
@@ -93,27 +93,35 @@
           <h3>Reinsurance Modeling Co-Op</h3>
           <div>Jan. 2024 - July 2024</div>
           <p>
-            As a data analyst intern, I worked on a team that developed a new inventory system for the company. 
-            I was responsible for creating dynamic visualizations of the data and writing SQL queries to optimize 
-            the system. I also worked on the backend of the system, writing code in Python and SQL.
+            Developed risk assessment models to optimize reinsurance strategies.
           </p>
+          <div class="article-footer">
+            <span>Learn More...</span>
+          </div>
         </article>
-
-        <article>
+        <article data-index="2">
           <figure>
             <div>
               <img src="images/scotia.png" alt="Scotia" width="100%">
               <figcaption>Scotiabank, 📍NYC</figcaption>
             </div>
           </figure>
-          <h3>Quantitative Developer Co-Op</h3>
+          <h3>Quant Developer Co-Op</h3>
           <div>Dec. 2024 - Present</div>
           <p>
-            As a software developer intern, I worked on a team that developed a new mobile banking application. 
-            I was responsible for implementing new features and fixing bugs in the application. I also worked on 
-            the backend of the application, writing code in Java and SQL.
+            Implemented quantitative models for financial analysis and trading strategies.
           </p>
+          <div class="article-footer">
+            <span>Learn More...</span>
+          </div>
         </article>
+      </div>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h4 id="modal-title"></h4>
+          <p id="modal-description"></p>
+        </div>
       </div>
     </section>
 
@@ -173,14 +181,6 @@
               <h4>Perks FFA</h4>
               <p>Project details coming soon.</p>
             </div>
-          </div>
-        </div>
-
-        <div id="modal" class="modal">
-          <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h4 id="modalTitle"></h4>
-            <p id="modalDescription"></p>
           </div>
         </div>
       </section>      

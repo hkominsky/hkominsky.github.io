@@ -83,17 +83,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /** PROJECT MODAL FUNCTIONALITY **/
   const modal = document.getElementById('modal');
-  const modalTitle = document.getElementById('modalTitle');
-  const modalDescription = document.getElementById('modalDescription');
+  const modalTitle = document.getElementById('modal-title');
+  const modalDescription = document.getElementById('modal-description');
   const closeBtn = document.querySelector('.close-btn');
-  const gridItems = document.querySelectorAll('.bento-grid .item');
+  const experienceArticles = document.querySelectorAll('#experience .roles article');
 
-  const projectsData = [
-    { title: "Pickaxe Knockout", description: "A fast-paced game leveraging Unreal Engine 5 and Niagara effects." },
-    { title: "Endzone Analytics", description: "A comprehensive data analysis tool." },
-    { title: "Jawn", description: "A responsive web app built with TypeScript, HTML, and CSS for a seamless user experience." },
-    { title: "Code Scout", description: "A responsive web app built with TypeScript, HTML, and CSS for a seamless user experience." },
-    { title: "Perks FFA", description: "Project details coming soon." }
+  const workExperiences = [
+    { title: "Data Engineer Intern, J&K Semainrs", description: "As a data analyst intern, I worked on a team that developed a new inventory system for the company. I was responsible for creating dynamic visualizations of the data and writing SQL queries to optimize the system. I also worked on the backend of the system, writing code in Python and SQL." },
+    { title: "Reinsurance Modeling Co-Op, Guy Carpenter", description: "As a data analyst intern, I worked on a team that developed a new inventory system for the company. I was responsible for creating dynamic visualizations of the data and writing SQL queries to optimize the system. I also worked on the backend of the system, writing code in Python and SQL." },
+    { title: "Quantitative Developer Co-Op, Scotiabank", description: "As a software developer intern, I worked on a team that developed a new mobile banking application. I was responsible for implementing new features and fixing bugs in the application. I also worked on the backend of the application, writing code in Java and SQL." },
   ];
 
   const closeModal = () => {
@@ -101,10 +99,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.overflow = '';
   };
 
-  gridItems.forEach((item, index) => {
+  experienceArticles.forEach((item, index) => {
     item.addEventListener('click', () => {
-      modalTitle.textContent = projectsData[index].title;
-      modalDescription.textContent = projectsData[index].description;
+      modalTitle.textContent = workExperiences [index].title;
+      modalDescription.textContent = workExperiences [index].description;
       modal.style.display = 'flex';
       document.body.style.overflow = 'hidden';
     });

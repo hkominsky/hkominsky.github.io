@@ -147,8 +147,8 @@
   section {
     margin: auto;
     gap: 25px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 45px;
+    margin-bottom: 45px;
   }
   
   h1 {
@@ -221,33 +221,31 @@
     display: table;
     margin: 0 auto;
     padding: 0 100px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   
     small {
       display: block;
       font-size: 34px;
       font-weight: 325;
       color: var(--accent-color);
-      margin-top: 50px;
-      margin-bottom: 5px;
     }
   
     &::before,
     &::after {
       content: "";
       position: absolute;
-      top: 65%;
+      top: 50%;
       width: 100px;
       height: 1px;
       background-color: var(--base-text);
     }
   
     &::before {
-      left: -60px;
+      left: -45px;
     }
   
     &::after {
-      right: -60px;
+      right: -45px;
     }
   }
   
@@ -265,15 +263,36 @@
       margin: auto;
   
       article {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
         background-color: var(--base);
         padding: 30px;
         border-radius: 20px;
         flex: 1;
         transition: ease 0.3s all;
         border: 5px solid var(--base-200);
+        cursor: pointer;
   
         &:hover {
           transform: translateY(-15px);
+        }
+  
+        .article-footer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: auto;
+          padding-top: 20px;
+        }
+  
+        span {
+          color: var(--accent-color);
+  
+          &:hover {
+            color: var(--accent-color-400);
+          }
         }
   
         h3 {
@@ -281,11 +300,15 @@
           margin-top: 20px;
           margin-bottom: 5px;
         }
+
+        p {
+          font-weight: 300;
+          font-size: 18px;
+        }
   
         div {
           font-size: 18px;
           font-weight: 550;
-          margin-bottom: 15px;
           color: var(--base-text);
         }
   
@@ -319,16 +342,58 @@
             transition: ease 0.3s all;
           }
   
-          &:hover {
-            figcaption {
-              opacity: 1;
-              visibility: visible;
-            }
+          &:hover figcaption {
+            opacity: 1;
+            visibility: visible;
           }
         }
       }
     }
+  
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 4;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+  
+      .modal-content {
+        position: relative;
+        width: 75%;
+        height: 85%;
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: var(--base);
+        overflow-y: auto;
+      }
+  
+      .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: var(--accent-color);
+        font-size: 60px;
+        font-weight: bold;
+        cursor: pointer;
+  
+        &:hover {
+          color: var(--accent-color-400);
+        }
+  
+        &:active {
+          transform: scale(0.96);
+        }
+      }
+    }
   }
+  
   
   h4 {
     font-size: 25px;
@@ -492,51 +557,7 @@
         }
       }
     }
-    
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 4;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.5);
-      justify-content: center;
-      align-items: center;
-      
-      .modal-content {
-        position: relative;
-        width: 75%;
-        height: 85%;
-        margin: auto;
-        padding: 20px;
-        border-radius: 10px;
-        background-color: var(--base);
-        overflow-y: auto;
-      }
-      
-      .close-btn {
-        position: absolute;
-        top: 10px;
-        right: 15px;
-        color: var(--accent-color);
-        font-size: 60px;
-        font-weight: bold;
-        cursor: pointer;
-
-        &:hover {
-          color: var(--accent-color-400);
-        }
-
-        &:active {
-          transform: scale(0.96);
-        }
-      }
-    }
   }
-  
   
   .contact-me {
     .form-content {
