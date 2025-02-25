@@ -90,8 +90,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const projectsData = [
     { title: "Pickaxe Knockout", description: "A fast-paced game leveraging Unreal Engine 5 and Niagara effects." },
-    { title: "Jawn", description: "A responsive web app built with TypeScript, HTML, and CSS for a seamless user experience." },
     { title: "Endzone Analytics", description: "A comprehensive data analysis tool." },
+    { title: "Jawn", description: "A responsive web app built with TypeScript, HTML, and CSS for a seamless user experience." },
     { title: "Code Scout", description: "A responsive web app built with TypeScript, HTML, and CSS for a seamless user experience." },
     { title: "Perks FFA", description: "Project details coming soon." }
   ];
