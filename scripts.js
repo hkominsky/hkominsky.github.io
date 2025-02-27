@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalTitle = document.getElementById('modal-title');
   const modalDescription = document.getElementById('modal-description');
   const closeBtn = document.querySelector('.close-btn');
-  const experienceArticles = document.querySelectorAll('#experience .roles article');
+  const experienceSpans = document.querySelectorAll('#experience .roles article span');
 
   const workExperiences = [
     { 
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.overflow = '';
   };
 
-  experienceArticles.forEach((item, index) => {
+  experienceSpans.forEach((item, index) => {
     item.addEventListener('click', () => {
       modalTitle.textContent = workExperiences [index].title;
       modalDescription.textContent = workExperiences [index].description;
