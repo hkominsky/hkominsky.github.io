@@ -256,7 +256,7 @@
   
   .experience {
     .roles {
-      padding: 0 50px;
+      padding: 0 25px;
       max-width: 1440px;
       display: flex;
       gap: 30px;
@@ -273,7 +273,6 @@
         flex: 1;
         transition: ease 0.3s all;
         border: 5px solid var(--base-200);
-        cursor: pointer;
   
         &:hover {
           transform: translateY(-15px);
@@ -292,6 +291,8 @@
   
           &:hover {
             color: var(--accent-color-400);
+            cursor: pointer;
+            text-decoration: underline;
           }
         }
   
@@ -368,7 +369,7 @@
         width: 75%;
         height: 85%;
         margin: auto;
-        padding: 20px;
+        padding: 35px;
         border-radius: 10px;
         background-color: var(--base);
         overflow-y: auto;
@@ -419,7 +420,7 @@
   
   .projects {
     .bento-grid {
-      padding: 0 50px;
+      padding: 0 25px;
       max-width: 1440px;
       height: 1440px;
       margin: auto;

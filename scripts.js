@@ -89,10 +89,35 @@ document.addEventListener("DOMContentLoaded", () => {
   const experienceArticles = document.querySelectorAll('#experience .roles article');
 
   const workExperiences = [
-    { title: "Data Engineer Intern, J&K Semainrs", description: "As a data analyst intern, I worked on a team that developed a new inventory system for the company. I was responsible for creating dynamic visualizations of the data and writing SQL queries to optimize the system. I also worked on the backend of the system, writing code in Python and SQL." },
-    { title: "Reinsurance Modeling Co-Op, Guy Carpenter", description: "As a data analyst intern, I worked on a team that developed a new inventory system for the company. I was responsible for creating dynamic visualizations of the data and writing SQL queries to optimize the system. I also worked on the backend of the system, writing code in Python and SQL." },
-    { title: "Quantitative Developer Co-Op, Scotiabank", description: "As a software developer intern, I worked on a team that developed a new mobile banking application. I was responsible for implementing new features and fixing bugs in the application. I also worked on the backend of the application, writing code in Java and SQL." },
+    { 
+      title: "Data Engineer Intern, J&K Seminars", 
+      description: `
+        - In response to inefficiencies in inventory management, I collaborated with a team to develop a new system, creating dynamic data visualizations and writing optimized SQL queries to improve data accessibility. This led to a more streamlined process, increasing the efficiency of data-driven decisions.
+        - Faced with the need to enhance backend functionality, I utilized Python and SQL to write backend code that improved system reliability. As a result, the system supported smoother inventory operations and faster data retrieval.
+        - To ensure the system's accuracy, I conducted rigorous data validation tests, identifying errors early. This increased the accuracy of reporting, leading to more reliable data insights.
+        - Involved in the deployment phase, I worked on the integration of the new system into the company’s existing operations, ensuring a smooth transition without disruptions to daily activities.
+      `
+    },
+    { 
+      title: "Reinsurance Modeling Co-Op, Guy Carpenter", 
+      description: `
+        - Recognizing the need for improved risk assessment models, I assisted in developing tools to analyze large datasets using SQL, Python, and Excel. This resulted in more precise pricing strategies for reinsurance products.
+        - To support decision-making, I created detailed reports and dashboards for senior management, helping them to better understand market trends. This led to more informed decisions and improved risk management.
+        - Faced with inefficiencies in data collection, I helped automate processes, which saved time and reduced manual errors, improving workflow efficiency across departments.
+        - Collaborating with cross-functional teams, I contributed to improving model accuracy, ultimately leading to enhanced risk models that better predicted financial outcomes.
+      `
+    },
+    { 
+      title: "Quantitative Developer Co-Op, Scotiabank", 
+      description: `
+        - In response to a need for improved mobile banking functionality, I developed and maintained features for the mobile app using Java and SQL, improving the user experience and customer satisfaction.
+        - To ensure app stability, I identified and resolved bugs that hindered performance. This led to improved app reliability and increased customer trust in the platform.
+        - Tasked with optimizing the backend systems, I worked on enhancing data processing speeds, resulting in a more responsive application and faster transactions.
+        - Collaborating closely with product managers, I helped implement user feedback-driven features that aligned the mobile app with customer expectations, resulting in higher user engagement.
+      `
+    }
   ];
+  
 
   const closeModal = () => {
     modal.style.display = 'none';
