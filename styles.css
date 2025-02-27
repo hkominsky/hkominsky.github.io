@@ -366,10 +366,10 @@
   
       .modal-content {
         position: relative;
-        width: 75%;
-        height: 85%;
+        width: 55%;
+        height: 80%;
         margin: auto;
-        padding: 35px;
+        padding: 60px 45px;
         border-radius: 10px;
         background-color: var(--base);
         overflow-y: auto;
@@ -390,6 +390,18 @@
   
         &:active {
           transform: scale(0.96);
+        }
+      }
+
+      #modal-description {
+        font-size: 24px;
+        width: 95%;
+        ul {
+          list-style-type: none;
+          padding-top: 10px;
+        }
+        li {
+          padding-top: 20px;
         }
       }
     }
