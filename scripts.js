@@ -14,6 +14,20 @@
   };
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Function to load header.html into the header element
+  fetch('header.html')
+  .then(response => response.text())
+  .then(data => {
+      document.getElementById('header').innerHTML = data;
+  });
+
+  // Function to load header.html into the header element
+  fetch('footer.html')
+  .then(response => response.text())
+  .then(data => {
+      document.getElementById('footer').innerHTML = data;
+  });
+
   /** SMOOTH SCROLL FUNCTIONALITY **/
   const redirectOffset = 100;
   document.querySelectorAll("a[href^='#']").forEach(anchor => {
