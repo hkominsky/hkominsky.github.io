@@ -50,7 +50,7 @@
   }
   
   h1 {
-    font-size: 64px;
+    font-size: 72px;
     margin-bottom: 10px;
     color: var(--accent-color);
   
@@ -96,7 +96,6 @@
     }
   }
   
-
   h3 {
     color: var(--base-text);
   }
@@ -119,6 +118,7 @@
   }
 
   p {
+    font-size: 22px;
     margin-top: 10px;
     color: var(--base-text);
   }
@@ -223,14 +223,15 @@
   }
   
   .hero {
-    min-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
   
     .hero-holder {
       display: flex;
-      max-width: 1440px;
+      max-width: 1280px;
+      gap: 25px;
+      margin-right: 50px;
   
       .hero-content {
         flex: 2;
@@ -268,12 +269,6 @@
           align-items: baseline;
           gap: 10px;
         }
-      }
-  
-      .hero-picture {
-        flex: 1;
-        display: flex;
-        justify-content: center;
       }
     }
   }  
@@ -435,7 +430,7 @@
     .bento-grid {
       padding: 0 25px;
       max-width: 1440px;
-      height: 1440px;
+      height: 1280px;
       margin: auto;
       display: grid;
       gap: 15px;
@@ -446,6 +441,7 @@
         "hero hero hero hero aside2 aside2"
         "hero hero hero hero aside3 aside3"
         "hero hero hero hero aside3 aside3"
+        "aside4 aside4 aside4 aside5 aside5 aside5"
         "aside4 aside4 aside4 aside5 aside5 aside5"
         "aside4 aside4 aside4 aside5 aside5 aside5";
 

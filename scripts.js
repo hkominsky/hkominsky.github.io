@@ -25,6 +25,7 @@ const changeTheme = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+  const pageOffset = 110;
   // Check for hash in URL and scroll with offset if present
   setTimeout(() => {
     if (window.location.hash) {
@@ -32,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const targetElement = document.getElementById(targetId);
       if (targetElement) {
         window.scrollTo({
-          top: targetElement.offsetTop - 100,
+          top: targetElement.offsetTop - pageOffset,
           behavior: "smooth"
         });
       }
@@ -49,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (targetElement) {
           e.preventDefault();
           window.scrollTo({ 
-            top: targetElement.offsetTop - 100, 
+            top: targetElement.offsetTop - pageOffset, 
             behavior: "smooth" 
           });
           
