@@ -146,22 +146,16 @@
       .logo-holder {
         display: flex;
         align-items: center;
-        gap: 10px;
+        justify-content: center;
+        gap: 8px;
         padding: 10px;
         font-weight: 600;
         color: var(--base-text);
-
-        .logo-picture {
-          max-width: 30px;
-        }
   
         .logo-text {
           color: var(--accent-color);
           font-size: 30px;
           font-weight: bold;
-          &:hover {
-            color: var(--accent-color-400);
-          }
         }
       }
   
@@ -249,7 +243,7 @@
           align-items: center;
           gap: 10px;
           margin-top: 40px;
-          margin-bottom: 10px;
+          margin-bottom: 5px;
   
           a {
             transition: transform 0.3s ease;
@@ -273,7 +267,6 @@
           display: inline-flex;
           align-items: baseline;
           gap: 10px;
-          margin-top: 1px;
         }
       }
   

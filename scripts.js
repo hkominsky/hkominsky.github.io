@@ -8,8 +8,19 @@ const changeTheme = () => {
   root.setAttribute("page-theme", newTheme);
   localStorage.setItem("theme", newTheme);
 
+  // Helper function to update image sources
+  const updateImageSource = (element, imageId) => {
+    if (element) {
+      element.src = `images/${imageId}-${newTheme}.png`;
+    }
+  };
+
+  // Update logo image
+  updateImageSource(document.querySelector('.logo-icon img'), 'logo');
+
+  // Update other icons
   ["location", "linkedin", "github", "me", "logo"].forEach(id => {
-    document.getElementById(`${id}-icon`).src = `images/${id}-${newTheme}.png`;
+    updateImageSource(document.getElementById(`${id}-icon`), id);
   });
 };
 
@@ -26,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
     }
-  }, 300); // Short delay to ensure content is loaded
+  }, 100);
 
   // Use event delegation for smooth scrolling - works with dynamically added elements
   document.addEventListener('click', (e) => {
