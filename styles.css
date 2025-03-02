@@ -15,12 +15,12 @@
   }
 
   [page-theme="dark"] {
-    --base: #1f1f1f;
-    --base-200: #151515;
-    --base-400: #242424;
+    --base: #303030;
+    --base-200: #424242;
+    --base-400: #525151;
     --base-text: #EAEAEA;
     --accent-color: #005a66;
-    --accent-color-400: #004e58;
+    --accent-color-400: #005a66;
     --error: #FF4C4C;
   }
   
@@ -78,6 +78,9 @@
           color: var(--accent-color);
           font-size: 30px;
           font-weight: bold;
+          &:hover {
+            color: var(--accent-color-400);
+          }
         }
       }
   
