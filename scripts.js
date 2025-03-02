@@ -1,47 +1,75 @@
-  /** THEME TOGGLE FUNCTIONALITY **/
-  const changeTheme = () => {
-    const root = document.documentElement;
-    const currTheme = root.getAttribute("page-theme");
-    const newTheme = currTheme === "dark" ? "light" : "dark";
+// Theme change functionality
+const changeTheme = () => {
+  const root = document.documentElement;
+  const currTheme = root.getAttribute("page-theme");
+  const newTheme = currTheme === "dark" ? "light" : "dark";
 
-    document.querySelector(".toggle").classList.toggle("active");
-    root.setAttribute("page-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
+  document.querySelector(".toggle").classList.toggle("active");
+  root.setAttribute("page-theme", newTheme);
+  localStorage.setItem("theme", newTheme);
 
-    ["location", "linkedin", "github", "me", "logo"].forEach(id => {
-      document.getElementById(`${id}-icon`).src = `images/${id}-${newTheme}.png`;
-    });
-  };
+  ["location", "linkedin", "github", "me", "logo"].forEach(id => {
+    document.getElementById(`${id}-icon`).src = `images/${id}-${newTheme}.png`;
+  });
+};
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Function to load header.html into the header element
-  fetch('header.html')
-  .then(response => response.text())
-  .then(data => {
-      document.getElementById('header').innerHTML = data;
-  });
-
-  // Function to load header.html into the header element
-  fetch('footer.html')
-  .then(response => response.text())
-  .then(data => {
-      document.getElementById('footer').innerHTML = data;
-  });
-
-  /** SMOOTH SCROLL FUNCTIONALITY **/
-  const redirectOffset = 100;
-  document.querySelectorAll("a[href^='#']").forEach(anchor => {
-    anchor.addEventListener("click", (e) => {
-      e.preventDefault();
-      const targetElement = document.getElementById(anchor.getAttribute("href").substring(1));
-
+  // Check for hash in URL and scroll with offset if present
+  setTimeout(() => {
+    if (window.location.hash) {
+      const targetId = window.location.hash.substring(1);
+      const targetElement = document.getElementById(targetId);
       if (targetElement) {
-        window.scrollTo({ top: targetElement.offsetTop - redirectOffset, behavior: "smooth" });
+        window.scrollTo({
+          top: targetElement.offsetTop - 100,
+          behavior: "smooth"
+        });
       }
-    });
+    }
+  }, 300); // Short delay to ensure content is loaded
+
+  // Use event delegation for smooth scrolling - works with dynamically added elements
+  document.addEventListener('click', (e) => {
+    let anchor = e.target.closest("a[href*='#']");
+    if (anchor) {
+      let targetId = anchor.getAttribute("href").split('#')[1];
+      if (targetId) {
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          window.scrollTo({ 
+            top: targetElement.offsetTop - 100, 
+            behavior: "smooth" 
+          });
+          
+          // Update URL hash without scrolling (for bookmarking)
+          history.pushState(null, null, `#${targetId}`);
+        }
+      }
+    }
   });
 
-  /** CONTACT FORM SUBMISSION **/
+  // Loads the header.html file into the header element
+  fetch('/header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    })
+    .catch(error => {
+      console.error("Error loading the header:", error);
+    });
+
+  // Loads the footer.html file into the footer element
+  fetch('/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    })
+    .catch(error => {
+      console.error("Error loading the footer:", error);
+    });
+
+  // Contact form submission functionality
   const URL = "https://script.google.com/macros/s/AKfycbwXEQ8Fu2jBDr7KLDNASK6njDyu9RQakWUnvG_lV5nJrq5IyDhcF06KvSlIaBrJNYw3Ow/exec";
   const contactForm = document.getElementById('contactForm');
   const apiResponse = document.getElementById('apiResponse');
@@ -76,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .then(() => {
         contactForm.reset();
-        apiResponse.textContent = "Message sent! I’ll reach out to you as soon as possible.";
+        apiResponse.textContent = "Message sent! I'll reach out to you as soon as possible.";
         apiResponse.className = "contact-api-response success";
       })
       .catch(() => {
@@ -95,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("contactForm not found in the DOM!");
   }
 
-  /** PROJECT MODAL FUNCTIONALITY **/
+  // Displays modals with more information when work experience articles are clicked
   const modal = document.getElementById('modal');
   const modalTitle = document.getElementById('modal-title');
   const modalDescription = document.getElementById('modal-description');
@@ -115,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
         - In response to inefficiencies in inventory management, I collaborated with a team to develop a new system, creating dynamic data visualizations and writing optimized SQL queries to improve data accessibility. This led to a more streamlined process, increasing the efficiency of data-driven decisions.
         - Faced with the need to enhance backend functionality, I utilized Python and SQL to write backend code that improved system reliability. As a result, the system supported smoother inventory operations and faster data retrieval.
         - To ensure the system's accuracy, I conducted rigorous data validation tests, identifying errors early. This increased the accuracy of reporting, leading to more reliable data insights.
-        - Involved in the deployment phase, I worked on the integration of the new system into the company’s existing operations, ensuring a smooth transition without disruptions to daily activities.
+        - Involved in the deployment phase, I worked on the integration of the new system into the company's existing operations, ensuring a smooth transition without disruptions to daily activities.
       `
     },
     { 
@@ -173,6 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
+  // Opens corresponding separate project webapge when its corresponding project is clicked
   let projectMap = new Map();
   projectMap.set(0, 'projects/pickaxe-knockout.html');
   projectMap.set(1, 'projects/endzone-analytics.html');
@@ -188,4 +217,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+});
+
+// Listen for hash changes from browser back/forward buttons
+window.addEventListener('hashchange', () => {
+  if (window.location.hash) {
+    const targetId = window.location.hash.substring(1);
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      setTimeout(() => {
+        window.scrollTo({
+          top: targetElement.offsetTop - 100,
+          behavior: "smooth"
+        });
+      }, 100);
+    }
+  }
 });
