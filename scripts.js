@@ -11,7 +11,7 @@ const changeTheme = () => {
   // Helper function to update image sources
   const updateImageSource = (element, imageId) => {
     if (element) {
-      element.src = `images/${imageId}-${newTheme}.png`;
+      element.src = `/images/${imageId}-${newTheme}.png`;
     }
   };
 
@@ -66,6 +66,9 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(response => response.text())
     .then(data => {
       document.getElementById('header').innerHTML = data;
+      
+      // Setup mobile menu after header is loaded
+      setupMobileMenu();
     })
     .catch(error => {
       console.error("Error loading the header:", error);
@@ -228,8 +231,44 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.href = projectMap.get(index);
     });
   });
-
 });
+
+// Mobile menu functionality
+function setupMobileMenu() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('header .header-content nav ul');
+  
+  if (!menuToggle || !navMenu) {
+    console.error("Menu toggle or navigation menu not found!");
+    return;
+  }
+  
+  // Toggle menu when hamburger button is clicked
+  menuToggle.addEventListener('click', function() {
+    menuToggle.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+  
+  // Close menu when a nav link is clicked
+  const navLinks = document.querySelectorAll('header .header-content nav ul li a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      menuToggle.classList.remove('active');
+      navMenu.classList.remove('active');
+    });
+  });
+  
+  // Close menu when clicking outside
+  document.addEventListener('click', function(event) {
+    const isClickInsideNav = navMenu.contains(event.target);
+    const isClickOnToggle = menuToggle.contains(event.target);
+    
+    if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('active')) {
+      menuToggle.classList.remove('active');
+      navMenu.classList.remove('active');
+    }
+  });
+}
 
 // Listen for hash changes from browser back/forward buttons
 window.addEventListener('hashchange', () => {
