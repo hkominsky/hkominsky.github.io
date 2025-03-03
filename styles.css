@@ -121,7 +121,6 @@
     color: var(--base-text);
   }
 
-    /* Initially hide the menu toggle button */
   .menu-toggle {
     display: none;
     flex-direction: column;
@@ -142,23 +141,23 @@
   @media (max-width: 768px) {
     header {
       .header-content {
-        position: relative;
+       position: relative;
         
         .menu-toggle {
           display: flex;
-        }
-        
-        .menu-toggle.active {
-          span:nth-child(1) {
-            transform: translateY(9px) rotate(45deg);
-          }
-          
-          span:nth-child(2) {
-            opacity: 0;
-          }
-          
-          span:nth-child(3) {
-            transform: translateY(-9px) rotate(-45deg);
+
+          &.active {
+            span:nth-child(1) {
+              transform: translateY(9px) rotate(45deg);
+            }
+            
+            span:nth-child(2) {
+              opacity: 0;
+            }
+            
+            span:nth-child(3) {
+              transform: translateY(-9px) rotate(-45deg);
+            }
           }
         }
         
@@ -169,23 +168,17 @@
             right: 20px;
             flex-direction: column;
             background-color: var(--base-200);
-            width: 150px;
-            padding: 15px;
+            width: 200px;
             border-radius: 0 0 5px 5px;
-            max-height: 0;
-            overflow: hidden;
             opacity: 0;
             visibility: hidden;
             transition: max-height 0.4s ease-in-out, opacity 0.4s ease, visibility 0s linear 0.4s, padding 0.4s ease;
-            padding-top: 0;
-            padding-bottom: 0;
             
             &.active {
               max-height: 300px;
               opacity: 1;
               visibility: visible;
               padding: 15px;
-              margin-top: 5px;
               transition: max-height 0.4s ease-in-out, opacity 0.4s ease, visibility 0s;
             }
             
@@ -304,21 +297,20 @@
             }
           }
         }
-      }
 
-      .toggle {
-        margin-left: 15px;
-        margin-top: 5px;
-        width: 60px;
-        height: 30px;
-        background-color: var(--accent-color);
-        border-radius: 30px;
-        position: relative;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-    
-      .toggle::before {
+        .theme-toggle {
+          width: 60px;
+          height: 30px;
+          margin-top: 5px;
+          margin-left: 20px;
+          background-color: var(--accent-color);
+          border-radius: 30px;
+          position: relative;
+          cursor: pointer;
+          transition: background-color 0.3s;
+        }
+      
+        .theme-toggle::before {
           content: "";
           width: 22px;
           height: 22px;
@@ -328,10 +320,11 @@
           top: 8%;
           left: 5%;
           transition: transform 0.3s;
-      }
+        }
 
-      .toggle.active::before {
-        transform: translateX(130%);
+        .theme-toggle.active::before {
+          transform: translateX(130%);
+        }
       }
     }
   }
@@ -386,6 +379,42 @@
       }
     }
   }  
+
+  .experience {
+    .roles {
+      padding: 0 25px;
+      max-width: 1280px;
+      display: flex;
+      gap: 30px;
+      margin: auto;
+      flex-wrap: wrap;
+    }
+  
+    article {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      background-color: var(--base);
+      padding: 30px;
+      border-radius: 20px;
+      flex: 1;
+      transition: ease 0.3s all;
+      border: 5px solid var(--base-200);
+    }
+    
+    @media (max-width: 768px) {
+      .roles {
+        flex-direction: column;
+        gap: 20px;
+      }
+  
+      article {
+        flex: 1 0 100%;
+      }
+    }
+  }
+  
   
   .experience {
     .roles {
@@ -685,6 +714,7 @@
   
   .contact-me {
     .form-content {
+      padding: 25px;
       max-width: 700px;
       margin: auto;
       background-color: var(--base);

@@ -4,7 +4,7 @@ const changeTheme = () => {
   const currTheme = root.getAttribute("page-theme");
   const newTheme = currTheme === "dark" ? "light" : "dark";
 
-  document.querySelector(".toggle").classList.toggle("active");
+  document.querySelector(".theme-toggle").classList.toggle("active");
   root.setAttribute("page-theme", newTheme);
   localStorage.setItem("theme", newTheme);
 
