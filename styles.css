@@ -76,24 +76,6 @@
       font-weight: 325;
       color: var(--accent-color);
     }
-  
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      width: 100px;
-      height: 1px;
-      background-color: var(--base-text);
-    }
-  
-    &::before {
-      left: -45px;
-    }
-  
-    &::after {
-      right: -45px;
-    }
   }
   
   h3 {
