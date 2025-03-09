@@ -102,10 +102,10 @@
   
   h3 {
     color: var(--base-text);
-    font-size: 30px;
+    font-size: 25px;
 
     @media (max-width: 768px) {
-      font-size: 25px;
+      font-size: 20px;
     }
   }
 
@@ -115,7 +115,7 @@
   }
 
   h4 {
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 700;
     color: var(--accent-color);
     display: flex;
@@ -135,7 +135,7 @@
     color: var(--base-text);
 
     @media (max-width: 768px) {
-      font-size: 15px;
+      font-size: 20px;
       margin-top: 5px;
     }
   }
@@ -457,22 +457,15 @@
       }
   
       h3 {
-        color: var(--base-text);
         margin-top: 20px;
         margin-bottom: 5px;
       }
   
-      p {
-        font-weight: 300;
-        font-size: 18px;
-      }
-  
       div {
-        font-size: 18px;
-        font-weight: 550;
         color: var(--base-text);
+        font-weight: 550;
       }
-  
+
       figure {
         width: 100%;
         padding-top: 56.25%;
@@ -592,6 +585,8 @@
       grid-template-areas:
         "hero hero hero hero aside2 aside2"
         "hero hero hero hero aside2 aside2"
+        "hero hero hero hero aside2 aside2"
+        "hero hero hero hero aside3 aside3"
         "hero hero hero hero aside3 aside3"
         "hero hero hero hero aside3 aside3"
         "aside4 aside4 aside4 aside5 aside5 aside5"
@@ -624,7 +619,7 @@
         cursor: pointer;
   
         @media (max-width: 768px) {
-          min-height: 350px;
+          min-height: 450px;
         }
   
         &::before {
