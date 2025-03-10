@@ -714,13 +714,13 @@
   
         &:nth-child(2) {
           background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
-            url('/images/projects/endzone-analytics/endzone-analytics.jpg');
+            url('/images/projects/endzone-analytics/endzone-analytics.png');
           grid-area: aside2;
         }
   
         &:nth-child(3) {
           background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
-            url('/images/projects/endzone-analytics/endzone-analytics.jpg');
+            url('/images/projects/endzone-analytics/endzone-analytics.png');
           grid-area: aside3;
         }
   
