@@ -576,22 +576,16 @@
     .bento-grid {
       padding: 0 25px;
       max-width: 1280px;
-      height: 1280px;
+      height: 1680px;
       margin: auto;
       display: grid;
       gap: 15px;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       grid-template-rows: auto;
       grid-template-areas:
-        "hero hero hero hero aside2 aside2"
-        "hero hero hero hero aside2 aside2"
-        "hero hero hero hero aside2 aside2"
-        "hero hero hero hero aside3 aside3"
-        "hero hero hero hero aside3 aside3"
-        "hero hero hero hero aside3 aside3"
-        "aside4 aside4 aside4 aside5 aside5 aside5"
-        "aside4 aside4 aside4 aside5 aside5 aside5"
-        "aside4 aside4 aside4 aside5 aside5 aside5";
+        "hero hero aside2 aside2 aside2"
+        "aside3 aside3 aside3 aside4 aside4"
+        "aside5 aside5 aside5 aside5 aside5";
   
       @media (max-width: 768px) {
         height: auto;
@@ -707,29 +701,27 @@
         }
         
         &:nth-child(1) {
-          background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
-            url('/images/projects/pickaxe-knockout/pickaxe-knockout.png');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
+          url('/images/projects/pickaxe-knockout/pickaxe-knockout.png');
           grid-area: hero;
         }
-  
+
         &:nth-child(2) {
           background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
-            url('/images/projects/endzone-analytics/endzone-analytics.png');
+            url('/images/projects/code-scout/code-scout.png');
           grid-area: aside2;
         }
-  
+
         &:nth-child(3) {
           background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
             url('/images/projects/endzone-analytics/endzone-analytics.png');
           grid-area: aside3;
         }
-  
+
         &:nth-child(4) {
-          background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
-            url('/images/projects/code-scout/code-scout.png');
           grid-area: aside4;
         }
-        
+
         &:nth-child(5) {
           background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
             url('/images/projects/perks-ffa/perks-ffa.png');
