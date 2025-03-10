@@ -20,12 +20,17 @@ const applyTheme = (theme) => {
 
   // Update theme toggle button image
   updateImageSource(document.querySelector('.theme-toggle img'), 'theme');
-  
   // Update logo and other images
   updateImageSource(document.querySelector('.logo-icon img'), 'logo');
+
   ["location", "linkedin", "github", "me"].forEach(id => {
     updateImageSource(document.getElementById(`${id}-icon`), id);
   });
+
+    // Update card icons (switching between code-light.svg and code-dark.svg)
+    document.querySelectorAll(".card-icon img").forEach(img => {
+      img.src = `/images/icons/code-${theme}.svg`;
+    });
 };
 
 // This function is called by the onClick attribute in HTML
