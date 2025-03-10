@@ -1,28 +1,48 @@
-// Theme change functionality
-const changeTheme = () => {
+// Theme functionality
+const applyTheme = (theme) => {
   const root = document.documentElement;
-  const currTheme = root.getAttribute("page-theme");
-  const newTheme = currTheme === "dark" ? "light" : "dark";
+  root.setAttribute("page-theme", theme);
+  
+  // Update theme toggle button state
+  const themeToggleBtn = document.getElementById("theme-toggle-btn");
+  const themeToggleContainer = document.querySelector(".theme-toggle");
+  
+  if (themeToggleContainer) {
+    themeToggleContainer.classList.toggle("active", theme === "dark");
+  }
 
-  document.querySelector(".theme-toggle").classList.toggle("active");
-  root.setAttribute("page-theme", newTheme);
-  localStorage.setItem("theme", newTheme);
-
+  // Update image sources based on theme
   const updateImageSource = (element, imageId) => {
     if (element) {
-      element.src = `/images/${imageId}-${newTheme}.png`;
+      element.src = `/images/${imageId}-${theme}.png`;
     }
   };
 
-  updateImageSource(document.querySelector('.logo-icon img'), 'logo');
+  // Update theme toggle button image
   updateImageSource(document.querySelector('.theme-toggle img'), 'theme');
-
+  
+  // Update logo and other images
+  updateImageSource(document.querySelector('.logo-icon img'), 'logo');
   ["location", "linkedin", "github", "me"].forEach(id => {
     updateImageSource(document.getElementById(`${id}-icon`), id);
   });
 };
 
+// This function is called by the onClick attribute in HTML
+function changeTheme() {
+  const root = document.documentElement;
+  const currTheme = root.getAttribute("page-theme");
+  const newTheme = currTheme === "dark" ? "light" : "dark";
+  
+  localStorage.setItem("theme", newTheme);
+  applyTheme(newTheme);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  // Load saved theme or default to "light"
+  const savedTheme = localStorage.getItem("theme") || "light";
+  applyTheme(savedTheme);
+  
   function updateLogoText() {
     let logoText = document.querySelector(".logo-text");
     if (logoText) {
@@ -37,6 +57,11 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(data => {
       document.getElementById('header').innerHTML = data;
       updateLogoText(); // Ensure logo text updates after header is loaded
+      
+      // Re-apply theme to ensure header elements get correct theme after loading
+      const currentTheme = localStorage.getItem("theme") || "light";
+      applyTheme(currentTheme);
+      
       setupMobileMenu();
     })
     .catch(error => console.error("Error loading the header:", error));
