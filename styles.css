@@ -372,40 +372,46 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  
+    
     .hero-holder {
       display: flex;
       max-width: 1280px;
       gap: 25px;
-
-      .hero-image img {
-        padding: 0px 10px;
-        max-width: 100%;
-        height: auto;
+      
+      .hero-image {
+        flex: 1;
+        min-width: 0;
+        
+        img {
+          padding: 0px 10px;
+          max-width: 100%;
+          height: auto;
+        }
       }
-  
+        
       .hero-content {
-        flex: 2;
+        flex: 1;
+        min-width: 300px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-
+        
         .socials {
           display: inline-flex;
           align-items: center;
           gap: 10px;
           margin-top: 40px;
           margin-bottom: 5px;
-  
+            
           a {
             transition: transform 0.3s ease;
-  
+              
             &:hover {
               text-decoration: none;
               transform: scale(0.94);
             }
           }
-  
+            
           .resume-button {
             margin-top: -2px;
             padding: 12px 20px;
@@ -414,7 +420,7 @@
             border-radius: 5px;
           }
         }
-  
+          
         .location {
           display: inline-flex;
           align-items: baseline;
@@ -422,7 +428,7 @@
         }
       }
     }
-
+    
     @media (max-width: 768px) {
       .hero-holder {
         display: grid;
@@ -430,24 +436,23 @@
         grid-template-rows: auto auto;
         justify-items: center;
         padding: 0px 25px;
-
+        
         .hero-image img {
           padding: 0px 75px;
         }
-
+        
         .hero-image {
           order: -1;
           display: flex;
           justify-content: center;
         }
-
+        
         .hero-content .socials {
           margin-top: 20px;
         }
       }
     }
-    
-  }  
+  }
 
   .experience {
     .roles {
