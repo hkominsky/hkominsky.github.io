@@ -371,6 +371,12 @@
       display: flex;
       max-width: 1280px;
       gap: 25px;
+
+      .hero-image img {
+        padding: 0px 10px;
+        max-width: 100%;
+        height: auto;
+      }
   
       .hero-content {
         flex: 2;
@@ -410,6 +416,31 @@
         }
       }
     }
+
+    @media (max-width: 768px) {
+      .hero-holder {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        justify-items: center;
+        padding: 0px 25px;
+
+        .hero-image img {
+          padding: 0px 75px;
+        }
+
+        .hero-image {
+          order: -1;
+          display: flex;
+          justify-content: center;
+        }
+
+        .hero-content .socials {
+          margin-top: 20px;
+        }
+      }
+    }
+    
   }  
 
   .experience {
