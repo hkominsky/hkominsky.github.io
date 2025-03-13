@@ -175,6 +175,7 @@
       align-items: center;
       margin: auto;
       padding: 0 20px;
+      
   
       .logo-holder {
         display: flex;
@@ -184,11 +185,16 @@
         padding: 10px;
         font-weight: 600;
         color: var(--base-text);
+        transition: all 0.3s ease;
   
         .logo-text {
           color: var(--accent-color);
           font-size: 30px;
           font-weight: bold;
+        }
+
+        &:hover {
+          transform: scale(0.98);
         }
       }
   
