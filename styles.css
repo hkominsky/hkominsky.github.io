@@ -621,13 +621,12 @@
       height: 1680px;
       margin: auto;
       display: grid;
-      gap: 15px;
+      gap: 25px;
       grid-template-columns: repeat(5, 1fr);
       grid-template-rows: auto;
       grid-template-areas:
-        "hero hero aside2 aside2 aside2"
-        "aside3 aside3 aside3 aside4 aside4"
-        "aside5 aside5 aside5 aside5 aside5";
+        "hero hero aside2 aside2 aside2 aside2 aside2"
+        "aside3 aside3 aside3 aside4 aside4 aside4 aside4";
   
       @media (max-width: 768px) {
         height: auto;
@@ -637,7 +636,6 @@
           "aside2"
           "aside3"
           "aside4"
-          "aside5";
       }
   
       .item {
@@ -761,13 +759,9 @@
         }
 
         &:nth-child(4) {
-          grid-area: aside4;
-        }
-
-        &:nth-child(5) {
           background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
-            url('/images/projects/perks-ffa/perks-ffa.png');
-          grid-area: aside5;
+          url('/images/projects/perks-ffa/perks-ffa.png');
+          grid-area: aside4;
         }
       }
     }

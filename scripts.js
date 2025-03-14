@@ -236,8 +236,7 @@ document.addEventListener("DOMContentLoaded", () => {
     projectMap.set(0, 'projects/pickaxe-knockout.html');
     projectMap.set(1, 'projects/code-scout.html');
     projectMap.set(2, 'projects/endzone-analytics.html');
-    projectMap.set(3, 'projects/photo-editor.html');
-    projectMap.set(4, 'projects/perks-ffa.html');
+    projectMap.set(3, 'projects/perks-ffa.html');
   
     const projects = document.querySelectorAll('#projects .item');
   
