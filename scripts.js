@@ -14,16 +14,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // Set up scroll and navigation
   navigationInit();
 
-  if (window.location.pathname.includes('index.html')) {
-    // Set up contact form
-    contactFormInit();
-    
-    // Set up experience modals
-    modalSystemInit();
-    
-    // Set up links to project pages from bento grid item
-    projectLinksInit();
-  }
+  // Set up contact form
+  contactFormInit();
+  
+  // Set up experience modals
+  modalSystemInit();
+  
+  // Set up links to project pages from bento grid item
+  projectLinksInit();
 });
 
 /**
@@ -366,7 +364,7 @@ function modalSystemInit() {
   });
   
   // Set up modal close handlers
-  modalCloseHandlersInit(modal, closeBtn);
+  handleModalClose(modal, closeBtn);
 }
 
 /**
@@ -403,7 +401,7 @@ function openModal(modal, elements, data) {
  * @param {HTMLElement} modal - The modal element
  * @param {HTMLElement} closeBtn - The close button element
  */
-function modalCloseHandlersInit(modal, closeBtn) {
+function handleModalClose(modal, closeBtn) {
   // Describes functionality when the modal is closed
   const closeModal = () => {
     modal.style.display = 'none';
@@ -427,7 +425,7 @@ function modalCloseHandlersInit(modal, closeBtn) {
 /**
  * Provides linkage between bento grid items and each project's respective page
  */
-function setupProjectLinks() {
+function projectLinksInit() {
   // Project URLs map
   const projectMap = new Map([
     [0, 'projects/pickaxe-knockout.html'],

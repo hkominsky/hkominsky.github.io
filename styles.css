@@ -481,7 +481,7 @@
       }
   
       .article-footer {
-        display: none;
+        display: flex;
         justify-content: space-between;
         align-items: center;
         margin-top: auto;
@@ -829,6 +829,7 @@
         margin-top: 25px;
         text-align: left;
         font-weight: bold;
+        color: var(--base-text)
         }
 
         .success {
