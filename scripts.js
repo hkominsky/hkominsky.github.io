@@ -300,6 +300,46 @@ function showResponseMessage(element, message, type = "") {
   }
 }
 
+// Work experience data
+const workExperiences = [
+  { 
+    title: "Quantitative Developer Co-Op", 
+    company: "Scotiabank",
+    location: "New York City, NY",
+    dates: "December 2024 - Present",
+    description: `
+      - Recognizing the need for improved risk assessment models, I assisted in developing tools to analyze large datasets using SQL, Python, and Excel. This resulted in more precise pricing strategies for reinsurance products.
+      - To support decision-making, I created detailed reports and dashboards for senior management, helping them to better understand market trends. This led to more informed decisions and improved risk management.
+      - Faced with inefficiencies in data collection, I helped automate processes, which saved time and reduced manual errors, improving workflow efficiency across departments.
+      - Collaborating with cross-functional teams, I contributed to improving model accuracy, ultimately leading to enhanced risk models that better predicted financial outcomes.
+    `
+  },
+  { 
+    title: "Reinsurance Modeling Co-Op", 
+    company: "Guy Carpenter",
+    location: "Philadelphia, PA",
+    dates: "January 2024 - July 2024",
+    description: `
+      - Recognizing the need for improved risk assessment models, I assisted in developing tools to analyze large datasets using SQL, Python, and Excel. This resulted in more precise pricing strategies for reinsurance products.
+      - To support decision-making, I created detailed reports and dashboards for senior management, helping them to better understand market trends. This led to more informed decisions and improved risk management.
+      - Faced with inefficiencies in data collection, I helped automate processes, which saved time and reduced manual errors, improving workflow efficiency across departments.
+      - Collaborating with cross-functional teams, I contributed to improving model accuracy, ultimately leading to enhanced risk models that better predicted financial outcomes.
+    `
+  },
+  { 
+    title: "Data Engineer Intern", 
+    company: "J&K Seminars",
+    location: "Philadelphia, PA",
+    dates: "April 2023 - July 2023",
+    description: `
+      - In response to inefficiencies in inventory management, I collaborated with a team to develop a new system, creating dynamic data visualizations and writing optimized SQL queries to improve data accessibility. This led to a more streamlined process, increasing the efficiency of data-driven decisions.
+      - Faced with the need to enhance backend functionality, I utilized Python and SQL to write backend code that improved system reliability. As a result, the system supported smoother inventory operations and faster data retrieval.
+      - To ensure the system's accuracy, I conducted rigorous data validation tests, identifying errors early. This increased the accuracy of reporting, leading to more reliable data insights.
+      - Involved in the deployment phase, I worked on the integration of the new system into the company's existing operations, ensuring a smooth transition without disruptions to daily activities.
+    `
+  }
+];
+
 /**
  * Initializes the modal system for work experience details
  */
@@ -318,46 +358,6 @@ function modalSystemInit() {
   const closeBtn = document.querySelector('.close-btn');
   const experienceSpans = document.querySelectorAll('#experience .roles article span');
   
-  // Work experience data
-  const workExperiences = [
-    { 
-      title: "Quantitative Developer Co-Op", 
-      company: "Scotiabank",
-      location: "New York City, NY",
-      dates: "December 2024 - Present",
-      description: `
-        - Recognizing the need for improved risk assessment models, I assisted in developing tools to analyze large datasets using SQL, Python, and Excel. This resulted in more precise pricing strategies for reinsurance products.
-        - To support decision-making, I created detailed reports and dashboards for senior management, helping them to better understand market trends. This led to more informed decisions and improved risk management.
-        - Faced with inefficiencies in data collection, I helped automate processes, which saved time and reduced manual errors, improving workflow efficiency across departments.
-        - Collaborating with cross-functional teams, I contributed to improving model accuracy, ultimately leading to enhanced risk models that better predicted financial outcomes.
-      `
-    },
-    { 
-      title: "Reinsurance Modeling Co-Op", 
-      company: "Guy Carpenter",
-      location: "Philadelphia, PA",
-      dates: "January 2024 - July 2024",
-      description: `
-        - Recognizing the need for improved risk assessment models, I assisted in developing tools to analyze large datasets using SQL, Python, and Excel. This resulted in more precise pricing strategies for reinsurance products.
-        - To support decision-making, I created detailed reports and dashboards for senior management, helping them to better understand market trends. This led to more informed decisions and improved risk management.
-        - Faced with inefficiencies in data collection, I helped automate processes, which saved time and reduced manual errors, improving workflow efficiency across departments.
-        - Collaborating with cross-functional teams, I contributed to improving model accuracy, ultimately leading to enhanced risk models that better predicted financial outcomes.
-      `
-    },
-    { 
-      title: "Data Engineer Intern", 
-      company: "J&K Seminars",
-      location: "Philadelphia, PA",
-      dates: "April 2023 - July 2023",
-      description: `
-        - In response to inefficiencies in inventory management, I collaborated with a team to develop a new system, creating dynamic data visualizations and writing optimized SQL queries to improve data accessibility. This led to a more streamlined process, increasing the efficiency of data-driven decisions.
-        - Faced with the need to enhance backend functionality, I utilized Python and SQL to write backend code that improved system reliability. As a result, the system supported smoother inventory operations and faster data retrieval.
-        - To ensure the system's accuracy, I conducted rigorous data validation tests, identifying errors early. This increased the accuracy of reporting, leading to more reliable data insights.
-        - Involved in the deployment phase, I worked on the integration of the new system into the company's existing operations, ensuring a smooth transition without disruptions to daily activities.
-      `
-    }
-  ];
-  
   // Add click event to each "Learn More" span
   experienceSpans.forEach((item, index) => {
     item.addEventListener('click', () => openModal(modal, modalElements, workExperiences[index]));
@@ -365,6 +365,31 @@ function modalSystemInit() {
   
   // Set up modal close handlers
   handleModalClose(modal, closeBtn);
+
+  // Add media query for article footers
+  const mediaQuery = window.matchMedia('(min-width: 768px)');
+  showExperienceSpan(mediaQuery);
+  reduceExperienceText(mediaQuery);
+  mediaQuery.addEventListener('change', showExperienceSpan);
+  mediaQuery.addEventListener('change', reduceExperienceText);
+}
+
+/**
+ * Displays a learn more button for work experience roles on smaller screens
+ * 
+ * @param {mediaQuery} query - Returns true if the document is wider than 768px
+ */
+function showExperienceSpan(query) {
+  document.querySelectorAll('.article-footer').forEach(footer => {
+    footer.style.display = query.matches ? 'none' : 'flex';
+  });
+}
+
+function reduceExperienceText(query) {
+  const experienceText = document.querySelectorAll('.experience-text');
+  experienceText.forEach(text => {
+    text.textContent = query.matches ? text.textContent : text.textContent.substring(0, 350) + '...';
+  });
 }
 
 /**
@@ -441,16 +466,4 @@ function projectLinksInit() {
       window.location.href = projectMap.get(index);
     });
   });
-  
-  // Add media query for article footers
-  const mediaQuery = window.matchMedia('(min-width: 768px)');
-  const updateFooters = (query) => {
-    document.querySelectorAll('.article-footer').forEach(footer => {
-      footer.style.display = query.matches ? 'none' : 'flex';
-    });
-  };
-  
-  // Initial check and setup listener
-  updateFooters(mediaQuery);
-  mediaQuery.addEventListener('change', updateFooters);
 }
