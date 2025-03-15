@@ -103,11 +103,10 @@
   h3 {
     color: var(--base-text);
     font-size: 22px;
-  }
 
-  h5 {
-    font-size: 15px;
-    color: var(--base);
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
   }
 
   h4 {
@@ -119,12 +118,25 @@
     align-items: flex-start;
     word-wrap: break-word;
     white-space: normal;
+
+    @media (max-width: 768px) {
+      font-size: 25px;
+    }
+  }
+
+  h5 {
+    font-size: 15px;
+    color: var(--base);
   }
 
   p {
     font-size: 20px;
     margin-top: 7px;
     color: var(--base-text);
+
+    @media (max-width: 768px) {
+      font-size: 15px;
+    }
   }
 
   .menu-toggle {
@@ -498,10 +510,9 @@
         margin-top: 20px;
         margin-bottom: 5px;
       }
-  
-      div {
-        color: var(--base-text);
-        font-weight: 550;
+
+      p {
+        margin-top: 10px;
       }
 
       .mobile-exp {
@@ -732,6 +743,12 @@
           flex-direction: column;
           justify-content: flex-start;
           align-items: flex-start;
+
+          @media (max-width: 768px) {
+            h4 {
+              margin-bottom: -5px;
+            }
+          }
         }
 
         @media (max-width: 768px) {
