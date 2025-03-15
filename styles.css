@@ -481,11 +481,17 @@
       }
   
       .article-footer {
-        display: flex;
+        display: none;
         justify-content: space-between;
         align-items: center;
         margin-top: auto;
         padding-top: 20px;
+      }
+
+      @media (max-width: 768px) {
+        .article-footer {
+          display: flex;
+        }
       }
   
       span {
@@ -618,7 +624,7 @@
     .bento-grid {
       padding: 0 25px;
       max-width: 1280px;
-      height: 1680px;
+      height: 1180px;
       margin: auto;
       display: grid;
       gap: 25px;
@@ -770,7 +776,7 @@
   .contact-me {
     .form-content {
       padding: 0px 25px;
-      max-width: 880px;
+      max-width: 680px;
       margin: auto;
       background-color: var(--base);
       transition: ease 0.3s all;
