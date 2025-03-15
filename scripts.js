@@ -367,11 +367,14 @@ function modalSystemInit() {
   handleModalClose(modal, closeBtn);
 
   // Add media query for article footers
-  const mediaQuery = window.matchMedia('(min-width: 768px)');
-  showExperienceSpan(mediaQuery);
-  reduceExperienceText(mediaQuery);
-  mediaQuery.addEventListener('change', showExperienceSpan);
-  mediaQuery.addEventListener('change', reduceExperienceText);
+  const mediaQueryMobile = window.matchMedia('(max-width: 767px)');  // Adjusted to prevent overlap
+  const mediaQueryDesktop = window.matchMedia('(min-width: 768px)');
+  
+  showExperienceSpan(mediaQueryMobile);
+  reduceExperienceText(mediaQueryDesktop);
+  
+  mediaQueryMobile.addEventListener('change', () => showExperienceSpan(mediaQueryMobile));
+  mediaQueryDesktop.addEventListener('change', () => reduceExperienceText(mediaQueryDesktop));
 }
 
 /**
@@ -386,12 +389,15 @@ function showExperienceSpan(query) {
 }
 
 function reduceExperienceText(query) {
-  const experienceText = document.querySelectorAll('.experience-text');
-  experienceText.forEach(text => {
-    text.textContent = query.matches ? text.textContent : text.textContent.substring(0, 350) + '...';
+  document.querySelectorAll('.mobile-exp').forEach((mobile) => {
+    mobile.style.display = query.matches ? 'none' : 'block';
+  });
+
+  document.querySelectorAll('.desktop-exp p').forEach((desktop) => {
+    desktop.style.display = query.matches ? 'block' : 'none';
   });
 }
-
+ 
 /**
  * Opens a modal with the provided content
  * 

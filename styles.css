@@ -102,11 +102,7 @@
   
   h3 {
     color: var(--base-text);
-    font-size: 25px;
-
-    @media (max-width: 768px) {
-      font-size: 20px;
-    }
+    font-size: 22px;
   }
 
   h5 {
@@ -115,7 +111,7 @@
   }
 
   h4 {
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 700;
     color: var(--accent-color);
     display: flex;
@@ -123,21 +119,12 @@
     align-items: flex-start;
     word-wrap: break-word;
     white-space: normal;
-
-    @media (max-width: 768px) {
-      font-size: 25px;
-    }
   }
 
   p {
     font-size: 20px;
     margin-top: 7px;
     color: var(--base-text);
-
-    @media (max-width: 768px) {
-      font-size: 20px;
-      margin-top: 5px;
-    }
   }
 
   .menu-toggle {
@@ -507,7 +494,7 @@
         }
       }
   
-      h3 {
+      h4 {
         margin-top: 20px;
         margin-bottom: 5px;
       }
@@ -515,6 +502,10 @@
       div {
         color: var(--base-text);
         font-weight: 550;
+      }
+
+      .mobile-exp {
+        display: none;
       }
 
       figure {
