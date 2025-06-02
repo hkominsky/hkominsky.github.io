@@ -815,7 +815,7 @@
           color: var(--accent-color);
         }
   
-        input[type="submit"] {
+        button {
           padding: 12px 20px;
           background-color: var(--accent-color);
           color: var(--base-text);

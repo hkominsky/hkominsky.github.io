@@ -269,6 +269,39 @@ function contactFormInit() {
   });
 }
 
+function captchaSubmit(token) {
+  document.getElementById("contactForm").submit();
+}
+
+function onClick(e) {
+  e.preventDefault();
+  grecaptcha.enterprise.ready(async () => {
+    const token = await grecaptcha.enterprise.execute('6Ld5RwsrAAAAAKhAZR3NK7WwNbT5Z7OJqW_N3TCo', {action: 'submit_form'});
+    
+    // Now send this token to your server
+    // Example using fetch:
+    try {
+      const response = await fetch('/verify-recaptcha', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ token }),
+      });
+      
+      const result = await response.json();
+      if (result.success) {
+        document.getElementById("contactForm").submit();
+      } else {
+        console.error('reCAPTCHA verification failed');
+        // Show error to user
+      }
+    } catch (error) {
+      console.error('Error sending token to server:', error);
+    }
+  });
+}
+
 /**
  * Sets the enabled/disabled state of form elements
  * 

@@ -7,6 +7,7 @@
   <link rel="icon" href="/images/favicon/logo.png" type="image/png">
   <link rel="stylesheet" href="/styles.css">
   <script src="/scripts.js"></script>
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6Ld5RwsrAAAAAKhAZR3NK7WwNbT5Z7OJqW_N3TCo"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
@@ -187,7 +188,12 @@
           <input id="name" type="text" name="name" required placeholder="Name">
           <input id="email" type="email" name="email" required placeholder="E-Mail">
           <textarea id="message" rows="10" name="message" required placeholder="Your Message"></textarea>
-          <input type="submit" value="Submit">
+          <button class="g-recaptcha"
+            data-sitekey="6Ld5RwsrAAAAAKhAZR3NK7WwNbT5Z7OJqW_N3TCo"
+            data-callback='onSubmit'
+            data-action='submit_form'>
+            Submit
+          </button>
         </div>
         <div id="apiResponse" class="contact-api-response"></div>
       </form>
