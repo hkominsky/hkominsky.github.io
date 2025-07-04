@@ -343,22 +343,6 @@ nav ul li a:hover::after {
   transform: scale(0.94);
 }
 
-.resume-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--spacing-sm) var(--spacing-md);
-  border-radius: var(--border-radius-sm);
-  background-color: var(--accent-color);
-  color: var(--base-text);
-  font-weight: 600;
-  border: 2px solid transparent;
-  box-sizing: border-box;
-  text-decoration: none;
-  cursor: pointer;
-  user-select: none;
-}
-
 .socials a img {
   vertical-align: middle;
 }
