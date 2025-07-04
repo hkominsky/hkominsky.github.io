@@ -326,6 +326,14 @@ nav ul li a:hover::after {
   justify-content: center;
 }
 
+.hero-content h1 {
+  line-height: var(--line-height-tight);
+}
+
+.hero-content p {
+  line-height: var(--line-height-tight);
+}
+
 @keyframes floatUpDown {
   0%, 25%, 100% {
     transform: translateY(0);
@@ -337,9 +345,9 @@ nav ul li a:hover::after {
 
 .socials a {
   display: inline-block;
-  animation: floatUpDown 3.6s ease-in-out infinite; /* total duration reduced */
+  animation: floatUpDown 3.6s ease-in-out infinite;
   animation-fill-mode: forwards;
-  margin-top: var(--spacing-2xl);
+  margin-top: var(--spacing-md);
   margin-bottom: var(--spacing-xs);
   margin-right: var(--spacing-xs);
 }
