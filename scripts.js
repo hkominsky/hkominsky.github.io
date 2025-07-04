@@ -17,13 +17,29 @@ document.addEventListener("DOMContentLoaded", () => {
   // Set up contact form
   contactFormInit();
   
-  // Set up experience modals
-  modalSystemInit();
-  
   // Set up links to project pages from bento grid item
   projectLinksInit();
+
+  positionProjectCardTags();
 });
 
+
+function positionProjectCardTags() {
+  document.querySelectorAll('.project-card').forEach(card => {
+    const image = card.querySelector('.project-card-image');
+    const tags = card.querySelector('.project-card-tags');
+    if (!image || !tags) return;
+
+    const imageHeight = image.offsetHeight;
+    // Position tags vertically centered on the bottom border of image
+    tags.style.top = `${imageHeight}px`;
+  });
+}
+
+// Run once after DOM loads
+window.addEventListener('DOMContentLoaded', positionProjectCardTags);
+// Optional: reposition on window resize to stay in sync
+window.addEventListener('resize', positionProjectCardTags);
 /**
  * Applies the specified theme to the website
  * 
@@ -333,159 +349,6 @@ function showResponseMessage(element, message, type = "") {
   }
 }
 
-// Work experience data
-const workExperiences = [
-  { 
-    title: "Quantitative Developer Co-Op", 
-    company: "Scotiabank",
-    location: "New York City, NY",
-    dates: "December 2024 - Present",
-    description: `
-      - Recognizing the need for improved risk assessment models, I assisted in developing tools to analyze large datasets using SQL, Python, and Excel. This resulted in more precise pricing strategies for reinsurance products.
-      - To support decision-making, I created detailed reports and dashboards for senior management, helping them to better understand market trends. This led to more informed decisions and improved risk management.
-      - Faced with inefficiencies in data collection, I helped automate processes, which saved time and reduced manual errors, improving workflow efficiency across departments.
-      - Collaborating with cross-functional teams, I contributed to improving model accuracy, ultimately leading to enhanced risk models that better predicted financial outcomes.
-    `
-  },
-  { 
-    title: "Reinsurance Modeling Co-Op", 
-    company: "Guy Carpenter",
-    location: "Philadelphia, PA",
-    dates: "January 2024 - July 2024",
-    description: `
-      - Recognizing the need for improved risk assessment models, I assisted in developing tools to analyze large datasets using SQL, Python, and Excel. This resulted in more precise pricing strategies for reinsurance products.
-      - To support decision-making, I created detailed reports and dashboards for senior management, helping them to better understand market trends. This led to more informed decisions and improved risk management.
-      - Faced with inefficiencies in data collection, I helped automate processes, which saved time and reduced manual errors, improving workflow efficiency across departments.
-      - Collaborating with cross-functional teams, I contributed to improving model accuracy, ultimately leading to enhanced risk models that better predicted financial outcomes.
-    `
-  },
-  { 
-    title: "Data Engineer Intern", 
-    company: "J&K Seminars",
-    location: "Philadelphia, PA",
-    dates: "April 2023 - July 2023",
-    description: `
-      - In response to inefficiencies in inventory management, I collaborated with a team to develop a new system, creating dynamic data visualizations and writing optimized SQL queries to improve data accessibility. This led to a more streamlined process, increasing the efficiency of data-driven decisions.
-      - Faced with the need to enhance backend functionality, I utilized Python and SQL to write backend code that improved system reliability. As a result, the system supported smoother inventory operations and faster data retrieval.
-      - To ensure the system's accuracy, I conducted rigorous data validation tests, identifying errors early. This increased the accuracy of reporting, leading to more reliable data insights.
-      - Involved in the deployment phase, I worked on the integration of the new system into the company's existing operations, ensuring a smooth transition without disruptions to daily activities.
-    `
-  }
-];
-
-/**
- * Initializes the modal system for work experience details
- */
-function modalSystemInit() {
-  const modal = document.getElementById('modal');
-  if (!modal) return;
-  
-  const modalElements = {
-    title: document.getElementById('modal-title'),
-    description: document.getElementById('modal-description'),
-    company: document.getElementById('modal-company'),
-    location: document.getElementById('modal-location'),
-    dates: document.getElementById('modal-dates')
-  };
-  
-  const closeBtn = document.querySelector('.close-btn');
-  const experienceSpans = document.querySelectorAll('#experience .roles article span');
-  
-  // Add click event to each "Learn More" span
-  experienceSpans.forEach((item, index) => {
-    item.addEventListener('click', () => openModal(modal, modalElements, workExperiences[index]));
-  });
-  
-  // Set up modal close handlers
-  handleModalClose(modal, closeBtn);
-
-  // Add media query for article footers
-  const mediaQueryMobile = window.matchMedia('(max-width: 767px)');  // Adjusted to prevent overlap
-  const mediaQueryDesktop = window.matchMedia('(min-width: 768px)');
-  
-  showExperienceSpan(mediaQueryMobile);
-  reduceExperienceText(mediaQueryDesktop);
-  
-  mediaQueryMobile.addEventListener('change', () => showExperienceSpan(mediaQueryMobile));
-  mediaQueryDesktop.addEventListener('change', () => reduceExperienceText(mediaQueryDesktop));
-}
-
-/**
- * Displays a learn more button for work experience roles on smaller screens
- * 
- * @param {mediaQuery} query - Returns true if the document is wider than 768px
- */
-function showExperienceSpan(query) {
-  document.querySelectorAll('.article-footer').forEach(footer => {
-    footer.style.display = query.matches ? 'none' : 'flex';
-  });
-}
-
-function reduceExperienceText(query) {
-  document.querySelectorAll('.mobile-exp').forEach((mobile) => {
-    mobile.style.display = query.matches ? 'none' : 'block';
-  });
-
-  document.querySelectorAll('.desktop-exp p').forEach((desktop) => {
-    desktop.style.display = query.matches ? 'block' : 'none';
-  });
-}
- 
-/**
- * Opens a modal with the provided content
- * 
- * @param {HTMLElement} modal - The modal element
- * @param {Object} elements - Object containing references to modal content elements
- * @param {Object} data - The data to display in the modal
- */
-function openModal(modal, elements, data) {
-  // Set modal content
-  elements.company.textContent = data.company;
-  elements.title.textContent = data.title;
-  elements.location.textContent = data.location;
-  elements.dates.textContent = data.dates;
-  
-  // Format description as bullet points
-  const bulletPoints = data.description
-    .trim()
-    .split('\n')
-    .map(line => `<li>${line.trim()}</li>`)
-    .join('');
-    
-  elements.description.innerHTML = `<ul>${bulletPoints}</ul>`;
-  
-  // Show modal
-  modal.style.display = 'flex';
-  document.body.style.overflow = 'hidden';
-}
-
-/**
- * Initializes event handlers for closing the modal
- * 
- * @param {HTMLElement} modal - The modal element
- * @param {HTMLElement} closeBtn - The close button element
- */
-function handleModalClose(modal, closeBtn) {
-  // Describes functionality when the modal is closed
-  const closeModal = () => {
-    modal.style.display = 'none';
-    document.body.style.overflow = '';
-  };
-  
-  // Closes the modal when the close button is clicked
-  closeBtn.addEventListener('click', closeModal);
-  
-  // Closes the modal when the area outside the modal is clicked
-  window.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal();
-  });
-  
-  // Closes the modal when the esc key is clicked
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeModal();
-  });
-}
-
 /**
  * Provides linkage between bento grid items and each project's respective page
  */
@@ -497,11 +360,12 @@ function projectLinksInit() {
     [2, 'projects/endzone-analytics.html'],
     [3, 'projects/perks-ffa.html']
   ]);
-  
-  // Add click handlers to project items
-  const projects = document.querySelectorAll('#projects .item');
-  projects.forEach((item, index) => {
-    item.addEventListener('click', () => {
+
+  // Select all project cards (not .item, which no longer exists)
+  const projects = document.querySelectorAll('#projects .project-card');
+  projects.forEach((card, index) => {
+    card.style.cursor = "pointer";
+    card.addEventListener('click', () => {
       window.location.href = projectMap.get(index);
     });
   });
