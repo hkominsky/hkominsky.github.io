@@ -166,13 +166,6 @@ a {
 }
 
 /* Layout Components */
-section {
-  margin: auto;
-  gap: var(--spacing-xl);
-  margin-top: var(--spacing-3xl);
-  margin-bottom: var(--spacing-3xl);
-}
-
 .container {
   max-width: var(--container-max-width);
   margin: 0 auto;
@@ -1018,6 +1011,37 @@ nav ul li a:hover::after {
     transform: translateX(0%);
   }
 }
+
+/* Animation classes */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-animate.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animation for child elements */
+.scroll-animate.stagger-children > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.animate-in.stagger-children > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delay for staggered effect */
+.scroll-animate.animate-in.stagger-children > *:nth-child(1) { transition-delay: 0.1s; }
+.scroll-animate.animate-in.stagger-children > *:nth-child(2) { transition-delay: 0.2s; }
+.scroll-animate.animate-in.stagger-children > *:nth-child(3) { transition-delay: 0.3s; }
+.scroll-animate.animate-in.stagger-children > *:nth-child(4) { transition-delay: 0.4s; }
+.scroll-animate.animate-in.stagger-children > *:nth-child(5) { transition-delay: 0.5s; }
 
 footer {
   margin-top: var(--spacing-5xl);

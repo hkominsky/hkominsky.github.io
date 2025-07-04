@@ -21,8 +21,28 @@ document.addEventListener("DOMContentLoaded", () => {
   projectLinksInit();
 
   positionProjectCardTags();
+
+  scrollAnimationInit();
 });
 
+function scrollAnimationInit() {
+  const animateElements = document.querySelectorAll('.scroll-animate');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+      }
+    });
+  }, {
+    threshold: 0.25,
+    rootMargin: '0px 0px -50px 0px'
+  });
+  
+  animateElements.forEach(element => {
+    observer.observe(element);
+  });
+}
 
 function positionProjectCardTags() {
   document.querySelectorAll('.project-card').forEach(card => {
