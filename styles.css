@@ -652,60 +652,47 @@ nav ul li a:hover::after {
   .menu-toggle {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    width: 20px;
-    height: 15px;
+    width: var(--spacing-md);
+    height: var(--spacing-md);
     cursor: pointer;
-    padding: var(--spacing-xs);
-    transition: transform var(--transition-fast);
-    position: relative;
-    padding: var(--spacing-lg) 22px;
-    border-radius: var(--border-radius-sm);
+    padding: 12px 12px;
     background-color: var(--base-200);
-    transition: var(--transition-fast);
+    border-radius: var(--border-radius-sm);
+    transition: background-color var(--transition-fast);
+    box-sizing: content-box;
   }
-  
+
   .menu-toggle:hover {
     background-color: var(--base-400);
   }
-  
+
   .menu-toggle span {
-    position: absolute;
     display: block;
-    width: 20px;
+    width: var(--spacing-md);
     height: 1px;
     background-color: var(--base-text);
-    transition: var(--transition-fast);
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+    transition: transform var(--transition-fast), opacity var(--transition-fast);
+    transform-origin: center center;
+    position: relative;
   }
-  
-  .menu-toggle span:nth-child(1) {
-    top: var(--spacing-sm);
+
+  .menu-toggle.active span:nth-child(1),
+  .menu-toggle.active span:nth-child(3) {
+    width: var(--spacing-lg);
   }
-  
-  .menu-toggle span:nth-child(2) {
-    top: 18px;
-  }
-  
-  .menu-toggle span:nth-child(3) {
-    top: 26px;
-  }
-  
+
   .menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg);
-    top: 18px;
+    transform: translateY(7.5px) rotate(45deg);
   }
-  
+
   .menu-toggle.active span:nth-child(2) {
     opacity: 0;
   }
-  
+
   .menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg);
-    top: 18px;
+    transform: translateY(-7.5px) rotate(-45deg);
   }
   
   nav ul {

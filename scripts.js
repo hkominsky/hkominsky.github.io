@@ -78,7 +78,7 @@ const updateThemeImages = (theme) => {
   updateImage('.logo-icon img', 'logo');
   
   // Update multiple icons in one go
-  ["location", "linkedin", "github", "me"].forEach(id => {
+  ["location", "resume", "linkedin", "github", "me"].forEach(id => {
     updateImage(document.getElementById(`${id}-icon`), id);
   });
 
