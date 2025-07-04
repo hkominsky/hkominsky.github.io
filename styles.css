@@ -326,25 +326,34 @@ nav ul li a:hover::after {
   justify-content: center;
 }
 
-.socials {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  margin-top: var(--spacing-2xl);
-  margin-bottom: var(--spacing-xs);
+@keyframes floatUpDown {
+  0%, 25%, 100% {
+    transform: translateY(0);
+  }
+  12.5% {
+    transform: translateY(-6px);
+  }
 }
 
 .socials a {
-  transition: transform var(--transition-fast);
+  display: inline-block;
+  animation: floatUpDown 3.6s ease-in-out infinite; /* total duration reduced */
+  animation-fill-mode: forwards;
+  margin-top: var(--spacing-2xl);
+  margin-bottom: var(--spacing-xs);
+  margin-right: var(--spacing-xs);
 }
 
-.socials a:hover {
-  text-decoration: none;
-  transform: scale(0.94);
+.socials a:nth-child(1) {
+  animation-delay: 0s;
 }
 
-.socials a img {
-  vertical-align: middle;
+.socials a:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.socials a:nth-child(3) {
+  animation-delay: 0.6s;
 }
 
 .location {
