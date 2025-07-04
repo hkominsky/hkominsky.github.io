@@ -982,10 +982,10 @@ nav ul li a:hover::after {
 
 .outcome-card h3 {
   margin-top: 0;
-  border-bottom: 2px solid var(--base-200);
+  border-bottom: 2px solid var(--base-text);
   padding-bottom: var(--spacing-md);
   margin-bottom: var(--spacing-lg);
-  color: var(--base);
+  color: var(--base-text);
 }
 
 .project-outcomes .outcome-card:hover {
