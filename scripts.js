@@ -1,71 +1,51 @@
+// ============================================================================
+// INITIALIZATION
+// ============================================================================
+
 /**
  * Main initialization function that runs when DOM is loaded
+ * Sets up all core functionality for the portfolio website
  */
 document.addEventListener("DOMContentLoaded", () => {
-  // Apply saved theme or default
-  applyTheme(localStorage.getItem("theme") || "light");
+  // Apply saved theme or default to light
+  applyTheme(getStoredTheme() || "light");
   
-  // Set up responsive elements
+  // Initialize all core components
   responsiveElementsInit();
-  
-  // Load the header and footer of the page
   componentsInit();
-
-  // Set up scroll and navigation
   navigationInit();
-
-  // Set up contact form
   contactFormInit();
-  
-  // Set up links to project pages from bento grid item
   projectLinksInit();
-
-  positionProjectCardTags();
-
   scrollAnimationInit();
+  
+  // Position project card tags after layout is complete
+  positionProjectCardTags();
 });
 
-function scrollAnimationInit() {
-  const animateElements = document.querySelectorAll('.scroll-animate');
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-in');
-      }
-    });
-  }, {
-    threshold: 0.25,
-    rootMargin: '0px 0px -50px 0px'
-  });
-  
-  animateElements.forEach(element => {
-    observer.observe(element);
-  });
+// ============================================================================
+// THEME MANAGEMENT
+// ============================================================================
+
+/**
+ * Retrieves the stored theme from localStorage
+ * @returns {string|null} The stored theme value or null if not found
+ */
+function getStoredTheme() {
+  return localStorage.getItem("theme");
 }
 
-function positionProjectCardTags() {
-  document.querySelectorAll('.project-card').forEach(card => {
-    const image = card.querySelector('.project-card-image');
-    const tags = card.querySelector('.project-card-tags');
-    if (!image || !tags) return;
-
-    const imageHeight = image.offsetHeight;
-    // Position tags vertically centered on the bottom border of image
-    tags.style.top = `${imageHeight}px`;
-  });
-}
-
-// Run once after DOM loads
-window.addEventListener('DOMContentLoaded', positionProjectCardTags);
-// Optional: reposition on window resize to stay in sync
-window.addEventListener('resize', positionProjectCardTags);
 /**
  * Applies the specified theme to the website
- * 
+ * Updates DOM attributes, UI elements, and images based on theme
  * @param {string} theme - The theme to apply ('light' or 'dark')
  */
 const applyTheme = (theme) => {
+  // Validate theme parameter
+  if (!["light", "dark"].includes(theme)) {
+    console.warn(`Invalid theme: ${theme}. Defaulting to light.`);
+    theme = "light";
+  }
+  
   // Set theme attribute on root element
   document.documentElement.setAttribute("page-theme", theme);
   
@@ -81,11 +61,11 @@ const applyTheme = (theme) => {
 
 /**
  * Updates image sources based on the current theme
- * 
+ * Handles both icon images and theme-specific graphics
  * @param {string} theme - The current theme ('light' or 'dark')
  */
 const updateThemeImages = (theme) => {
-  // Function to update image source
+  // Function to safely update image source
   const updateImage = (selector, imageId) => {
     const element = typeof selector === 'string' ? document.querySelector(selector) : selector;
     if (element) {
@@ -93,16 +73,19 @@ const updateThemeImages = (theme) => {
     }
   };
 
-  // Update UI elements
+  // Update main UI elements
   updateImage('.theme-toggle img', 'theme');
   updateImage('.logo-icon img', 'logo');
   
-  // Update multiple icons in one go
+  // Update multiple icons efficiently
   ["location", "resume", "linkedin", "github", "me"].forEach(id => {
-    updateImage(document.getElementById(`${id}-icon`), id);
+    const iconElement = document.getElementById(`${id}-icon`);
+    if (iconElement) {
+      updateImage(iconElement, id);
+    }
   });
 
-  // Update card icons
+  // Update card icons (using SVG format)
   document.querySelectorAll(".card-icon img").forEach(img => {
     img.src = `/images/icons/code-${theme}.svg`;
   });
@@ -110,6 +93,7 @@ const updateThemeImages = (theme) => {
 
 /**
  * Toggles between light and dark themes
+ * Saves the new theme to localStorage and applies it
  */
 function changeTheme() {
   const currTheme = document.documentElement.getAttribute("page-theme");
@@ -119,11 +103,19 @@ function changeTheme() {
   applyTheme(newTheme);
 }
 
+// ============================================================================
+// RESPONSIVE DESIGN
+// ============================================================================
+
 /**
  * Initializes responsive UI elements that adapt to screen size
+ * Currently handles logo text truncation on mobile devices
  */
 function responsiveElementsInit() {
-  // Update logo text based on screen width
+  /**
+   * Updates logo text based on screen width
+   * Shows full name on desktop, abbreviated on mobile
+   */
   function updateLogoText() {
     const logoText = document.querySelector(".logo-text");
     if (logoText) {
@@ -131,41 +123,63 @@ function responsiveElementsInit() {
     }
   }
   
+  // Set initial state and listen for resize events
   updateLogoText();
   window.addEventListener("resize", updateLogoText);
 }
 
+// ============================================================================
+// COMPONENT LOADING
+// ============================================================================
+
 /**
  * Loads external HTML components like header and footer
+ * Handles async loading and error states
  */
 function componentsInit() {
-  // Load header
+  // Load header component
   fetch('/header.html')
-    .then(response => response.text())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.text();
+    })
     .then(data => {
       document.getElementById('header').innerHTML = data;
+      // Re-initialize components that depend on header
       responsiveElementsInit();
       mobileMenuInit();
-      applyTheme(localStorage.getItem("theme") || "light");
+      applyTheme(getStoredTheme() || "light");
     })
     .catch(error => console.error("Error loading header:", error));
 
-  // Load footer  
+  // Load footer component
   fetch('/footer.html')
-    .then(response => response.text())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.text();
+    })
     .then(data => {
       document.getElementById('footer').innerHTML = data;
     })
     .catch(error => console.error("Error loading footer:", error));
 }
 
+// ============================================================================
+// NAVIGATION AND SCROLLING
+// ============================================================================
+
 /**
  * Initializes navigation and smooth scrolling functionality
+ * Handles hash-based navigation and smooth scroll behavior
  */
 function navigationInit() {
   const pageOffset = 110;
   
-  // Handle initial hash in URL
+  // Handle initial hash in URL after page load
   setTimeout(() => {
     if (window.location.hash) {
       scrollToSection(window.location.hash.substring(1), pageOffset);
@@ -176,8 +190,10 @@ function navigationInit() {
   document.addEventListener('click', (e) => {
     const anchor = e.target.closest("a[href*='#']");
     if (anchor) {
-      const sectionId = anchor.getAttribute("href").split('#')[1];
-      if (document.getElementById(sectionId)) {
+      const href = anchor.getAttribute("href");
+      const sectionId = href.split('#')[1];
+      
+      if (sectionId && document.getElementById(sectionId)) {
         e.preventDefault();
         scrollToSection(sectionId, pageOffset);
         history.pushState(null, null, `#${sectionId}`);
@@ -185,7 +201,7 @@ function navigationInit() {
     }
   });
   
-  // Handle hash changes
+  // Handle browser back/forward navigation
   window.addEventListener('hashchange', () => {
     if (window.location.hash) {
       scrollToSection(window.location.hash.substring(1), 100);
@@ -208,8 +224,13 @@ function scrollToSection(sectionId, offset) {
   }
 }
 
+// ============================================================================
+// MOBILE MENU
+// ============================================================================
+
 /**
  * Initializes mobile menu functionality
+ * Sets up menu toggle, click handlers, and outside click detection
  */
 function mobileMenuInit() {
   const menuToggle = document.querySelector('.menu-toggle');
@@ -217,7 +238,7 @@ function mobileMenuInit() {
   
   if (!menuToggle || !navMenu) return;
 
-  // Toggle menu on click
+  // Toggle menu on hamburger click
   menuToggle.addEventListener('click', () => toggleMenu(menuToggle, navMenu));
 
   // Close menu when clicking a navigation item
@@ -251,8 +272,13 @@ function toggleMenu(toggle, menu, state = null) {
   }
 }
 
+// ============================================================================
+// CONTACT FORM
+// ============================================================================
+
 /**
  * Initializes the contact form submission handling
+ * Sets up form validation, API submission, and user feedback
  */
 function contactFormInit() {
   const contactForm = document.getElementById('contactForm');
@@ -263,7 +289,7 @@ function contactFormInit() {
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
-    // API endpoint
+    // API endpoint for form submission
     const URL = "https://script.google.com/macros/s/AKfycbwXEQ8Fu2jBDr7KLDNASK6njDyu9RQakWUnvG_lV5nJrq5IyDhcF06KvSlIaBrJNYw3Ow/exec";
     
     // Form elements
@@ -275,10 +301,17 @@ function contactFormInit() {
     
     // Get form data
     const formData = {
-      name: contactForm.name.value,
-      email: contactForm.email.value,
-      message: contactForm.message.value
+      name: contactForm.name.value.trim(),
+      email: contactForm.email.value.trim(),
+      message: contactForm.message.value.trim()
     };
+    
+    // Basic form validation
+    if (!formData.name || !formData.email || !formData.message) {
+      showResponseMessage(apiResponse, "Please fill in all required fields.", "error");
+      setFormState(formElements, submitButton, false);
+      return;
+    }
     
     // Show sending message
     const firstName = formData.name.split(" ")[0];
@@ -305,42 +338,8 @@ function contactFormInit() {
   });
 }
 
-function captchaSubmit(token) {
-  document.getElementById("contactForm").submit();
-}
-
-function onClick(e) {
-  e.preventDefault();
-  grecaptcha.enterprise.ready(async () => {
-    const token = await grecaptcha.enterprise.execute('6Ld5RwsrAAAAAKhAZR3NK7WwNbT5Z7OJqW_N3TCo', {action: 'submit_form'});
-    
-    // Now send this token to your server
-    // Example using fetch:
-    try {
-      const response = await fetch('/verify-recaptcha', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ token }),
-      });
-      
-      const result = await response.json();
-      if (result.success) {
-        document.getElementById("contactForm").submit();
-      } else {
-        console.error('reCAPTCHA verification failed');
-        // Show error to user
-      }
-    } catch (error) {
-      console.error('Error sending token to server:', error);
-    }
-  });
-}
-
 /**
  * Sets the enabled/disabled state of form elements
- * 
  * @param {NodeList} elements - The form input elements
  * @param {HTMLElement} submitButton - The form submit button
  * @param {boolean} isDisabled - Whether to disable (true) or enable (false) the elements
@@ -356,7 +355,6 @@ function setFormState(elements, submitButton, isDisabled) {
 
 /**
  * Displays a response message to the user
- * 
  * @param {HTMLElement} element - The element to display the message in
  * @param {string} message - The message text to display
  * @param {string} type - Optional message type for styling ('success', 'error', etc.)
@@ -369,11 +367,16 @@ function showResponseMessage(element, message, type = "") {
   }
 }
 
+// ============================================================================
+// PROJECT NAVIGATION
+// ============================================================================
+
 /**
  * Provides linkage between bento grid items and each project's respective page
+ * Maps project card clicks to their corresponding project detail pages
  */
 function projectLinksInit() {
-  // Project URLs map
+  // Project URLs mapping
   const projectMap = new Map([
     [0, 'projects/pickaxe-knockout.html'],
     [1, 'projects/code-scout.html'],
@@ -381,12 +384,63 @@ function projectLinksInit() {
     [3, 'projects/perks-ffa.html']
   ]);
 
-  // Select all project cards (not .item, which no longer exists)
+  // Select all project cards and add click handlers
   const projects = document.querySelectorAll('#projects .project-card');
   projects.forEach((card, index) => {
     card.style.cursor = "pointer";
     card.addEventListener('click', () => {
-      window.location.href = projectMap.get(index);
+      const projectUrl = projectMap.get(index);
+      if (projectUrl) {
+        window.location.href = projectUrl;
+      }
     });
   });
 }
+
+// ============================================================================
+// ANIMATIONS AND VISUAL EFFECTS
+// ============================================================================
+
+/**
+ * Initializes scroll-based animations using Intersection Observer
+ * Animates elements when they come into view
+ */
+function scrollAnimationInit() {
+  const animateElements = document.querySelectorAll('.scroll-animate');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+      }
+    });
+  }, {
+    threshold: 0.25,
+    rootMargin: '0px 0px -50px 0px'
+  });
+  
+  animateElements.forEach(element => {
+    observer.observe(element);
+  });
+}
+
+/**
+ * Positions project card tags relative to their associated images
+ * Ensures tags are properly aligned with the bottom border of project images
+ */
+function positionProjectCardTags() {
+  document.querySelectorAll('.project-card').forEach(card => {
+    const image = card.querySelector('.project-card-image');
+    const tags = card.querySelector('.project-card-tags');
+    
+    if (!image || !tags) return;
+
+    const imageHeight = image.offsetHeight;
+    // Position tags vertically centered on the bottom border of image
+    tags.style.top = `${imageHeight}px`;
+  });
+}
+
+// Set up event listeners for tag positioning
+window.addEventListener('DOMContentLoaded', positionProjectCardTags);
+window.addEventListener('resize', positionProjectCardTags);
