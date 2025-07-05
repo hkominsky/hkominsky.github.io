@@ -7,23 +7,54 @@
  * Sets up all core functionality for the portfolio website
  */
 document.addEventListener("DOMContentLoaded", () => {
-  // Apply saved theme or default to light
+  // Always apply theme and components regardless of page
   applyTheme(getStoredTheme() || "light");
-  
-  // Check if animations should be skipped BEFORE initializing scroll animations
-  handleAnimationState();
-  
-  // Initialize all core components
-  responsiveElementsInit();
   componentsInit();
-  navigationInit();
-  contactFormInit();
-  projectLinksInit();
-  scrollAnimationInit();
   
-  // Position project card tags after layout is complete
-  positionProjectCardTags();
+  // Check if this is the home page before running other functions
+  if (isHomePage()) {
+    // Check if animations should be skipped 
+    handleAnimationState();
+    
+    // Initialize all core home page components
+    responsiveElementsInit();
+    navigationInit();
+    contactFormInit();
+    projectLinksInit();
+    scrollAnimationInit();
+
+    // Position project card tags after layout is complete
+    positionProjectCardTags();
+  }
 });
+
+/**
+ * Determines if the current page is the home page
+ * @returns {boolean} True if this is the home page, false otherwise
+ */
+function isHomePage() {
+  const homeElements = [
+    '#projects',
+    '#contact',
+    '.project-card'
+  ];
+  
+  const hasHomeElements = homeElements.some(selector => 
+    document.querySelector(selector) !== null
+  );
+  
+  const projectElements = [
+    '.project-container',
+    '.project-hero',
+    '.project-overview'
+  ];
+  
+  const hasProjectElements = projectElements.some(selector => 
+    document.querySelector(selector) !== null
+  );
+  
+  return hasHomeElements && !hasProjectElements;
+}
 
 // ============================================================================
 // THEME MANAGEMENT
@@ -43,16 +74,13 @@ function getStoredTheme() {
  * @param {string} theme - The theme to apply ('light' or 'dark')
  */
 const applyTheme = (theme) => {
-  // Validate theme parameter
   if (!["light", "dark"].includes(theme)) {
     console.warn(`Invalid theme: ${theme}. Defaulting to light.`);
     theme = "light";
   }
   
-  // Set theme attribute on root element
   document.documentElement.setAttribute("page-theme", theme);
   
-  // Update theme toggle if it exists
   const themeToggleContainer = document.querySelector(".theme-toggle");
   if (themeToggleContainer) {
     themeToggleContainer.classList.toggle("active", theme === "dark");
@@ -68,7 +96,6 @@ const applyTheme = (theme) => {
  * @param {string} theme - The current theme ('light' or 'dark')
  */
 const updateThemeImages = (theme) => {
-  // Function to safely update image source
   const updateImage = (selector, imageId) => {
     const element = typeof selector === 'string' ? document.querySelector(selector) : selector;
     if (element) {
@@ -76,11 +103,9 @@ const updateThemeImages = (theme) => {
     }
   };
 
-  // Update main UI elements
   updateImage('.theme-toggle img', 'theme');
   updateImage('.logo-icon img', 'logo');
   
-  // Update multiple icons efficiently
   ["location", "resume", "linkedin", "github", "me"].forEach(id => {
     const iconElement = document.getElementById(`${id}-icon`);
     if (iconElement) {
@@ -88,7 +113,6 @@ const updateThemeImages = (theme) => {
     }
   });
 
-  // Update card icons (using SVG format)
   document.querySelectorAll(".card-icon img").forEach(img => {
     img.src = `/images/icons/code-${theme}.svg`;
   });
@@ -115,6 +139,7 @@ function changeTheme() {
  * Currently handles logo text truncation on mobile devices
  */
 function responsiveElementsInit() {
+
   /**
    * Updates logo text based on screen width
    * Shows full name on desktop, abbreviated on mobile
@@ -126,7 +151,6 @@ function responsiveElementsInit() {
     }
   }
   
-  // Set initial state and listen for resize events
   updateLogoText();
   window.addEventListener("resize", updateLogoText);
 }
@@ -140,7 +164,6 @@ function responsiveElementsInit() {
  * Handles async loading and error states
  */
 function componentsInit() {
-  // Load header component
   fetch('/header.html')
     .then(response => {
       if (!response.ok) {
@@ -150,14 +173,12 @@ function componentsInit() {
     })
     .then(data => {
       document.getElementById('header').innerHTML = data;
-      // Re-initialize components that depend on header
       responsiveElementsInit();
       mobileMenuInit();
       applyTheme(getStoredTheme() || "light");
     })
     .catch(error => console.error("Error loading header:", error));
 
-  // Load footer component
   fetch('/footer.html')
     .then(response => {
       if (!response.ok) {
@@ -182,14 +203,12 @@ function componentsInit() {
 function navigationInit() {
   const pageOffset = 110;
   
-  // Handle initial hash in URL after page load
   setTimeout(() => {
     if (window.location.hash) {
       scrollToSection(window.location.hash.substring(1), pageOffset);
     }
   }, 100);
 
-  // Handle anchor clicks for smooth scrolling
   document.addEventListener('click', (e) => {
     const anchor = e.target.closest("a[href*='#']");
     if (anchor) {
@@ -204,7 +223,6 @@ function navigationInit() {
     }
   });
   
-  // Handle browser back/forward navigation
   window.addEventListener('hashchange', () => {
     if (window.location.hash) {
       scrollToSection(window.location.hash.substring(1), 100);
@@ -241,15 +259,12 @@ function mobileMenuInit() {
   
   if (!menuToggle || !navMenu) return;
 
-  // Toggle menu on hamburger click
   menuToggle.addEventListener('click', () => toggleMenu(menuToggle, navMenu));
 
-  // Close menu when clicking a navigation item
   document.querySelectorAll('header .header-content nav ul li a').forEach(link => {
     link.addEventListener('click', () => toggleMenu(menuToggle, navMenu, false));
   });
 
-  // Close menu when clicking outside
   document.addEventListener('click', (event) => {
     if (!navMenu.contains(event.target) && 
         !menuToggle.contains(event.target) && 
@@ -292,35 +307,28 @@ function contactFormInit() {
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
-    // API endpoint for form submission
     const URL = "https://script.google.com/macros/s/AKfycbwXEQ8Fu2jBDr7KLDNASK6njDyu9RQakWUnvG_lV5nJrq5IyDhcF06KvSlIaBrJNYw3Ow/exec";
     
-    // Form elements
     const submitButton = contactForm.querySelector('input[type="submit"]');
     const formElements = contactForm.querySelectorAll('input, textarea');
     
-    // Disable form during submission
     setFormState(formElements, submitButton, true);
     
-    // Get form data
     const formData = {
       name: contactForm.name.value.trim(),
       email: contactForm.email.value.trim(),
       message: contactForm.message.value.trim()
     };
     
-    // Basic form validation
     if (!formData.name || !formData.email || !formData.message) {
       showResponseMessage(apiResponse, "Please fill in all required fields.", "error");
       setFormState(formElements, submitButton, false);
       return;
     }
     
-    // Show sending message
     const firstName = formData.name.split(" ")[0];
     showResponseMessage(apiResponse, `Your message is being sent, ${firstName}...`);
     
-    // Submit form
     fetch(URL, {
       method: "POST",
       mode: "no-cors",
@@ -379,7 +387,6 @@ function showResponseMessage(element, message, type = "") {
  * Maps project card clicks to their corresponding project detail pages
  */
 function projectLinksInit() {
-  // Project URLs mapping
   const projectMap = new Map([
     [0, 'projects/pickaxe-knockout.html'],
     [1, 'projects/code-scout.html'],
@@ -387,7 +394,6 @@ function projectLinksInit() {
     [3, 'projects/perks-ffa.html']
   ]);
 
-  // Select all project cards and add click handlers
   const projects = document.querySelectorAll('#projects .project-card');
   projects.forEach((card, index) => {
     card.style.cursor = "pointer";
@@ -412,7 +418,6 @@ function handleAnimationState() {
   const hasSeenAnimations = sessionStorage.getItem('hasSeenAnimations');
   
   if (hasSeenAnimations) {
-    // If animations have been seen, add a class to prevent them from running
     document.documentElement.classList.add('skip-animations');
   }
 }
@@ -422,7 +427,6 @@ function handleAnimationState() {
  * Only runs animations on first visit to avoid re-animating on navigation returns
  */
 function scrollAnimationInit() {
-  // Check if we should skip animations entirely
   if (document.documentElement.classList.contains('skip-animations')) {
     skipAnimations();
     return;
@@ -432,7 +436,6 @@ function scrollAnimationInit() {
   
   if (animateElements.length === 0) return;
   
-  // Track which elements have been animated to mark session as complete
   let animatedCount = 0;
   const totalElements = animateElements.length;
   
@@ -442,7 +445,6 @@ function scrollAnimationInit() {
         entry.target.classList.add('animate-in');
         animatedCount++;
         
-        // Mark session as having seen animations when majority of elements are animated
         if (animatedCount >= Math.ceil(totalElements * 0.7)) {
           sessionStorage.setItem('hasSeenAnimations', 'true');
         }
@@ -487,5 +489,14 @@ function positionProjectCardTags() {
 }
 
 // Set up event listeners for tag positioning
-window.addEventListener('DOMContentLoaded', positionProjectCardTags);
-window.addEventListener('resize', positionProjectCardTags);
+window.addEventListener('DOMContentLoaded', () => {
+  if (isHomePage()) {
+    positionProjectCardTags();
+  }
+});
+
+window.addEventListener('resize', () => {
+  if (isHomePage()) {
+    positionProjectCardTags();
+  }
+});
