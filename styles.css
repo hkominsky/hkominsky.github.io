@@ -66,6 +66,7 @@
   --transition-slow: 1s ease;
   
   /* Z-index scale */
+  --z-dropdown: 2;
   --z-header: 3;
   --z-modal: 4;
   --z-tooltip: 5;
@@ -689,42 +690,39 @@ nav ul li a:hover::after {
   }
   
   nav ul {
+    z-index: var(--z-modal);
     position: absolute;
     top: 100%;
-    right: 0;
-    width: 100vw; /* Full screen width */
-    flex-direction: column;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background-color: var(--base-200);
-    border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-xl);
     opacity: 0;
     visibility: hidden;
-    padding: var(--spacing-xl) var(--spacing-2xl); /* Bigger padding */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    z-index: var(--z-header);
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
   }
 
   nav ul.active {
     opacity: 1;
     visibility: visible;
-    max-height: 600px;
-    transition: max-height 0.4s ease-in-out, opacity 0.4s ease;
+    pointer-events: all;
   }
 
   nav ul li {
-    width: 100%;
-    margin: var(--spacing-sm) 0;
-    opacity: 0;
-    transform: translateY(var(--spacing-sm));
-    transition: opacity var(--transition-fast), transform var(--transition-fast);
-    transition-delay: 0s;
+    margin: 0;
+    opacity: 1;
+    transform: none;
   }
 
   nav ul li a {
-    display: block;
-    width: 100%;
+    text-align: center;
+    font-size: var(--font-size-h2);
     padding: var(--spacing-md) var(--spacing-lg);
-    text-align: left;
-    font-size: var(--font-size-base);
   }
 
   nav ul li a::after,
