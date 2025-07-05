@@ -1,120 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Code Scout</title>
-  <link rel="icon" href="/images/favicon/logo.png" type="image/png">
-  <link rel="stylesheet" href="/styles.css">
-  <script src="/scripts.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="/images/favicon/logo.png" type="image/png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/scripts.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <header id="header"></header>
-    
-    <main class="project-container">
-      <section class="project-hero">
-        <div class="project-hero-content">
-            <h1>Code Scout</h1>
-            <p class="project-tagline">A modern recreation of Stack Overflow with real-time features</p>
-            <div class="project-stats">
-                <div class="stat-box">
-                    <span class="stat-number">5,000+</span>
-                    <span class="stat-label">Active Users</span>
-                </div>
-                <div class="stat-box">
-                  <span class="stat-number">Instant</span>
-                  <span class="stat-label">Live Updates</span>
-                </div>
-            </div>
+  <header id="header"></header>
+
+  <main class="project-container">
+    <!-- Hero -->
+    <section class="project-hero">
+      <div class="project-hero-content">
+        <h1>Code Scout</h1>
+        <p class="project-tagline">
+          A modern recreation of Stack Overflow with real-time features
+        </p>
+        <div class="project-stats">
+          <div class="stat-box">
+            <span class="stat-number">5,000+</span>
+            <span class="stat-label">Active Users</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">Instant</span>
+            <span class="stat-label">Live Updates</span>
+          </div>
         </div>
-        <div class="project-hero-image">
-            <img src="/images/projects/code-scout/code-scout.png" alt="Code Scout">
-        </div>
+      </div>
+      <div class="project-hero-image">
+        <img src="/images/projects/code-scout/code-scout.png" alt="Code Scout Dashboard Screenshot" />
+      </div>
     </section>
 
-        <section class="project-overview">
-            <h2>Project Overview</h2>
-            <div class="tech-stack">
-              <div class="tech-badge-wrapper">
-                <div class="tech-badge-container">
-                    <span class="tech-badge">React</span>
-                    <span class="tech-badge">TypeScript</span>
-                    <span class="tech-badge">HTML</span>
-                    <span class="tech-badge">CSS</span>
-                    <span class="tech-badge">Tailwind</span>
-                    <span class="tech-badge">MongoDB</span>
-                    <span class="tech-badge">WebSockets</span>
-                </div>
-                <div class="tech-badge-container">
-                    <span class="tech-badge">React</span>
-                    <span class="tech-badge">TypeScript</span>
-                    <span class="tech-badge">HTML</span>
-                    <span class="tech-badge">CSS</span>
-                    <span class="tech-badge">Tailwind</span>
-                    <span class="tech-badge">MongoDB</span>
-                    <span class="tech-badge">WebSockets</span>
-                </div>
-                <div class="tech-badge-container">
-                    <span class="tech-badge">React</span>
-                    <span class="tech-badge">TypeScript</span>
-                    <span class="tech-badge">HTML</span>
-                    <span class="tech-badge">CSS</span>
-                    <span class="tech-badge">Tailwind</span>
-                    <span class="tech-badge">MongoDB</span>
-                    <span class="tech-badge">WebSockets</span>
-                </div>
-              </div>
-            </div>
-            <p>Code Scout is a feature-rich Q&A platform inspired by Stack Overflow, built with React and TypeScript. It enables real-time interactions using WebSockets, allowing users to ask questions, post answers, and engage in live messaging. User authentication and role-based permissions, including moderators, ensure a structured and interactive experience. Data is stored efficiently using MongoDB with API calls for seamless access.</p>
-        </section>
+    <!-- Overview -->
+    <section class="project-overview">
+      <h2>Project Overview</h2>
+      <div class="tech-stack">
+        <div class="tech-badge-wrapper">
+          <div class="tech-badge-container">
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">TypeScript</span>
+            <span class="tech-badge">HTML</span>
+            <span class="tech-badge">CSS</span>
+            <span class="tech-badge">Tailwind</span>
+            <span class="tech-badge">MongoDB</span>
+            <span class="tech-badge">WebSockets</span>
+          </div>
+          <div class="tech-badge-container">
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">TypeScript</span>
+            <span class="tech-badge">HTML</span>
+            <span class="tech-badge">CSS</span>
+            <span class="tech-badge">Tailwind</span>
+            <span class="tech-badge">MongoDB</span>
+            <span class="tech-badge">WebSockets</span>
+          </div>
+          <div class="tech-badge-container">
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">TypeScript</span>
+            <span class="tech-badge">HTML</span>
+            <span class="tech-badge">CSS</span>
+            <span class="tech-badge">Tailwind</span>
+            <span class="tech-badge">MongoDB</span>
+            <span class="tech-badge">WebSockets</span>
+          </div>
+        </div>
+      </div>
+      <p>
+        Code Scout is a feature-rich Q&A platform inspired by Stack Overflow, built with React and TypeScript.
+        It enables real-time interactions using WebSockets, allowing users to ask questions, post answers, and
+        engage in live messaging. User authentication and role-based permissions, including moderators,
+        ensure a structured and interactive experience. Data is stored efficiently using MongoDB with API calls for seamless access.
+      </p>
+    </section>
 
-        <section class="project-gallery">
-            <h2>Gallery</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="/images/projects/code-scout/login.png" alt="Login">
-                    <span class="caption">Login Page</span>
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/projects/code-scout/notifications.png" alt="Notifications">
-                    <span class="caption">Live Notification System</span>
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/projects/code-scout/class-diagram.png" alt="Class Diagram">
-                    <span class="caption">Class Diagram</span>
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/projects/code-scout/messaging.png" alt="Messaging">
-                    <span class="caption">Live Messaging Feature</span>
-                </div>
-            </div>
-        </section>
+    <!-- Gallery -->
+    <section class="project-gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="/images/projects/code-scout/login.png" alt="Login Page UI" />
+          <span class="caption">Login Page</span>
+        </div>
+        <div class="gallery-item">
+          <img src="/images/projects/code-scout/notifications.png" alt="Live Notifications UI" />
+          <span class="caption">Live Notification System</span>
+        </div>
+        <div class="gallery-item">
+          <img src="/images/projects/code-scout/class-diagram.png" alt="Class Diagram Overview" />
+          <span class="caption">Class Diagram</span>
+        </div>
+        <div class="gallery-item">
+          <img src="/images/projects/code-scout/messaging.png" alt="Real-time Messaging Feature UI" />
+          <span class="caption">Live Messaging Feature</span>
+        </div>
+      </div>
+    </section>
 
-        <section class="project-outcomes">
-            <h2>Results & Impact</h2>
-            <div class="outcomes-grid">
-                <div class="outcome-card">
-                    <h3>Scalability</h3>
-                    <p>Designed with a scalable architecture that could be deployed for real-world use with minimal modifications.</p>
-                </div>
-                <div class="outcome-card">
-                    <h3>Good Design Principles</h3>
-                    <p>Followed best practices in software development, ensuring maintainability, readability, and performance.</p>
-                </div>
-                <div class="outcome-card">
-                    <h3>Technical Achievement</h3>
-                    <p>Implemented WebSockets for real-time updates and optimized API interactions for efficient data retrieval.</p>
-                </div>
-                <div class="outcome-card">
-                    <h3>Learning Experience</h3>
-                    <p>Provided hands-on experience with modern web technologies, improving skills in frontend and backend development.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    <div id="footer"></div>
+    <!-- Outcomes -->
+    <section class="project-outcomes">
+      <h2>Results &amp; Impact</h2>
+      <div class="outcomes-grid">
+        <div class="outcome-card">
+          <h3>Scalability</h3>
+          <p>
+            Designed with a scalable architecture that could be deployed 
+            for real-world use with minimal modifications.
+          </p>
+        </div>
+        <div class="outcome-card">
+          <h3>Good Design Principles</h3>
+          <p>
+            Followed best practices in software development, ensuring maintainability, readability, and performance.
+          </p>
+        </div>
+        <div class="outcome-card">
+          <h3>Technical Achievement</h3>
+          <p>
+            Implemented WebSockets for real-time updates and optimized API interactions for efficient data retrieval.
+          </p>
+        </div>
+        <div class="outcome-card">
+          <h3>Learning Experience</h3>
+          <p>
+            Provided hands-on experience with modern web technologies, improving skills in frontend and backend development.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
 </body>
 </html>
