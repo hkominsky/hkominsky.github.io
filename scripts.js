@@ -1,5 +1,5 @@
 // ============================================================================
-// INITIALIZATION
+// INITIALIZATION AND MAIN ENTRY POINT
 // ============================================================================
 
 /**
@@ -9,6 +9,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Apply saved theme or default to light
   applyTheme(getStoredTheme() || "light");
+  
+  // Check if animations should be skipped BEFORE initializing scroll animations
+  handleAnimationState();
   
   // Initialize all core components
   responsiveElementsInit();
@@ -402,16 +405,47 @@ function projectLinksInit() {
 // ============================================================================
 
 /**
+ * Handles the initial animation state based on session storage
+ * Must be called early in the page load process
+ */
+function handleAnimationState() {
+  const hasSeenAnimations = sessionStorage.getItem('hasSeenAnimations');
+  
+  if (hasSeenAnimations) {
+    // If animations have been seen, add a class to prevent them from running
+    document.documentElement.classList.add('skip-animations');
+  }
+}
+
+/**
  * Initializes scroll-based animations using Intersection Observer
- * Animates elements when they come into view
+ * Only runs animations on first visit to avoid re-animating on navigation returns
  */
 function scrollAnimationInit() {
+  // Check if we should skip animations entirely
+  if (document.documentElement.classList.contains('skip-animations')) {
+    skipAnimations();
+    return;
+  }
+  
   const animateElements = document.querySelectorAll('.scroll-animate');
+  
+  if (animateElements.length === 0) return;
+  
+  // Track which elements have been animated to mark session as complete
+  let animatedCount = 0;
+  const totalElements = animateElements.length;
   
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
+      if (entry.isIntersecting && !entry.target.classList.contains('animate-in')) {
         entry.target.classList.add('animate-in');
+        animatedCount++;
+        
+        // Mark session as having seen animations when majority of elements are animated
+        if (animatedCount >= Math.ceil(totalElements * 0.7)) {
+          sessionStorage.setItem('hasSeenAnimations', 'true');
+        }
       }
     });
   }, {
@@ -421,6 +455,17 @@ function scrollAnimationInit() {
   
   animateElements.forEach(element => {
     observer.observe(element);
+  });
+}
+
+/**
+ * Skips all animations and immediately shows elements in their final state
+ * Used when user has already seen animations in this session
+ */
+function skipAnimations() {
+  const animateElements = document.querySelectorAll('.scroll-animate');
+  animateElements.forEach(element => {
+    element.classList.add('animate-in');
   });
 }
 
