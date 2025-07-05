@@ -89,7 +89,7 @@ const updateThemeImages = (theme) => {
   const updateImage = (selector, imageId) => {
     const element = typeof selector === 'string' ? document.querySelector(selector) : selector;
     if (element) {
-      element.src = `/images/${imageId}-${theme}.png`;
+      element.src = `/images/icons/${imageId}-${theme}.png`;
     }
   };
 
