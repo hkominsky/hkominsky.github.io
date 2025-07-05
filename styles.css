@@ -450,6 +450,15 @@ nav ul li a:hover::after {
   overflow: hidden; 
 }
 
+.project-card.no-interaction {
+  cursor: default;
+  pointer-events: none;
+}
+
+.project-card.no-interaction:hover .project-card-image {
+  transform: none;
+}
+
 .project-card-image {
   width: 100%;
   aspect-ratio: 16 / 9;
