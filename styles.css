@@ -306,7 +306,6 @@ nav ul li a:hover::after {
 }
 
 .hero-image img {
-  padding: 0px var(--spacing-sm);
   max-width: 100%;
   height: auto;
 }
