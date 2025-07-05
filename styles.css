@@ -195,7 +195,7 @@ a {
 header {
   line-height: var(--line-height-none);
   padding-top: var(--spacing-md);
-  padding-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
   position: sticky;
   top: 0;
   left: 0;
