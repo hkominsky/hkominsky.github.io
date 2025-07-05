@@ -34,6 +34,7 @@
   --font-size-p: 20px;
   
   /* Spacing */
+  --spacing-none: 0px;
   --spacing-xs: 4px;
   --spacing-sm: 8px;
   --spacing-md: 16px;
@@ -764,6 +765,11 @@ nav ul li a:hover::after {
     grid-template-rows: auto auto;
     justify-items: center;
     padding: 0 var(--spacing-xl);
+  }
+
+  .socials a {
+    margin-top: var(--spacing-none);
+    margin-bottom: var(--spacing-none);
   }
   
   .hero-image {
