@@ -1,11 +1,5 @@
-// Function to get project name from URL or filename
-function getProjectName() {
-  const path = window.location.pathname;
-  const filename = path.split('/').pop();
-
-  // Remove .html extension and return project name
-  return filename.replace('.html', '');
-}
+// Import the getProjectName function from your navigation module
+import { getProjectName } from '/scripts/navigation.js';
 
 // Function to populate the page with project data
 function populatePage(data) {

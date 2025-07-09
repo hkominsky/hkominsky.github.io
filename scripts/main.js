@@ -1,8 +1,7 @@
 import { applyTheme, getStoredTheme } from './theme.js';
 import { componentsInit, projectComponentsInit, positionProjectCardTags } from './components.js';
 import { contactFormInit } from './contact.js';
-import { projectNavigationInit } from './smooth-scroll.js';
-import { projectLinksInit, isHomePage } from './navigation.js';
+import { projectLinksInit, isHomePage, headerNavigationInit } from './navigation.js';
 import { scrollAnimationInit, handleAnimationState } from './animations.js';
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -17,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     handleAnimationState();
     
     // Initialize all core home page components
-    projectNavigationInit();
+    headerNavigationInit();
     contactFormInit();
     projectLinksInit();
 
