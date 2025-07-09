@@ -1,0 +1,58 @@
+/* Hero Styles*/
+.project-container .project-hero {
+  height: var(--projects-page-height);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spacing-2xl);
+}
+
+.project-hero-content {
+  flex: 1;
+}
+
+.project-stats {
+  display: flex;
+  gap: var(--spacing-2xl);
+  margin-top: var(--spacing-xl);
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.project-hero-image {
+  flex: 1;
+  border-radius: var(--border-radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.project-hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-divider {
+  width: 120px;
+  height: 3px;
+  background: var(--color-accent);
+  margin: var(--spacing-md) 0;
+  border-radius: 999px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .project-container .project-hero {
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

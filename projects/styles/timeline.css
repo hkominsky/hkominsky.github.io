@@ -1,0 +1,117 @@
+/* Timeline Styles */
+.project-timeline {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
+  padding: 2rem 0;
+}
+
+.project-overview__timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Vertical line in center */
+.project-overview__timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  background: var(--color-background-tertiary);
+  border-radius: 2px;
+}
+
+/* Arrows */
+.arrow {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  z-index: var(--z-content);
+}
+
+.arrow.top {
+  top: calc(var(--spacing-sm) * -1);
+  border-bottom: 18px solid var(--color-background-tertiary);
+  border-top: none;
+}
+
+.arrow.bottom {
+  bottom: calc(var(--spacing-sm) * -1);
+  border-top: 18px solid var(--color-background-tertiary);
+  border-bottom: none;
+}
+
+/* Timeline entry wrapper (controls layout for item + dot) */
+.timeline-entry {
+  position: relative;
+  width: 100%;
+  margin: var(--spacing-xl) 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Alternating alignment */
+.timeline-entry.left .timeline-item {
+  align-self: flex-start;
+  text-align: right;
+  transform: translateX(-100px);
+}
+
+.timeline-entry.right .timeline-item {
+  align-self: flex-end;
+  text-align: left;
+  transform: translateX(100px);
+}
+
+/* Timeline dot centered on vertical line */
+.timeline-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: var(--spacing-md);
+  height: var(--spacing-md);
+  background: var(--color-accent);
+  border: var(--spacing-xs) solid var(--color-background);
+  border-radius: 50%;
+  box-sizing: content-box;
+  z-index: var(--z-content);
+  pointer-events: none;
+}
+
+/* Timeline item content */
+.timeline-item {
+  background: var(--color-background);
+  box-shadow: var(--shadow-card);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  width: 60%;
+  z-index: var(--z-content);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .timeline-entry.left .timeline-item,
+  .timeline-entry.right .timeline-item {
+    width: 90%;
+    align-self: center;
+    transform: none;
+    text-align: left;
+  }
+
+  .timeline-dot {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

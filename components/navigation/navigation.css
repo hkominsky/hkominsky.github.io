@@ -1,0 +1,67 @@
+.project-navigation-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-3xl);
+}
+
+.project-navigation {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
+  border-radius: var(--border-radius-3xl);
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  line-height: var(--line-height-none);
+}
+
+.project-navigation h4 {
+  color: var(--color-background);
+}
+
+.project-navigation:hover h4 {
+  color: var(--color-background-secondary);
+}
+
+.project-navigation:hover .project-nav-icon {
+  fill: var(--color-background-secondary);
+}
+
+.project-navigation:active h4 {
+  color: var(--color-background-tertiary);
+}
+
+.project-navigation:active .project-nav-icon {
+  fill: var(--color-background-tertiary);
+}
+
+.project-nav-icon {
+  width: var(--spacing-2xl);
+  height: var(--spacing-2xl);
+  fill: var(--color-background);
+  transition: transform var(--transition-fast);
+  padding: var(--spacing-xs);
+  border-radius: var(--border-radius-md);
+}
+
+.project-navigation--last:hover .project-nav-icon {
+  transform: translateX(-4px);
+}
+
+.project-navigation--next:hover .project-nav-icon {
+  transform: translateX(4px);
+}
+
+.project-navigation.disabled {
+  cursor: default;
+  background: var(--color-background-muted);
+}
+
+.project-navigation.disabled h4,
+.project-navigation.disabled .project-nav-icon {
+  color: var(--color-text-muted);
+  fill: var(--color-text-muted);
+}

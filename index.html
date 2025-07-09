@@ -3,200 +3,226 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hugh Kominsky | Software Engineer</title>
+  <title>Hugh Kominsky</title>
   <link rel="icon" href="/images/favicon/logo.png" type="image/png">
-  <link rel="stylesheet" href="/styles.css">
-  <script src="/scripts.js"></script>
-  <script src="https://www.google.com/recaptcha/enterprise.js?render=6Ld5RwsrAAAAAKhAZR3NK7WwNbT5Z7OJqW_N3TCo"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/global-styles/animations.css">
+  <link rel="stylesheet" href="/global-styles/base.css">
+  <link rel="stylesheet" href="/global-styles/variables.css">
+  <link rel="stylesheet" href="/home/styles/layout.css">
+  <link rel="stylesheet" href="/home/styles/hero.css">
+  <link rel="stylesheet" href="/home/styles/experience.css">
+  <link rel="stylesheet" href="/home/styles/projects.css">
+  <link rel="stylesheet" href="/home/styles/contact-form.css">
+  <script type="module" src="/scripts/main.js"></script>
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6Ld5RwsrAAAAAKhAZR3NK7WwNbT5Z7OJqW_N3TCo"></script>
 </head>
 <body>
   <header id="header"></header>
 
   <main>
-    <section id="hero" class="hero container">
-      <div class="hero-holder">
-        <div class="hero-image">
-          <img id="me-icon" src="images/icons/me-light.png" alt="Hugh Kominsky" width="750px">
-        </div>
-        <div class="hero-content">
-          <div class="hero-text">
-            <h1><small>Hello, I'm </small>Hugh</h1>
-            <p>
-              an aspiring software engineer with experience across tech and finance, 
-              focused on building impactful, user-driven solutions.
-            </p>
-          <div class="experience-tags">
-            <h5 class="tag">Java</h5>
-            <h5 class="tag">Python</h5>
-            <h5 class="tag">TypeScript</h5>
-            <h5 class="tag">React</h5>
-            <h5 class="tag">SQL</h5>
+    <div class="container">
+      <section id="hero" class="section hero">
+        <div class="hero__content scroll-animate">
+          <div class="hero__image">
+            <img id="me-icon" alt="Me" width="750">
           </div>
-          </div>
-          <div class="socials">
-            <a href="resume/HughKominskyResume.pdf" class="btn" target="_blank">
-              <img id="resume-icon" src="images/icons/resume-light.png" alt="Resume" width="50px">
-            </a>
-            <a href="https://www.linkedin.com/in/hughkominsky/" class="btn" target="_blank">
-              <img id="linkedin-icon" src="images/icons/linkedin-light.png" alt="LinkedIn" width="45px">
-            </a>
-            <a href="https://github.com/hkominsky" class="btn" target="_blank">
-              <img id="github-icon" src="images/icons/github-light.png" alt="GitHub" width="45px">
-            </a>
-          </div>
-          <div class="location">
-            <img id="location-icon" src="images/icons/location-light.png" alt="📍" width="14px">
-            <p><small>Philadelphia, PA</small></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience" class="experience container scroll-animate">
-      <h2><small>About Me</small> Experience</h2>
-      <div class="roles">
-        <article>
-          <figure>
-            <div>
-              <img src="images/experience/scotia.png" alt="Scotiabank" width="100%">
-              <figcaption>Scotiabank</figcaption>
+          <div class="hero__text">
+            <div class="hero__content-text">
+              <h1><small>Hello, I'm </small>Hugh</h1>
+              <p>
+                an aspiring full-stack software engineer with experience across tech and finance, 
+                passionate about developing impactful, user-driven solutions.
+              </p>
             </div>
-          </figure>
-          <h4>Quantitative Developer Co-Op</h4>
-          <h3>Dec. 2024 – June 2025</h3>
-          <h3>⚲ New York City, NY</h3>
-          <div class="experience-tags">
-            <h5 class="tag">Java</h5>
-            <h5 class="tag">SQL</h5>
-            <h5 class="tag">HTML</h5>
-            <h5 class="tag">CSS</h5>
-          </div>
-          <p>Extended a full-stack web application to optimize client pricing workflows, resulting in a 90% improvement in efficiency</p>
-        </article>
-
-        <article>
-          <figure>
-            <div>
-              <img src="images/experience/mmc.png" alt="Guy Carpenter" width="100%">
-              <figcaption>Guy Carpenter</figcaption>
+            <div class="hero__socials">
+              <a href="/home/resume/HughKominskyResume.pdf" target="_blank">
+                <img id="resume-icon" alt="Resume" width="50">
+              </a>
+              <a href="https://www.linkedin.com/in/hughkominsky/" target="_blank">
+                <img id="linkedin-icon" alt="LinkedIn" width="45">
+              </a>
+              <a href="https://github.com/hkominsky" target="_blank">
+                <img id="github-icon" alt="GitHub" width="45">
+              </a>
             </div>
-          </figure>
-          <h4>Reinsurance Anlytics Co-Op</h4>
-          <h3>Jan. 2024 – June 2024</h3>
-          <h3>⚲ Philadelphia, PA</h3>
-          <div class="experience-tags">
-            <h5 class="tag">Python</h5>
-            <h5 class="tag">SQL</h5>
-            <h5 class="tag">Excel</h5>
+            <div class="hero__location">
+              <img id="location-icon" alt="Location" width="14">
+              <p>Philadelphia, PA</p>
+            </div> 
           </div>
-          <p>Analyzed 50+ client portfolios to refine risk models and generate reports informing reinsurance recommendations.</p>
-        </article>
+        </div>
+      </section>
 
-        <article>
-          <figure>
-            <div>
-              <img src="images/experience/j&k.png" alt="J&K Seminars" width="100%">
-              <figcaption>J&K Seminars</figcaption>
+      <section id="experience" class="section">
+        <div class="experience scroll-animate">
+          <h2>Experience</h2>
+          <div class="experience__grid">
+            <article class="experience-card">
+              <figure class="experience-card__image">
+                <img src="/home/images/experience/scotia.png" alt="Scotiabank" width="100%">
+                <figcaption>Scotiabank</figcaption>
+              </figure>
+              <h3>Quant Developer</h3>
+              <h4>Co-Op</h4>
+              <h4>Dec. 2024 – June 2025</h4>
+              <h4>New York City, NY</h4>
+              <div class="experience-card__divider"></div>
+              <p class="experience-card__description">
+                Extended a full-stack web application to automate client request for quotation pricing, 
+                resulting in a 90% efficiency increase.
+              </p>
+              <div class="experience-card__tech-stack">
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">Gradle</span>
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">SQL</span>
+              </div>
+            </article>
+
+            <article class="experience-card">
+              <figure class="experience-card__image">
+                <img src="/home/images/experience/mmc.png" alt="Guy Carpenter" width="100%">
+                <figcaption>Guy Carpenter</figcaption>
+              </figure>
+              <h3>Reinsurance Modeler</h3>
+              <h4>Co-Op</h4>
+              <h4>Jan. 2024 – June 2024</h4>
+              <h4>Philadelphia, PA</h4>
+              <div class="experience-card__divider"></div>
+              <p class="experience-card__description">
+                Analyzed 50+ client portfolios to refine risk models and generate reports 
+                informing reinsurance policy recommendations.
+              </p>
+              <div class="experience-card__tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">VBA</span>
+              </div>
+            </article>
+
+            <article class="experience-card">
+              <figure class="experience-card__image">
+                <img src="/home/images/experience/j&k.png" alt="J&K Seminars" width="100%">
+                <figcaption>J&K Seminars</figcaption>
+              </figure>
+              <h3>Data Engineer</h3>
+              <h4>Intern</h4>
+              <h4>Apr. 2023 – July 2023</h4>
+              <h4>Philadelphia, PA</h4>
+              <div class="experience-card__divider"></div>
+              <p class="experience-card__description">
+                Automated Zoom data collection and created detailed location data dashboards 
+                to improve certification processes.
+              </p>
+              <div class="experience-card__tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Tableau</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="projects scroll-animate stagger-children">
+          <h2>Projects</h2>
+          <div class="projects__grid">
+            <div class="project-card">
+              <div class="project-card__image">
+                <img src="/images/projects/pickaxe-knockout/pickaxe-knockout.png" alt="Pickaxe Knockout">
+              </div>
+              <div class="project-card__tags">
+                <h3 class="project-card__tag">Pickaxe Knockout</h3>
+              </div>
+              <div class="project-card__content">
+                <p>
+                  A high-octane multiplayer arena featuring innovative 
+                  custom mechanics and rewarding player progression.
+                </p>
+                <div class="project-card__divider"></div>
+                <span class="project-card__cta">Learn More...</span>
+              </div>
             </div>
-          </figure>
-          <h4>Software Engineer Intern</h4>
-          <h3>Apr. 2023 – July 2023</h3>
-          <h3>⚲ Philadelphia, PA</h3>
-          <div class="experience-tags">
-            <h5 class="tag">Python</h5>
-            <h5 class="tag">SQL</h5>
-            <h5 class="tag">Tableau</h5>
-          </div>
-          <p>Automated Zoom data collection and created detailed location data dashboards to improve certification processes.</p>
-        </article>
-      </div>
-    </section>
 
-    <section id="projects" class="project-section container scroll-animate stagger-children">
-      <h2><small>My Work</small> Projects</h2>
-      <div class="project-section-grid">
-        <div class="project-card">
-          <img src="/images/projects/pickaxe-knockout/pickaxe-knockout.png" alt="Pickaxe Knockout" class="project-card-image" />
-          <div class="project-card-tags">
-            <h5 class="project-card-tag">Verse</h5>
-            <h5 class="project-card-tag">UEFN</h5>
-            <h5 class="project-card-tag">Blender</h5>
-          </div>
-          <div class="project-card-text">
-            <h4>Pickaxe Knockout</h4>
-            <h3>Jan. 2024 - June 2024</h3>
-            <p>A high-octane multiplayer arena featuring innovative custom mechanics and rewarding player progression.</p>
+            <div class="project-card">
+              <div class="project-card__image">
+                <img src="/images/projects/code-scout/code-scout.png" alt="Code Scout">
+              </div>
+              <div class="project-card__tags">
+                <h3 class="project-card__tag">Code Scout</h3>
+              </div>
+              <div class="project-card__content">
+                <p>
+                  A Stack Overflow inspired site enabling real-time Q&A, notifications, 
+                  customizable user experiences, and role-based access control.
+                </p>
+                <div class="project-card__divider"></div>
+                <span class="project-card__cta">Learn More...</span>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-card__image">
+                <img src="/images/projects/endzone-analytics/endzone-analytics.png" alt="Endzone Analytics">
+              </div>
+              <div class="project-card__tags">
+                <h3 class="project-card__tag">Endzone Analytics</h3>
+              </div>
+              <div class="project-card__content">
+                <p>
+                  A comprehensive sports analytics platform to generate 
+                  actionable insights for coaches, players, and fans.
+                </p>
+                <div class="project-card__divider"></div>
+                <span class="project-card__cta">Learn More...</span>
+              </div>
+            </div>
+
+            <div class="project-card project-card--disabled">
+              <div class="project-card__image">
+                <img src="/images/projects/perks-ffa/perks-ffa.png" alt="Perks FFA">
+              </div>
+              <div class="project-card__tags">
+                <h3 class="project-card__tag">Perks FFA</h3>
+              </div>
+              <div class="project-card__content">
+                <p>
+                  An innovative free-for-all battle arena featuring unique power-ups and 
+                  advanced particle effects. *Scheduled for release in Fall 2025.
+                </p>
+                <div class="project-card__divider"></div>
+                <span class="project-card__cta">Learn More...</span>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="project-card">
-          <img src="/images/projects/code-scout/code-scout.png" alt="Code Scout" class="project-card-image" />
-          <div class="project-card-tags">
-            <h5 class="project-card-tag">React</h5>
-            <h5 class="project-card-tag">TypeScript</h5>
-            <h5 class="project-card-tag">HTML</h5>
-            <h5 class="project-card-tag">CSS</h5>
-          </div>
-          <div class="project-card-text">
-            <h4>Code Scout</h4>
-            <h3>Oct. 2024 - Dec. 2024</h3>
-            <p>A Stack Overflow inspired site enabling real-time Q&A, notifications, customizable user experiences, and role-based access control.</p>
-          </div>
+      <section id="contact" class="section">
+        <div class="contact scroll-animate stagger-children">
+          <h2>Let's Connect</h2>
+          <form id="contactForm" class="contact__form">
+            <div class="form-group">
+              <p>
+                I'm actively seeking full-time software engineering opportunities beginning June 2026!
+                For direct inquiries, reach me at <span class="accent-text">hugh.kominsky@gmail.com</span>.
+              </p>
+              <input id="name" type="text" name="name" required placeholder="Name" class="form-input">
+              <input id="email" type="email" name="email" required placeholder="E-Mail" class="form-input">
+              <textarea id="message" rows="10" name="message" required placeholder="Your Message" class="form-textarea"></textarea>
+              <button class="form-button">Submit</button>
+            </div>
+            <div id="apiResponse" class="form-response"></div>
+          </form>
         </div>
-
-        <div class="project-card">
-          <img src="/images/projects/endzone-analytics/endzone-analytics.png" alt="Endzone Analytics" class="project-card-image" />
-          <div class="project-card-tags">
-            <h5 class="project-card-tag">Flask</h5>
-            <h5 class="project-card-tag">Python</h5>
-            <h5 class="project-card-tag">Docker</h5>
-            <h5 class="project-card-tag">SQL</h5>
-          </div>
-          <div class="project-card-text">
-            <h4>Endzone Analytics</h4>
-            <h3>Nov. 2023 - Dec. 2023</h3>
-            <p>A comprehensive sports analytics platform to generate actionable insights for coaches, players, and fans.</p>
-          </div>
-        </div>
-
-        <div class="project-card no-interaction">
-          <img src="/images/projects/perks-ffa/perks-ffa.png" alt="Perks FFA" class="project-card-image" />
-          <div class="project-card-tags">
-            <h5 class="project-card-tag">Verse</h5>
-            <h5 class="project-card-tag">UEFN</h5>
-            <h5 class="project-card-tag">Blender</h5>
-          </div>
-          <div class="project-card-text">
-            <h4>Perks FFA</h4>
-            <h3>July 2024 - Present</h3>
-            <p>An innovative free-for-all battle arena featuring unique power-ups and advanced particle effects. Scheduled for release in Fall 2025.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact-me container scroll-animate">
-      <h2><small>Let's Connect</small> Get In Touch</h2>
-      <form id="contactForm" class="form-content">
-        <div class="form-group">
-        <p>
-          I'm actively seeking full-time software engineering opportunities beginning June 2026!
-          For direct inquiries, reach me at <span>hugh.kominsky@gmail.com</span>.
-        </p>
-          <input id="name" type="text" name="name" required placeholder="Name">
-          <input id="email" type="email" name="email" required placeholder="E-Mail">
-          <textarea id="message" rows="10" name="message" required placeholder="Your Message"></textarea>
-          <button>
-            Submit
-          </button>
-        </div>
-        <div id="apiResponse" class="contact-api-response"></div>
-      </form>
-    </section>
+      </section>
+    </div>
   </main>
-<div id="footer"></div>  
+  <div id="footer"></div>  
 </body>
 </html>

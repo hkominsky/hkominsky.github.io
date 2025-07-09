@@ -1,0 +1,23 @@
+/* Layout Styles */
+.project-container {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.project-container section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 var(--spacing-3xl);
+  box-sizing: border-box;
+  margin-bottom: var(--spacing-5xl);
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .project-container {
+    padding: var(--spacing-3xl) var(--spacing-md);
+  }
+}

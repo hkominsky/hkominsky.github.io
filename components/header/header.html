@@ -1,0 +1,28 @@
+<head>
+  <link rel="stylesheet" href="/global-styles/base.css">
+  <link rel="stylesheet" href="/global-styles/variables.css">
+  <link rel="stylesheet" href="/components/header/header.css">
+</head>
+
+<div class="header__content">
+    <a href="/#hero" class="header__logo">
+        Hugh Kominsky
+    </a>
+    <nav class="header__nav">
+        <ul class="nav__list">
+            <li><a href="/#experience" class="nav__link">Experience</a></li>
+            <li><a href="/#projects" class="nav__link">Projects</a></li>
+            <li><a href="/#contact" class="nav__link">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <span class="menu-toggle__bar"></span>
+            <span class="menu-toggle__bar"></span>
+            <span class="menu-toggle__bar"></span>
+        </div>
+        <div class="theme-toggle">
+            <button id="theme-toggle-btn" class="theme-toggle__button" onClick="changeTheme()">
+                <img src="/images/icons/theme-light.png" alt="☀️" width="25px">
+            </button>
+        </div>
+    </nav>
+</div>

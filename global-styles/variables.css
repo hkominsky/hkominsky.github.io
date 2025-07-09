@@ -1,0 +1,75 @@
+/* Variables */
+:root {
+  --color-background: #ffffff;
+  --color-background-secondary: #f5f5f5;
+  --color-background-tertiary: #d4d4d4;
+  --color-background-muted: #d1d5db;
+  --color-text-primary: #333333;
+  --color-text-muted: #9ca3af;
+  --color-accent: #4CBB17;
+  --color-accent-hover: #409f14;
+  --color-error: #d50000;
+  --color-header-bg: rgba(255, 255, 255, 0.85);
+  --shadow-card: 0 12px 28px rgba(0, 0, 0, 0.18);
+
+  --font-family-primary: "League Spartan", serif;
+  --font-size-base: 22px;
+  --font-size-h1: 72px;
+  --font-size-h1-small: 55px;
+  --font-size-h2: 48px;
+  --font-size-h3: 32px;
+  --font-size-h4: 24px;
+  --font-size-h5: 18px;
+  --font-size-body: 20px;
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 40px;
+  --spacing-3xl: 64px;
+  --spacing-4xl: 80px;
+  --spacing-5xl: 128px;
+
+  --container-max-width: 1440px;
+  --content-max-width: 1280px;
+  --form-max-width: 680px;
+  --border-radius-sm: 5px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 15px;
+  --border-radius-xl: 20px;
+  --border-radius-2xl: 25px;
+  --border-radius-3xl: 30px;
+  --border-radius-full: 50%;
+
+  --line-height-base: 1.5;
+  --line-height-tight: 1.25;
+  --line-height-none: 1;
+
+  --transition-fast: 0.3s ease;
+  --transition-slow: 1s ease;
+
+  --z-background: -1;
+  --z-dropdown: 1;
+  --z-header: 2;
+  --z-content: 3;
+
+  --header-height: 5vh;
+  --main-content-height: 90vh;
+  --projects-page-height: 95vh;
+}
+
+[page-theme="dark"] {
+  --color-background: #121212;
+  --color-background-muted: #374151;
+  --color-background-secondary: #1e1e1e;
+  --color-background-tertiary: #2c2c2c;
+  --color-text-primary: #f8f8f8;
+  --color-text-muted: #6b7280;
+  --color-accent: #005a66;
+  --color-accent-hover: #013e46;
+  --color-error: #ff6b6b;
+  --color-header-bg: rgba(18, 18, 18, 0.85);
+  --shadow-card: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
