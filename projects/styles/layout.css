@@ -1,4 +1,4 @@
-/* Layout Styles */
+/* Project Page Layout Styles */
 .project-container {
   display: flex;
   flex-direction: column;
@@ -15,9 +15,25 @@
   margin-bottom: var(--spacing-5xl);
 }
 
+.project-container .project-outcomes {
+  margin-bottom: 0;
+}
+
+.project-container .navigation {
+  margin-bottom: var(--spacing-3xl);
+}
+
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .project-container {
-    padding: var(--spacing-3xl) var(--spacing-md);
+    padding: var(--spacing-3xl) var(--spacing-xs) var(--spacing-xl) var(--spacing-xs);
+  }
+
+  .project-container section {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .project-container .navigation {
+    margin-bottom: 0;
   }
 }

@@ -51,8 +51,8 @@
 }
 
 .outcome-icon {
-  width: 56px;
-  height: 56px;
+  width: var(--icons-size);
+  height: var(--icons-size);
   margin-bottom: var(--spacing-md);
   color: var(--color-accent);
 }
@@ -64,12 +64,19 @@
 
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
+  .outcomes-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
   .outcomes-content {
     grid-template-columns: 1fr;
     gap: var(--spacing-3xl);
   }
 
-  .outcomes-grid {
-    grid-template-columns: 1fr;
+  .outcome-card {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }

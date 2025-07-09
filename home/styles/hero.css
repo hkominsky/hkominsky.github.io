@@ -34,6 +34,11 @@
   margin-bottom: var(--spacing-xs);
 }
 
+.hero__socials img {
+  width: var(--icons-size);
+  height: auto;
+}
+
 .hero__socials a {
   display: inline-block;
   animation: floatUpDown 3.6s ease-in-out infinite;
@@ -75,11 +80,7 @@
     display: flex;
     justify-content: center;
   }
-  
-  .hero__image img {
-    padding: 0 var(--spacing-4xl);
-  }
-  
+
   .hero__text .hero__socials {
     margin-top: var(--spacing-lg);
   }

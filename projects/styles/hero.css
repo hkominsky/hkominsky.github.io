@@ -55,4 +55,8 @@
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .hero__socials img {
+    width: 12px;
+  }
 }

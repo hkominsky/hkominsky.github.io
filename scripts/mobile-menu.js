@@ -5,39 +5,57 @@
 export function mobileMenuInit() {
   const menuToggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('.nav__list');
-  const header = document.querySelector('.header');
-  
-  if (!menuToggle || !navMenu) return;
+  const header = document.querySelector('header');
 
-  menuToggle.addEventListener('click', () => toggleMenu(menuToggle, navMenu, header));
+  if (!menuToggle || !navMenu || !header) return;
+
+  // Function to set menu height dynamically
+  function setMenuHeight() {
+    const viewportHeight = window.innerHeight;
+    const headerHeight = header.offsetHeight;
+    const menuHeight = viewportHeight - headerHeight;
+    navMenu.style.height = menuHeight + 'px';
+  }
+
+  // Set initial height on load and resize/orientationchange
+  window.addEventListener('load', setMenuHeight);
+  window.addEventListener('resize', setMenuHeight);
+  window.addEventListener('orientationchange', setMenuHeight);
+
+  menuToggle.addEventListener('click', () => {
+    setMenuHeight();
+    toggleMenu(menuToggle, navMenu, header);
+  });
 
   document.querySelectorAll('.nav__link').forEach(link => {
     link.addEventListener('click', () => toggleMenu(menuToggle, navMenu, header, false));
   });
 
   document.addEventListener('click', (event) => {
-    if (!navMenu.contains(event.target) && 
-        !menuToggle.contains(event.target) && 
+    if (!navMenu.contains(event.target) &&
+        !menuToggle.contains(event.target) &&
         navMenu.classList.contains('nav__list--active')) {
       toggleMenu(menuToggle, navMenu, header, false);
     }
   });
 }
 
-/**
- * Toggles the mobile menu state
- * @param {HTMLElement} toggle - The menu toggle button element
- * @param {HTMLElement} menu - The menu container element
- * @param {HTMLElement} header - The header element
- * @param {boolean|null} state - Optional explicit state (true=open, false=closed, null=toggle)
- */
 function toggleMenu(toggle, menu, header, state = null) {
   const body = document.body;
-
   const shouldOpen = state === null ? !menu.classList.contains('nav__list--active') : state;
 
   toggle.classList.toggle('menu-toggle--active', shouldOpen);
   menu.classList.toggle('nav__list--active', shouldOpen);
   body.classList.toggle('no-scroll', shouldOpen);
   header.classList.toggle('header--mobile-menu-open', shouldOpen);
+  
+  // If menu is opened, make sure the height is updated (in case viewport changed)
+  if (shouldOpen) {
+    const viewportHeight = window.innerHeight;
+    const headerHeight = header.offsetHeight;
+    menu.style.height = (viewportHeight - headerHeight) + 'px';
+  } else {
+    // Reset height when closed (optional)
+    menu.style.height = '';
+  }
 }

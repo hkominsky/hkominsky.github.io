@@ -15,7 +15,6 @@
   align-items: center;
 }
 
-/* Vertical line in center */
 .project-overview__timeline::before {
   content: '';
   position: absolute;
@@ -28,7 +27,6 @@
   border-radius: 2px;
 }
 
-/* Arrows */
 .arrow {
   position: absolute;
   left: 50%;
@@ -50,7 +48,6 @@
   border-bottom: none;
 }
 
-/* Timeline entry wrapper (controls layout for item + dot) */
 .timeline-entry {
   position: relative;
   width: 100%;
@@ -59,7 +56,6 @@
   flex-direction: column;
 }
 
-/* Alternating alignment */
 .timeline-entry.left .timeline-item {
   align-self: flex-start;
   text-align: right;
@@ -72,7 +68,6 @@
   transform: translateX(100px);
 }
 
-/* Timeline dot centered on vertical line */
 .timeline-dot {
   position: absolute;
   top: 50%;
@@ -88,7 +83,6 @@
   pointer-events: none;
 }
 
-/* Timeline item content */
 .timeline-item {
   background: var(--color-background);
   box-shadow: var(--shadow-card);
@@ -100,7 +94,6 @@
   flex-direction: column;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .timeline-entry.left .timeline-item,
   .timeline-entry.right .timeline-item {
@@ -108,6 +101,8 @@
     align-self: center;
     transform: none;
     text-align: left;
+    justify-content: center;
+    text-align: center;
   }
 
   .timeline-dot {
