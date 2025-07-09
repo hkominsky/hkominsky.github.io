@@ -10,7 +10,7 @@
 
 .section {
   height: var(--main-content-height);
-  padding: 0 var(--spacing-lg);
+  padding: var(--spacing-xl) var(--spacing-lg);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,7 +19,7 @@
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .container {
-    padding: var(--spacing-3xl) var(--spacing-xs);
+    padding: 0 var(--spacing-xs) var(--spacing-xl);
   }
 
   .section {

@@ -81,6 +81,10 @@
     justify-content: center;
   }
 
+  .hero__image img {
+    padding: 0 var(--spacing-xl);
+  }
+
   .hero__text .hero__socials {
     margin-top: var(--spacing-lg);
   }
