@@ -9,8 +9,13 @@ export function mobileMenuInit() {
 
   if (!menuToggle || !navMenu || !header) return;
 
-  // Function to set menu height dynamically
+  // Function to set menu height dynamically ONLY on mobile
   function setMenuHeight() {
+    if (window.innerWidth > 768) {
+      navMenu.style.height = ''; // reset height on desktop
+      return;
+    }
+
     const viewportHeight = window.innerHeight;
     const headerHeight = header.offsetHeight;
     const menuHeight = viewportHeight - headerHeight;
@@ -48,14 +53,12 @@ function toggleMenu(toggle, menu, header, state = null) {
   menu.classList.toggle('nav__list--active', shouldOpen);
   body.classList.toggle('no-scroll', shouldOpen);
   header.classList.toggle('header--mobile-menu-open', shouldOpen);
-  
-  // If menu is opened, make sure the height is updated (in case viewport changed)
-  if (shouldOpen) {
+
+  if (shouldOpen && window.innerWidth <= 768) {
     const viewportHeight = window.innerHeight;
     const headerHeight = header.offsetHeight;
     menu.style.height = (viewportHeight - headerHeight) + 'px';
   } else {
-    // Reset height when closed (optional)
     menu.style.height = '';
   }
 }

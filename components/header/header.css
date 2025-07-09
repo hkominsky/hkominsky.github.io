@@ -2,7 +2,7 @@
 header {
   line-height: var(--line-height-none);
   padding-top: var(--spacing-md);
-  padding-bottom: var(--spacing-sm);
+  padding-bottom: var(--spacing-md);
   position: sticky;
   top: 0;
   left: 0;
