@@ -3,7 +3,7 @@ export default {
   description:
     "A real-time Q&A platform developed as a capstone project to simulate full-scale production systems.",
   heroImage: {
-    src: "/images/projects/code-scout/code-scout.png",
+    src: "/projects/images/code-scout/code-scout.png",
     alt: "Code Scout Dashboard Screenshot"
   },
   stats: [
@@ -36,22 +36,22 @@ export default {
   ],
   gallery: [
     {
-      src: "/images/projects/code-scout/login.png",
+      src: "/projects/images/code-scout/login.png",
       alt: "Login Page UI",
       caption: "Login Page"
     },
     {
-      src: "/images/projects/code-scout/notifications.png",
+      src: "/projects/images/code-scout/notifications.png",
       alt: "Live Notifications UI",
       caption: "Live Notification System"
     },
     {
-      src: "/images/projects/code-scout/class-diagram.png",
+      src: "/projects/images/code-scout/class-diagram.png",
       alt: "Class Diagram Overview",
       caption: "Class Diagram"
     },
     {
-      src: "/images/projects/code-scout/messaging.png",
+      src: "/projects/images/code-scout/messaging.png",
       alt: "Real-time Messaging Feature UI",
       caption: "Live Messaging Feature"
     }

@@ -3,7 +3,7 @@ export default {
   description:
     "Bring hypothetical NFL seasons to life through intuitive data tools.",
   heroImage: {
-    src: "/images/projects/endzone-analytics/endzone-analytics.png",
+    src: "/projects/images/endzone-analytics/endzone-analytics.png",
     alt: "Endzone Analytics"
   },
   stats: [
@@ -31,22 +31,22 @@ export default {
   ],
   gallery: [
     {
-      src: "/images/projects/endzone-analytics/teams.png",
+      src: "/projects/images/endzone-analytics/teams.png",
       alt: "Games Page",
       caption: "Season Schedules"
     },
     {
-      src: "/images/projects/endzone-analytics/player-stats.png",
+      src: "/projects/images/endzone-analytics/player-stats.png",
       alt: "Player Stats Page",
       caption: "Player Metrics"
     },
     {
-      src: "/images/projects/endzone-analytics/draft.png",
+      src: "/projects/images/endzone-analytics/draft.png",
       alt: "Draft Board Page",
       caption: "Interactive Draft Board"
     },
     {
-      src: "/images/projects/endzone-analytics/all-players.png",
+      src: "/projects/images/endzone-analytics/all-players.png",
       alt: "All Players Page",
       caption: "Player Rankings"
     }
