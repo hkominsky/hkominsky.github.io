@@ -21,12 +21,14 @@ export function scrollAnimationInit() {
   }
   
   const animateElements = document.querySelectorAll('.scroll-animate');
-  
   if (animateElements.length === 0) return;
   
   let animatedCount = 0;
   const totalElements = animateElements.length;
-  
+
+  const isMobile = window.innerWidth <= 768;
+  const threshold = isMobile ? 0.05 : 0.15;
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting && !entry.target.classList.contains('animate-in')) {
@@ -39,8 +41,8 @@ export function scrollAnimationInit() {
       }
     });
   }, {
-    threshold: 0.25,
-    rootMargin: '0px 0px -50px 0px'
+    threshold,
+    rootMargin: '0px 0px 0px 0px'
   });
   
   animateElements.forEach(element => {

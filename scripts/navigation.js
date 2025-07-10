@@ -168,31 +168,40 @@ export function isHomePage() {
 export function headerNavigationInit() {
   const pageOffset = 110;
 
+  // On page load: if hash exists, scroll to it
   setTimeout(() => {
     if (window.location.hash) {
       scrollToSection(window.location.hash.substring(1), pageOffset);
     }
   }, 100);
 
+  // Click handler for anchors with hash
   document.addEventListener('click', (e) => {
-    const anchor = e.target.closest("a[href*='#']");
+    const anchor = e.target.closest("a[href^='#']");
     if (anchor) {
       const href = anchor.getAttribute("href");
-      const sectionId = href.split('#')[1];
+      const sectionId = href.substring(1); // remove #
 
       if (sectionId && document.getElementById(sectionId)) {
         e.preventDefault();
+
+        // Scroll smoothly to section
         scrollToSection(sectionId, pageOffset);
+
+        // Update the URL hash without jumping or reloading
+        history.replaceState(null, '', `#${sectionId}`);
       }
     }
   });
 
+  // Handle manual changes to hash (optional, for back/forward buttons)
   window.addEventListener('hashchange', () => {
     if (window.location.hash) {
-      scrollToSection(window.location.hash.substring(1), 100);
+      scrollToSection(window.location.hash.substring(1), pageOffset);
     }
   });
 }
+
 
 /**
  * Scrolls to a specific section with smooth animation
