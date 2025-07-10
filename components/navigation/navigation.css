@@ -20,6 +20,7 @@
 
 .project-navigation h4 {
   color: var(--color-background);
+  margin-top: 3px;
 }
 
 .project-navigation:hover h4 {
