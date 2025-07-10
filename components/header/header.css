@@ -149,6 +149,10 @@ header {
     transform: translateY(-5.5px) rotate(-45deg);
   }
 
+  .menu-toggle.menu-toggle--active {
+    background-color: transparent;
+  }
+
   .theme-toggle {
     margin-left: var(--spacing-md);
   }
