@@ -75,7 +75,7 @@
   --color-accent-hover: #013e46;
   --color-error: #ff6b6b;
   --color-header-bg: rgba(24, 24, 24, 0.80);
-  --shadow-card: 0 8px 24px rgba(255, 255, 255, 0.08);
+  --shadow-card: 0 12px 28px rgba(0, 0, 0, 0.7);
 }
 
 /* Mobile Responsive Styles */
