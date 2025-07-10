@@ -83,11 +83,6 @@ header {
   background-color: var(--color-background-tertiary);
 }
 
-.theme-toggle:focus,
-.theme-toggle:active {
-  background-color: orange;
-}
-
 .theme-toggle__button {
   background-color: transparent;
   padding: 6px var(--spacing-sm) var(--spacing-xs);
@@ -118,14 +113,16 @@ header {
     transition: background-color var(--transition-fast);
     box-sizing: content-box;
   }
-  
-  .menu-toggle:hover {
-    background-color: var(--color-background-tertiary);
+
+  .theme-toggle
+  .menu-toggle {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
 
-  .menu-toggle:focus,
+  .theme-toggle:active,
   .menu-toggle:active {
-    background-color: orange;
+    background-color: transparent;
   }
 
   .menu-toggle__bar {
@@ -157,6 +154,10 @@ header {
 
   .theme-toggle {
     margin-left: var(--spacing-md);
+  }
+
+  .theme-toggle:hover {
+    background-color: transparent;
   }
   
   .nav__list {
