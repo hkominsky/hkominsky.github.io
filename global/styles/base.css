@@ -54,6 +54,7 @@ h4 { font-size: var(--font-size-h4); font-weight: 550; }
 h5 { font-size: var(--font-size-h5); }
 p  { font-size: var(--font-size-body); }
 
+/* Mobile Responsive Styles */
 @media (max-width: 768px) {
   h2 {
     margin-bottom: var(--spacing-sm);
