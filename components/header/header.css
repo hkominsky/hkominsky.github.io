@@ -87,14 +87,8 @@ header {
   line-height: var(--line-height-none);
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .menu-toggle:hover {
-    background-color: var(--color-background-tertiary);
-  }
-  
-  .theme-toggle:hover {
-    background-color: var(--color-background-tertiary);
-  }
+.menu-toggle {
+  display: none;
 }
 
 /* Mobile Responsive Styles */
@@ -113,7 +107,6 @@ header {
     transition: var(--transition-fast);
   }
 
-  /* New button styles */
   .menu-toggle__button {
     display: flex;
     flex-direction: column;
@@ -142,7 +135,6 @@ header {
     position: relative;
   }
 
-  /* Update the active state selectors */
   .menu-toggle--active .menu-toggle__button .menu-toggle__bar:nth-child(1),
   .menu-toggle--active .menu-toggle__button .menu-toggle__bar:nth-child(3) {
     width: var(--spacing-lg);
@@ -223,5 +215,15 @@ header {
 
   .nav__list--active li {
     opacity: 1;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .menu-toggle:hover {
+    background-color: var(--color-background-tertiary);
+  }
+  
+  .theme-toggle:hover {
+    background-color: var(--color-background-tertiary);
   }
 }
