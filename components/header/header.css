@@ -79,45 +79,9 @@ header {
   line-height: var(--line-height-none);
 }
 
+/* Hide menu toggle by default (desktop) */
 .menu-toggle {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: var(--spacing-md);
-  height: var(--spacing-md);
-  cursor: pointer;
-  padding: 12px 12px;
-  border-radius: var(--border-radius-sm);
-  transition: var(--transition-fast);
-  box-sizing: content-box;
-}
-
-.menu-toggle__bar {
-  display: block;
-  width: var(--spacing-md);
-  height: 1px;
-  background-color: var(--color-text-primary);
-  transition: transform var(--transition-fast), opacity var(--transition-fast);
-  transform-origin: center center;
-  position: relative;
-}
-
-.menu-toggle--active .menu-toggle__bar:nth-child(1),
-.menu-toggle--active .menu-toggle__bar:nth-child(3) {
-  width: var(--spacing-lg);
-}
-
-.menu-toggle--active .menu-toggle__bar:nth-child(1) {
-  transform: translateY(5.5px) rotate(45deg);
-}
-
-.menu-toggle--active .menu-toggle__bar:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle--active .menu-toggle__bar:nth-child(3) {
-  transform: translateY(-5.5px) rotate(-45deg);
+  display: none;
 }
 
 /* Hover effects only on devices that can actually hover (desktop) */
@@ -170,6 +134,47 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: var(--spacing-md);
+    height: var(--spacing-md);
+    cursor: pointer;
+    padding: 12px 12px;
+    border-radius: var(--border-radius-sm);
+    transition: var(--transition-fast);
+    box-sizing: content-box;
+  }
+
+  .menu-toggle__bar {
+    display: block;
+    width: var(--spacing-md);
+    height: 1px;
+    background-color: var(--color-text-primary);
+    transition: transform var(--transition-fast), opacity var(--transition-fast);
+    transform-origin: center center;
+    position: relative;
+  }
+
+  .menu-toggle--active .menu-toggle__bar:nth-child(1),
+  .menu-toggle--active .menu-toggle__bar:nth-child(3) {
+    width: var(--spacing-lg);
+  }
+
+  .menu-toggle--active .menu-toggle__bar:nth-child(1) {
+    transform: translateY(5.5px) rotate(45deg);
+  }
+
+  .menu-toggle--active .menu-toggle__bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle--active .menu-toggle__bar:nth-child(3) {
+    transform: translateY(-5.5px) rotate(-45deg);
   }
 
   .theme-toggle {
