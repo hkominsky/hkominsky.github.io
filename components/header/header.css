@@ -112,16 +112,6 @@ header {
     border-radius: var(--border-radius-sm);
     transition: background-color var(--transition-fast);
     box-sizing: content-box;
-  }
-
-  .theme-toggle
-  .menu-toggle {
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-  }
-
-  .theme-toggle:active,
-  .menu-toggle:active {
     background-color: transparent;
   }
 
