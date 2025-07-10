@@ -1,6 +1,6 @@
 /* Hero Styles*/
 .project-container .project-hero {
-  height: var(--projects-page-height);
+  min-height: var(--projects-page-height);
   display: flex;
   flex-direction: row;
   align-items: center;
