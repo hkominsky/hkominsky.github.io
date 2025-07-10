@@ -114,12 +114,8 @@ header {
     cursor: pointer;
     padding: 12px 12px;
     border-radius: var(--border-radius-sm);
-    transition: background-color var(--transition-fast);
+    transition: var(--transition-fast);
     box-sizing: content-box;
-  }
-
-  .menu-toggle:hover {
-    background-color: transparent;
   }
 
   .menu-toggle__bar {
@@ -147,10 +143,6 @@ header {
 
   .menu-toggle--active .menu-toggle__bar:nth-child(3) {
     transform: translateY(-5.5px) rotate(-45deg);
-  }
-
-  .menu-toggle.menu-toggle--active {
-    background-color: transparent;
   }
 
   .theme-toggle {
