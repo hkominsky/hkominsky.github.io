@@ -104,15 +104,23 @@ export function projectLinksInit() {
  */
 export function initProjectPageNavigation() {
   const currentIndex = getCurrentProjectIndex();
-  
+
   if (currentIndex === -1) return;
 
   const lastBtn = document.querySelector('.project-navigation--last');
   const nextBtn = document.querySelector('.project-navigation--next');
+  const homeBtn = document.querySelector('.project-navigation--home');
 
   configureNavButton(lastBtn, currentIndex > 0, () => goToProject(currentIndex - 1));
   configureNavButton(nextBtn, currentIndex < projectMap.length - 1, () => goToProject(currentIndex + 1));
+
+  if (homeBtn) {
+    homeBtn.addEventListener('click', () => {
+      window.location.href = '/';
+    });
+  }
 }
+
 
 /**
  * Gets the project name from the current URL for data loading
