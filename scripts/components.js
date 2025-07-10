@@ -24,12 +24,6 @@ export function componentsInit() {
         mobileMenuInit();
       }, 0);
 
-      // Initialize responsive elements if function exists
-      if (typeof responsiveElementsInit === 'function') {
-        responsiveElementsInit();
-      }
-
-      // Theme toggle event listener also needs to be initialized here
       const themeToggleButton = document.querySelector('.theme-toggle__button');
       if (themeToggleButton) {
         themeToggleButton.addEventListener('click', changeTheme);
@@ -102,12 +96,3 @@ window.addEventListener('resize', () => {
     positionProjectCardTags();
   }
 });
-
-/**
- * Placeholder for responsive elements initialization
- * Add your responsive functionality here if needed
- */
-function responsiveElementsInit() {
-  // Add any responsive initialization code here
-  console.log('Responsive elements initialized');
-}
