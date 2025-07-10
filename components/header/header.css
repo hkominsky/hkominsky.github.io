@@ -152,11 +152,13 @@ header {
     background-color: transparent; /* Default transparent */
     outline: none;
     border: none;
+    -webkit-tap-highlight-color: transparent; /* Remove default mobile tap highlight */
   }
 
-  /* Apply background only on active/focus states */
+  /* Apply background on touch/click states - mobile specific */
+  .menu-toggle:active,
   .menu-toggle:focus,
-  .menu-toggle:active {
+  .menu-toggle.active-touch {
     background-color: var(--color-background-secondary) !important;
     outline: none !important;
   }
@@ -191,11 +193,13 @@ header {
   .theme-toggle {
     margin-left: var(--spacing-md);
     background-color: transparent; /* Default transparent */
+    -webkit-tap-highlight-color: transparent; /* Remove default mobile tap highlight */
   }
 
-  /* Apply background only on active/focus states */
+  /* Apply background on touch/click states - mobile specific */
+  .theme-toggle:active,
   .theme-toggle:focus,
-  .theme-toggle:active {
+  .theme-toggle.active-touch {
     background-color: var(--color-background-secondary) !important;
   }
 
