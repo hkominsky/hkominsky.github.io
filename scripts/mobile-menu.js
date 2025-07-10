@@ -1,49 +1,9 @@
-function toggleMenu(menuToggle, navMenu, header, forceClose = null) {
-  const isActive = navMenu.classList.contains('nav__list--active');
-  
-  if (forceClose === false || (forceClose === null && isActive)) {
-    // Close menu
-    navMenu.classList.remove('nav__list--active');
-    menuToggle.classList.remove('menu-toggle--active');
-    document.body.classList.remove('no-scroll');
-  } else {
-    // Open menu
-    navMenu.classList.add('nav__list--active');
-    menuToggle.classList.add('menu-toggle--active');
-    document.body.classList.add('no-scroll');
-  }
-}
-
 export function mobileMenuInit() {
   const menuToggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('.nav__list');
   const header = document.querySelector('header');
-  const themeToggle = document.querySelector('.theme-toggle');
  
   if (!menuToggle || !navMenu || !header) return;
-
-  // Add touch feedback for mobile devices
-  function addTouchFeedback(element) {
-    if (!element) return;
-    
-    element.addEventListener('touchstart', () => {
-      element.classList.add('active-touch');
-    });
-    
-    element.addEventListener('touchend', () => {
-      setTimeout(() => {
-        element.classList.remove('active-touch');
-      }, 150); // Keep feedback visible for 150ms
-    });
-    
-    element.addEventListener('touchcancel', () => {
-      element.classList.remove('active-touch');
-    });
-  }
-
-  // Apply touch feedback to both buttons
-  addTouchFeedback(menuToggle);
-  addTouchFeedback(themeToggle);
  
   function setMenuHeight() {
     if (window.innerWidth > 768) {
@@ -85,31 +45,25 @@ export function mobileMenuInit() {
   });
 }
 
+function toggleMenu(menuToggle, navMenu, header, forceClose = null) {
+  const isActive = navMenu.classList.contains('nav__list--active');
+  
+  if (forceClose === false || (forceClose === null && isActive)) {
+    navMenu.classList.remove('nav__list--active');
+    menuToggle.classList.remove('menu-toggle--active');
+    document.body.classList.remove('no-scroll');
+  } else {
+    navMenu.classList.add('nav__list--active');
+    menuToggle.classList.add('menu-toggle--active');
+    document.body.classList.add('no-scroll');
+  }
+}
+
 const themeToggleButton = document.querySelector('.theme-toggle__button');
-const themeToggle = document.querySelector('.theme-toggle');
-if (themeToggleButton && themeToggle) {
+if (themeToggleButton) {
   themeToggleButton.addEventListener('click', (e) => {
     changeTheme();
     themeToggleButton.blur();
     e.preventDefault();
   });
-  
-  // Add touch feedback for theme toggle button
-  function addTouchFeedback(element) {
-    element.addEventListener('touchstart', () => {
-      element.classList.add('active-touch');
-    });
-    
-    element.addEventListener('touchend', () => {
-      setTimeout(() => {
-        element.classList.remove('active-touch');
-      }, 150);
-    });
-    
-    element.addEventListener('touchcancel', () => {
-      element.classList.remove('active-touch');
-    });
-  }
-  
-  addTouchFeedback(themeToggle);
 }
