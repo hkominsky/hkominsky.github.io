@@ -9,7 +9,7 @@
   --color-accent: #4CBB17;
   --color-accent-hover: #409f14;
   --color-error: #d50000;
-  --color-header-bg: rgba(255, 255, 255, 0.85);
+  --color-header-bg: rgba(255, 255, 255, 0.80);
   --shadow-card: 0 12px 28px rgba(0, 0, 0, 0.18);
 
   --font-family-primary: "League Spartan", serif;
@@ -64,17 +64,17 @@
 }
 
 [page-theme="dark"] {
-  --color-background: #121212;
-  --color-background-muted: #374151;
-  --color-background-secondary: #1e1e1e;
-  --color-background-tertiary: #2c2c2c;
+  --color-background: #181818;
+  --color-background-secondary: #222222;
+  --color-background-tertiary: #2e2e2e;
+  --color-background-muted: #3a3f4b;
   --color-text-primary: #f8f8f8;
-  --color-text-muted: #6b7280;
+  --color-text-muted: #a1a1aa;
   --color-accent: #005a66;
   --color-accent-hover: #013e46;
   --color-error: #ff6b6b;
-  --color-header-bg: rgba(18, 18, 18, 0.85);
-  --shadow-card: 0 5px 15px rgba(0, 0, 0, 0.6);
+  --color-header-bg: rgba(24, 24, 24, 0.80);
+  --shadow-card: 0 8px 24px rgba(255, 255, 255, 0.08);
 }
 
 @media (max-width: 768px) {

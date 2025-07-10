@@ -11,10 +11,6 @@ const projectMap = [
   {
     slug: 'endzone-analytics',
     path: 'projects/pages/endzone-analytics/'
-  },
-  {
-    slug: 'perks-ffa',
-    path: 'projects/pages/perks-ffa/'
   }
 ];
 
