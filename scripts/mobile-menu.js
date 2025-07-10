@@ -1,9 +1,10 @@
 export function mobileMenuInit() {
   const menuToggle = document.querySelector('.menu-toggle');
+  const menuToggleButton = document.querySelector('.menu-toggle__button'); // Add this line
   const navMenu = document.querySelector('.nav__list');
   const header = document.querySelector('header');
- 
-  if (!menuToggle || !navMenu || !header) return;
+  
+  if (!menuToggle || !menuToggleButton || !navMenu || !header) return;
  
   function setMenuHeight() {
     if (window.innerWidth > 768) {
@@ -21,11 +22,10 @@ export function mobileMenuInit() {
   window.addEventListener('resize', setMenuHeight);
   window.addEventListener('orientationchange', setMenuHeight);
  
-  menuToggle.addEventListener('click', (e) => {
+  menuToggleButton.addEventListener('click', (e) => {
     setMenuHeight();
     toggleMenu(menuToggle, navMenu, header);
-    
-    menuToggle.blur();
+    menuToggleButton.blur();
     e.preventDefault();
   });
  

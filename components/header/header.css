@@ -79,16 +79,22 @@ header {
   height: auto;
 }
 
-.theme-toggle:hover {
-  background-color: var(--color-background-tertiary);
-}
-
 .theme-toggle__button {
   background-color: transparent;
   padding: 6px var(--spacing-sm) var(--spacing-xs);
   border: none;
   cursor: pointer;
   line-height: var(--line-height-none);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .menu-toggle:hover {
+    background-color: var(--color-background-tertiary);
+  }
+  
+  .theme-toggle:hover {
+    background-color: var(--color-background-tertiary);
+  }
 }
 
 /* Mobile Responsive Styles */
@@ -102,17 +108,28 @@ header {
   
   .menu-toggle {
     display: flex;
+    align-items: center;
+    border-radius: var(--border-radius-sm);
+    transition: var(--transition-fast);
+  }
+
+  /* New button styles */
+  .menu-toggle__button {
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: var(--spacing-md);
     height: var(--spacing-md);
+    background: none;
+    border: none;
     cursor: pointer;
     padding: 12px 12px;
     border-radius: var(--border-radius-sm);
-    transition: background-color var(--transition-fast);
+    transition: var(--transition-fast);
     box-sizing: content-box;
-    background-color: transparent;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .menu-toggle__bar {
@@ -125,29 +142,26 @@ header {
     position: relative;
   }
 
-  .menu-toggle--active .menu-toggle__bar:nth-child(1),
-  .menu-toggle--active .menu-toggle__bar:nth-child(3) {
+  /* Update the active state selectors */
+  .menu-toggle--active .menu-toggle__button .menu-toggle__bar:nth-child(1),
+  .menu-toggle--active .menu-toggle__button .menu-toggle__bar:nth-child(3) {
     width: var(--spacing-lg);
   }
 
-  .menu-toggle--active .menu-toggle__bar:nth-child(1) {
+  .menu-toggle--active .menu-toggle__button .menu-toggle__bar:nth-child(1) {
     transform: translateY(5.5px) rotate(45deg);
   }
 
-  .menu-toggle--active .menu-toggle__bar:nth-child(2) {
+  .menu-toggle--active .menu-toggle__button .menu-toggle__bar:nth-child(2) {
     opacity: 0;
   }
 
-  .menu-toggle--active .menu-toggle__bar:nth-child(3) {
+  .menu-toggle--active .menu-toggle__button .menu-toggle__bar:nth-child(3) {
     transform: translateY(-5.5px) rotate(-45deg);
   }
 
   .theme-toggle {
     margin-left: var(--spacing-md);
-  }
-
-  .theme-toggle:hover {
-    background-color: transparent;
   }
   
   .nav__list {
