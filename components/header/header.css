@@ -64,6 +64,7 @@ header {
   border-radius: var(--border-radius-sm);
   transition: var(--transition-fast);
   margin-left: var(--spacing-lg);
+  background-color: transparent; /* Default transparent */
 }
 
 .theme-toggle img{
@@ -148,7 +149,16 @@ header {
     border-radius: var(--border-radius-sm);
     transition: var(--transition-fast);
     box-sizing: content-box;
-    background-color: var(--color-background-secondary);
+    background-color: transparent; /* Default transparent */
+    outline: none;
+    border: none;
+  }
+
+  /* Apply background only on active/focus states */
+  .menu-toggle:focus,
+  .menu-toggle:active {
+    background-color: var(--color-background-secondary) !important;
+    outline: none !important;
   }
 
   .menu-toggle__bar {
@@ -180,7 +190,29 @@ header {
 
   .theme-toggle {
     margin-left: var(--spacing-md);
-    background-color: var(--color-background-secondary);
+    background-color: transparent; /* Default transparent */
+  }
+
+  /* Apply background only on active/focus states */
+  .theme-toggle:focus,
+  .theme-toggle:active {
+    background-color: var(--color-background-secondary) !important;
+  }
+
+  .theme-toggle__button {
+    background-color: transparent;
+    padding: 6px var(--spacing-sm) var(--spacing-xs);
+    border: none;
+    cursor: pointer;
+    line-height: var(--line-height-none);
+    outline: none;
+  }
+
+  .theme-toggle__button:focus,
+  .theme-toggle__button:active,
+  .theme-toggle__button:hover {
+    background-color: transparent !important;
+    outline: none !important;
   }
 
   .nav__list {
