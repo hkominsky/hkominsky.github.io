@@ -45,6 +45,20 @@ export function mobileMenuInit() {
   });
 }
 
+function toggleMenu(menuToggle, navMenu, header, forceClose = null) {
+  const isActive = navMenu.classList.contains('nav__list--active');
+  
+  if (forceClose === false || (forceClose === null && isActive)) {
+    navMenu.classList.remove('nav__list--active');
+    menuToggle.classList.remove('menu-toggle--active');
+    document.body.classList.remove('no-scroll');
+  } else {
+    navMenu.classList.add('nav__list--active');
+    menuToggle.classList.add('menu-toggle--active');
+    document.body.classList.add('no-scroll');
+  }
+}
+
 const themeToggleButton = document.querySelector('.theme-toggle__button');
 if (themeToggleButton) {
   themeToggleButton.addEventListener('click', (e) => {
