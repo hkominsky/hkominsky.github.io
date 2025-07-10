@@ -29,7 +29,7 @@
   aspect-ratio: 16 / 9;
   overflow: hidden;
   position: relative;
-  transition: transform var(--transition-slow);
+  border-radius: var(--border-radius-xl);
 }
 
 .project-card__image img {
@@ -39,51 +39,16 @@
   display: block;
   top: 0;
   left: 0;
+  transition: transform var(--transition-slow);
 }
 
-.project-card:hover .project-card__image {
+.project-card:hover .project-card__image img {
   transform: scale(1.05);
-}
-
-.project-card__tags {
-  position: absolute;
-  left: var(--spacing-md);
-  transform: translateY(-50%);
-  display: flex;
-  flex-wrap: wrap;
-  z-index: var(--z-content);
-  background: transparent;
-  user-select: none;
-}
-
-.project-card__tag {
-  position: relative;
-  padding: calc(var(--spacing-sm)) calc(var(--spacing-lg));
-  border-radius: var(--border-radius-2xl);
-  background-color: var(--color-accent);
-  color: var(--color-background);
-  font-size: var(--font-size-base);
-  font-weight: 600;
-  user-select: none;
-}
-
-.project-card__tag::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(100% + var(--spacing-sm));
-  height: calc(100% + var(--spacing-sm));
-  border-radius: var(--border-radius-3xl);
-  background-color: var(--color-background);
-  z-index: var(--z-background);
 }
 
 .project-card__content {
   position: relative;
   width: 100%;
-  margin-top: var(--spacing-md);
   padding: var(--spacing-lg);
   box-sizing: border-box;
   text-align: left;
@@ -94,15 +59,8 @@
   background: var(--color-background);
 }
 
-.project-card__divider {
-  width: 150px;
-  height: 3px;
-  background: var(--color-accent);
-  margin: var(--spacing-md) 0;
-  border-radius: 999px;
-}
-
 .project-card__cta {
+  margin-top: var(--spacing-sm);
   color: var(--color-text-primary);
   font-size: var(--font-size-body);
 }
@@ -113,6 +71,15 @@
 
 .project-card:active .project-card__cta {
   color: var(--color-accent-hover);
+}
+
+.project-card__cta::after {
+  content: '➜';
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: var(--spacing-sm);
+  position: relative;
+  top: 2px;
 }
 
 /* Mobile Responsive Styles */

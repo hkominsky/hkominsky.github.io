@@ -1,5 +1,5 @@
 import { applyTheme, getStoredTheme } from './theme.js';
-import { componentsInit, projectComponentsInit, positionProjectCardTags } from './components.js';
+import { componentsInit, projectComponentsInit } from './components.js';
 import { contactFormInit } from './contact.js';
 import { projectLinksInit, isHomePage, headerNavigationInit } from './navigation.js';
 import { scrollAnimationInit, handleAnimationState } from './animations.js';
@@ -19,9 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
     headerNavigationInit();
     contactFormInit();
     projectLinksInit();
-
-    // Position project card tags after layout is complete
-    positionProjectCardTags();
   } else {
     projectComponentsInit();
   }

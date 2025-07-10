@@ -68,22 +68,6 @@ export function projectComponentsInit() {
     .catch(error => console.error("Error loading project navigation:", error));
 }
 
-/**
- * Positions project card tags relative to their associated images
- * Ensures tags are properly aligned with the bottom border of project images
- */
-export function positionProjectCardTags() {
-  document.querySelectorAll('.project-card').forEach(card => {
-    const image = card.querySelector('.project-card__image');
-    const tags = card.querySelector('.project-card__tags');
-    
-    if (!image || !tags) return;
-
-    const imageHeight = image.offsetHeight;
-    tags.style.top = `${imageHeight}px`;
-  });
-}
-
 // Set up event listeners for tag positioning
 window.addEventListener('DOMContentLoaded', () => {
   if (isHomePage()) {
