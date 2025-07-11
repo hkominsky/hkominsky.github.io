@@ -73,6 +73,7 @@
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .projects__grid {
+    grid-template-columns: 1fr;
     gap: var(--spacing-lg);
   }
 
