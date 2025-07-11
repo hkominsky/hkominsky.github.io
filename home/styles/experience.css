@@ -158,12 +158,12 @@
   }
 
   .carousel-arrow.prev {
-    left: var(--spacing-3xl);
+    left: var(--spacing-md);
     transform: translateY(-50%) translateX(-50%);
   }
 
   .carousel-arrow.next {
-    right: var(--spacing-3xl);
+    right: var(--spacing-md);
     transform: translateY(-50%) translateX(50%);
   }
 
