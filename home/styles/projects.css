@@ -70,13 +70,11 @@
   color: var(--color-accent-hover);
 }
 
-.project-card__cta::after {
-  content: '➜';
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: var(--spacing-sm);
-  position: relative;
-  top: 2px;
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .projects__grid {
+    gap: var(--spacing-lg);
+  }
 }
 
 /* Hover Styles */

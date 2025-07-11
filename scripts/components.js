@@ -59,13 +59,3 @@ export async function projectComponentsInit() {
     initProjectPageNavigation();
   }
 }
-
-// Position project card tags if on home page (helper function assumed to exist)
-function positionTagsIfHome() {
-  if (isHomePage()) {
-    positionProjectCardTags();
-  }
-}
-
-window.addEventListener('DOMContentLoaded', positionTagsIfHome);
-window.addEventListener('resize', positionTagsIfHome);

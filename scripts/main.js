@@ -17,7 +17,78 @@ document.addEventListener("DOMContentLoaded", () => {
     headerNavigationInit();
     contactFormInit();
     projectLinksInit();
+    initExperienceCarousel();
   } else {
     projectComponentsInit();
   }
 });
+
+function initExperienceCarousel() {
+  const grid = document.querySelector('.experience__grid');
+  const cards = Array.from(grid.children);
+  const prevBtn = document.querySelector('.carousel-arrow.prev');
+  const nextBtn = document.querySelector('.carousel-arrow.next');
+  const dotsContainer = document.querySelector('.experience-dots');
+  const dots = dotsContainer ? Array.from(dotsContainer.children) : [];
+
+  let currentIndex = 0;
+
+  const updateArrows = () => {
+    if (prevBtn) prevBtn.style.visibility = currentIndex === 0 ? 'hidden' : 'visible';
+    if (nextBtn) nextBtn.style.visibility = currentIndex === cards.length - 1 ? 'hidden' : 'visible';
+  };
+
+  const updateDots = () => {
+    dots.forEach((dot, i) => {
+      const selected = i === currentIndex;
+      dot.classList.toggle('active', selected);
+      dot.setAttribute('aria-selected', selected);
+      dot.tabIndex = selected ? 0 : -1;
+    });
+  };
+
+  const centerCard = (index, smooth = true) => {
+    const card = cards[index];
+    const gridWidth = grid.offsetWidth;
+    const cardWidth = card.offsetWidth;
+    const scrollX = card.offsetLeft - (gridWidth / 2) + (cardWidth / 2);
+
+    grid.scrollTo({
+      left: scrollX,
+      behavior: smooth ? 'smooth' : 'auto'
+    });
+
+    cards.forEach((c, i) => {
+      c.classList.toggle('active', i === index);
+    });
+
+    currentIndex = index;
+    updateArrows();
+    updateDots();
+  };
+
+  const next = () => {
+    if (currentIndex < cards.length - 1) {
+      centerCard(currentIndex + 1);
+    }
+  };
+
+  const prev = () => {
+    if (currentIndex > 0) {
+      centerCard(currentIndex - 1);
+    }
+  };
+
+  if (nextBtn) nextBtn.addEventListener('click', next);
+  if (prevBtn) prevBtn.addEventListener('click', prev);
+
+  if (dots.length) {
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        centerCard(i);
+      });
+    });
+  }
+
+  centerCard(currentIndex, false);
+}
