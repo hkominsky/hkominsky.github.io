@@ -97,7 +97,7 @@
     display: flex;
     margin: 0 var(--spacing-md);
     scroll-behavior: smooth;
-    padding: var(--spacing-lg) 0;
+    padding: var(--spacing-md);
     scroll-snap-type: x mandatory;
     flex: 1;
   }
@@ -173,6 +173,11 @@
   .experience-dots .dot.active {
     background-color: var(--color-accent);
     outline: none;
+  }
+
+  .experience-card__description {
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
   }
 }
 
