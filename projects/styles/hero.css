@@ -31,7 +31,6 @@
   flex: 1;
   border-radius: var(--border-radius-xl);
   overflow: hidden;
-  box-shadow: var(--shadow-card);
 }
 
 .project-hero-image img {

@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   applyTheme(getStoredTheme() || "light");
   componentsInit();
   scrollAnimationInit();
-
+ 
   // Check if on the home page
   if (isHomePage()) {
     handleAnimationState();

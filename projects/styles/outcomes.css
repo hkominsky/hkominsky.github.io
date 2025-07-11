@@ -38,12 +38,11 @@
 }
 
 .outcome-card {
-  background: var(--color-background);
+  background: var(--color-background-secondary);
   color: var(--color-text-primary);
   padding: calc(var(--spacing-xl) + 0.5rem);
   border-radius: var(--border-radius-xl);
   transition: transform var(--transition-fast);
-  box-shadow: var(--shadow-card);
   min-height: 280px;
   display: flex;
   flex-direction: column;

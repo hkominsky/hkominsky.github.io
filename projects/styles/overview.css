@@ -12,10 +12,9 @@
 }
 
 .project-overview__meta {
-  background: var(--color-background);
+  background: var(--color-background-secondary);
   padding: var(--spacing-lg);
   border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -60,12 +60,14 @@
   align-self: flex-start;
   text-align: right;
   transform: translateX(-100px);
+  background: var(--color-background-secondary);
 }
 
 .timeline-entry.right .timeline-item {
   align-self: flex-end;
   text-align: left;
   transform: translateX(100px);
+  background: var(--color-background-secondary);
 }
 
 .timeline-dot {
@@ -76,7 +78,7 @@
   width: var(--spacing-md);
   height: var(--spacing-md);
   background: var(--color-accent);
-  border: var(--spacing-xs) solid var(--color-background);
+  border: var(--spacing-xs) solid var(--color-background-tertiary);
   border-radius: 50%;
   box-sizing: content-box;
   z-index: var(--z-content);
@@ -85,7 +87,6 @@
 
 .timeline-item {
   background: var(--color-background);
-  box-shadow: var(--shadow-card);
   border-radius: var(--border-radius-md);
   padding: var(--spacing-lg) var(--spacing-xl);
   width: 60%;

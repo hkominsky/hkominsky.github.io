@@ -10,7 +10,6 @@
   border-radius: var(--border-radius-lg);
   overflow: hidden;
   aspect-ratio: 16 / 9;
-  box-shadow: var(--shadow-card);
 }
 
 .gallery-item img {

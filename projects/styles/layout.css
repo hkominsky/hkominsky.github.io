@@ -26,7 +26,7 @@
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .project-container {
-    padding: var(--spacing-xl) var(--spacing-xs) var(--spacing-xl) var(--spacing-xs);
+    padding: 0 var(--spacing-xs) var(--spacing-xl);
   }
 
   .project-container section {
