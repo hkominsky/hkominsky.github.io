@@ -75,6 +75,24 @@
   .projects__grid {
     gap: var(--spacing-lg);
   }
+
+  .project-card__content p,
+  .project-card__content h4 {
+    display: none;
+  }
+
+  .project-card__image {
+    padding: var(--spacing-sm);
+  }
+
+  .project-card__content {
+    padding: -12px var(--spacing-lg) var(--spacing-lg);
+  }
+
+  .project-card:active {
+    transform: scale(0.95);
+    transition: transform var(--transition-fast);
+  }
 }
 
 /* Hover Styles */
