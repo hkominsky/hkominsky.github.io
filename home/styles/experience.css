@@ -110,11 +110,10 @@
   margin: var(--spacing-xs) var(--spacing-xs);
 }
 
-/* Mobile STryles */
+/* Mobile Styles */
 @media (max-width: 768px) {
   .experience__grid {
     flex-wrap: nowrap;
-    gap: var(--spacing-xl);
   }
 
   .experience-card {
