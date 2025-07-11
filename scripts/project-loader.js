@@ -1,123 +1,184 @@
-// Import the getProjectName function from your navigation module
 import { getProjectName } from '/scripts/navigation.js';
 
-// Function to populate the page with project data
-function populatePage(data) {
-  // Set title and description
+/**
+ * Populates title and description sections of the project page.
+ * @param {Object} data
+ * @param {string} data.title
+ * @param {string} data.description
+ */
+function populateTitleAndDescription(data) {
   document.getElementById('page-title').textContent = data.title;
   document.getElementById('project-title').textContent = data.title;
   document.getElementById('project-description').textContent = data.description;
+}
 
-  // Set hero image
+/**
+ * Populates the hero image section.
+ * @param {{src: string, alt: string}} heroImage
+ */
+function populateHeroImage(heroImage) {
   const heroImg = document.getElementById('hero-image');
-  heroImg.src = data.heroImage.src;
-  heroImg.alt = data.heroImage.alt;
+  heroImg.src = heroImage.src;
+  heroImg.alt = heroImage.alt;
+}
 
-  // Populate stats
+/**
+ * Populates the project stats section.
+ * @param {Array<{number: string|number, label: string}>} stats
+ */
+function populateStats(stats) {
   const statsContainer = document.getElementById('project-stats');
-  statsContainer.innerHTML = data.stats.map(stat => `
+  statsContainer.innerHTML = stats.map(stat => `
     <div class="stat-box">
       <h3 class="stat-number">${stat.number}</h3>
       <p class="stat-label">${stat.label}</p>
     </div>
   `).join('');
+}
 
-  // Populate overview
+/**
+ * Populates the overview text section.
+ * @param {string[]} overview
+ */
+function populateOverview(overview) {
   const overviewContainer = document.getElementById('overview-text');
-  overviewContainer.innerHTML = data.overview.map(text => `<p>${text}</p>`).join('');
+  overviewContainer.innerHTML = overview.map(text => `<p>${text}</p>`).join('');
+}
 
-  // Populate tech stack
+/**
+ * Populates the technology stack section.
+ * @param {string[]} techStack
+ */
+function populateTechStack(techStack) {
   const techStackContainer = document.getElementById('tech-stack');
-  techStackContainer.innerHTML = data.techStack.map(tech =>
+  techStackContainer.innerHTML = techStack.map(tech =>
     `<span class="tech-tag">${tech}</span>`
   ).join('');
+}
 
-  // Populate timeline
+/**
+ * Populates the timeline section, or shows a fallback message.
+ * @param {Array<{date: string, description: string}>} timeline
+ */
+function populateTimeline(timeline) {
   const timelineContainer = document.getElementById('timeline-container');
-  if (timelineContainer) {
-    if (data.timeline && Array.isArray(data.timeline)) {
-        const itemsHTML = data.timeline.map((event, index) => {
-        const sideClass = index % 2 === 0 ? 'left' : 'right';
-        return `
-            <div class="timeline-entry ${sideClass}">
-            <div class="timeline-dot"></div>
-            <div class="timeline-item">
-                <h4>${event.date}</h4>
-                <p>${event.description}</p>
-            </div>
-            </div>
-        `;
-        }).join('');
+  if (!timelineContainer) return;
 
-        // Wrap in arrows
-        timelineContainer.innerHTML = `
-        <div class="arrow top"></div>
-        ${itemsHTML}
-        <div class="arrow bottom"></div>
-        `;
-    } else {
-        timelineContainer.innerHTML = `
-        <div class="arrow top"></div>
-        <p>No timeline data available.</p>
-        <div class="arrow bottom"></div>
-        `;
-    }
+  if (timeline && Array.isArray(timeline)) {
+    const itemsHTML = timeline.map((event, index) => {
+      const sideClass = index % 2 === 0 ? 'left' : 'right';
+      return `
+        <div class="timeline-entry ${sideClass}">
+          <div class="timeline-dot"></div>
+          <div class="timeline-item">
+            <h4>${event.date}</h4>
+            <p>${event.description}</p>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    timelineContainer.innerHTML = `
+      <div class="arrow top"></div>
+      ${itemsHTML}
+      <div class="arrow bottom"></div>
+    `;
+  } else {
+    timelineContainer.innerHTML = `
+      <div class="arrow top"></div>
+      <p>No timeline data available.</p>
+      <div class="arrow bottom"></div>
+    `;
   }
+}
 
-  // Populate gallery
+/**
+ * Populates the gallery section.
+ * @param {Array<{src: string, alt: string, caption: string}>} gallery
+ */
+function populateGallery(gallery) {
   const galleryContainer = document.getElementById('gallery-grid');
-  galleryContainer.innerHTML = data.gallery.map(item => `
+  galleryContainer.innerHTML = gallery.map(item => `
     <div class="gallery-item">
       <img src="${item.src}" alt="${item.alt}" />
       <p class="caption">${item.caption}</p>
     </div>
   `).join('');
+}
 
-  // Populate outcomes intro
+/**
+ * Populates the outcomes intro section.
+ * @param {{intro: string[]}} outcomes
+ */
+function populateOutcomesIntro(outcomes) {
   const outcomesIntro = document.getElementById('outcomes-intro');
   outcomesIntro.innerHTML = `
-    <p>${data.outcomes.intro[0]}</p>
+    <p>${outcomes.intro[0]}</p>
     <div class="outcome-divider"></div>
-    <p>${data.outcomes.intro[1]}</p>
+    <p>${outcomes.intro[1]}</p>
   `;
+}
 
-  // Populate outcomes grid
+/**
+ * Populates the outcomes grid section.
+ * @param {Array<{icon: string, title: string, description: string}>} cards
+ */
+function populateOutcomesGrid(cards) {
   const outcomesGrid = document.getElementById('outcomes-grid');
-  outcomesGrid.innerHTML = data.outcomes.cards.map(card => `
+  outcomesGrid.innerHTML = cards.map(card => `
     <div class="outcome-card">
       <div class="outcome-icon">${card.icon}</div>
       <h4>${card.title}</h4>
       <p>${card.description}</p>
     </div>
   `).join('');
+}
 
-  // Ensure content after hero is visible in case it was hidden previously
+/**
+ * Shows the main content sections after the hero.
+ */
+function showContentAfterHero() {
   const contentAfterHero = document.getElementById('content-after-hero');
   if (contentAfterHero) contentAfterHero.style.display = '';
 }
 
-// Function to load project data
+/**
+ * Main function to populate all page sections.
+ * @param {Object} data - The project data object
+ */
+function populatePage(data) {
+  populateTitleAndDescription(data);
+  populateHeroImage(data.heroImage);
+  populateStats(data.stats);
+  populateOverview(data.overview);
+  populateTechStack(data.techStack);
+  populateTimeline(data.timeline);
+  populateGallery(data.gallery);
+  populateOutcomesIntro(data.outcomes);
+  populateOutcomesGrid(data.outcomes.cards);
+  showContentAfterHero();
+}
+
+/**
+ * Loads project data dynamically based on current URL and populates the page.
+ * Handles errors by showing error UI and updating document title.
+ */
 async function loadProjectData() {
   const projectName = getProjectName();
 
   try {
-    // Import the project data module
     const { default: projectData } = await import(`./project-data/${projectName}.js`);
     populatePage(projectData);
-    } catch (error) {
+  } catch (error) {
     console.error(`Error loading project data for ${projectName}:`, error);
 
-    // Hide content
     document.getElementById('hero-section').style.display = 'none';
     document.getElementById('content-after-hero').style.display = 'none';
-
-    // Show error block
     document.getElementById('hero-error').style.display = 'block';
 
-    // Update title
     document.title = 'Project Not Found';
-    }
+  }
 }
 
-// Initialize when DOM is loaded
+// Initialize page load
 document.addEventListener('DOMContentLoaded', loadProjectData);

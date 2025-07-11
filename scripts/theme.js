@@ -1,7 +1,15 @@
+/**
+ * Retrieves the currently stored theme from localStorage.
+ * @returns {string|null} The stored theme ("light" or "dark"), or null if none stored.
+ */
 export function getStoredTheme() {
   return localStorage.getItem("theme");
 }
 
+/**
+ * Applies the given theme by setting the attribute on the document and updating UI elements.
+ * @param {string} theme - The theme to apply ("light" or "dark").
+ */
 export function applyTheme(theme) {
   if (!["light", "dark"].includes(theme)) {
     theme = "light";
@@ -17,7 +25,16 @@ export function applyTheme(theme) {
   updateThemeImages(theme);
 }
 
+/**
+ * Updates images/icons on the page to match the current theme.
+ * @param {string} theme - The active theme ("light" or "dark").
+ */
 function updateThemeImages(theme) {
+  /**
+   * Updates a single image source based on theme.
+   * @param {string|Element} selector - CSS selector string or DOM element for the image.
+   * @param {string} imageId - The base ID/name of the image file.
+   */
   const updateImage = (selector, imageId) => {
     const element = typeof selector === 'string' ? document.querySelector(selector) : selector;
     if (element) {
@@ -36,7 +53,9 @@ function updateThemeImages(theme) {
   });
 }
 
-
+/**
+ * Toggles the current theme between "light" and "dark", stores the preference, and applies it.
+ */
 export function changeTheme() {
   const currTheme = document.documentElement.getAttribute("page-theme");
   const newTheme = currTheme === "dark" ? "light" : "dark";

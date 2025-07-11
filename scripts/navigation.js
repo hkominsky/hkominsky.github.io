@@ -1,18 +1,24 @@
 // Centralized project list with full URL paths
 const projectMap = [
-  {
-    slug: 'pickaxe-knockout',
-    path: 'projects/pages/pickaxe-knockout/'
-  },
-  {
-    slug: 'code-scout',
-    path: 'projects/pages/code-scout/'
-  },
-  {
-    slug: 'endzone-analytics',
-    path: 'projects/pages/endzone-analytics/'
-  }
+  { path: 'projects/pages/pickaxe-knockout/' },
+  { path: 'projects/pages/code-scout/' },
+  { path: 'projects/pages/endzone-analytics/' }
 ];
+
+/**
+ * Checks if the current URL path is allowed (home, 404, or known project page).
+ * If not, redirects to the home page.
+ */
+export function validateAndRedirect() {
+  const allowedPaths = ['', 'index.html', '404.html'];
+  const currentPath = window.location.pathname.replace(/^\/+|\/+$/g, '');
+  const normalizedProjectPaths = projectMap.map(p => p.path.replace(/\/+$/, ''));
+
+  if (allowedPaths.includes(currentPath)) return;
+  if (normalizedProjectPaths.includes(currentPath)) return;
+
+  window.location.replace('/');
+}
 
 /**
  * Navigates to a project using full URLs
@@ -26,30 +32,13 @@ function goToProject(index) {
 }
 
 /**
- * Navigates to a project by slug
- * @param {string} slug - Project slug
- */
-function goToProjectBySlug(slug) {
-  const index = projectMap.findIndex(p => p.slug === slug);
-  if (index !== -1) {
-    goToProject(index);
-  }
-}
-
-/**
  * Gets the current project index based on the URL path
  * @returns {number} Current project index, or -1 if not found
  */
 function getCurrentProjectIndex() {
   const currentPath = window.location.pathname.replace(/^\/+/, '').replace(/\/+$/, '');
-  
-  const pathMatch = currentPath.match(/^projects\/pages\/([^\/]+)/);
-  if (pathMatch) {
-    const folderName = pathMatch[1];
-    return projectMap.findIndex(p => p.slug === folderName);
-  }
-  
-  return -1;
+
+  return projectMap.findIndex(p => p.path.replace(/\/+$/, '') === currentPath);
 }
 
 /**
@@ -107,20 +96,18 @@ export function initProjectPageNavigation() {
   configureNavButton(nextBtn, currentIndex < projectMap.length - 1, () => goToProject(currentIndex + 1));
 }
 
-
 /**
  * Gets the project name from the current URL for data loading
- * @returns {string} Project name/slug
+ * @returns {string} Project name/folder
  */
 export function getProjectName() {
   const path = window.location.pathname.replace(/^\/+/, '').replace(/\/+$/, '');
-  
+
   const pathMatch = path.match(/^projects\/pages\/([^\/]+)/);
   if (pathMatch) {
-    const folderName = pathMatch[1];
-    return folderName;
+    return pathMatch[1];
   }
-  
+
   const filename = path.split('/').pop();
   return filename.replace('.html', '');
 }
@@ -135,21 +122,21 @@ export function isHomePage() {
     '#contact',
     '.project-card'
   ];
-  
-  const hasHomeElements = homeElements.some(selector => 
+
+  const hasHomeElements = homeElements.some(selector =>
     document.querySelector(selector) !== null
   );
-  
+
   const projectElements = [
     '.project-container',
     '.project-hero',
     '.project-overview'
   ];
-  
-  const hasProjectElements = projectElements.some(selector => 
+
+  const hasProjectElements = projectElements.some(selector =>
     document.querySelector(selector) !== null
   );
-  
+
   return hasHomeElements && !hasProjectElements;
 }
 
@@ -170,7 +157,7 @@ export function headerNavigationInit() {
     const anchor = e.target.closest("a[href^='#']");
     if (anchor) {
       const href = anchor.getAttribute("href");
-      const sectionId = href.substring(1); // remove #
+      const sectionId = href.substring(1);
 
       if (sectionId && document.getElementById(sectionId)) {
         e.preventDefault();
@@ -182,14 +169,12 @@ export function headerNavigationInit() {
     }
   });
 
-  // Handle manual changes to hash (optional, for back/forward buttons)
   window.addEventListener('hashchange', () => {
     if (window.location.hash) {
       scrollToSection(window.location.hash.substring(1), pageOffset);
     }
   });
 }
-
 
 /**
  * Scrolls to a specific section with smooth animation

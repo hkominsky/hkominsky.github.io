@@ -3,80 +3,69 @@ import { applyTheme, getStoredTheme, changeTheme } from './theme.js';
 import { mobileMenuInit } from './mobile-menu.js';
 
 /**
- * Loads external HTML components like header and footer
- * Handles async loading and error states
+ * Fetches HTML from a given URL and inserts it into a target element by ID.
+ * Handles fetch errors and logs them.
+ * @param {string} url - URL to fetch HTML from
+ * @param {string} targetElementId - ID of the element to insert HTML into
+ * @returns {Promise<void>}
  */
-export function componentsInit() {
-  fetch('/components/header/header.html')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return response.text();
-    })
-    .then(data => {
-      document.getElementById('header').innerHTML = data;
+async function fetchAndInsertHTML(url, targetElementId) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const html = await response.text();
+    const targetElement = document.getElementById(targetElementId);
+    if (targetElement) {
+      targetElement.innerHTML = html;
+    } else {
+      console.warn(`Element with ID "${targetElementId}" not found.`);
+    }
+  } catch (error) {
+    console.error(`Error loading ${targetElementId}:`, error);
+  }
+}
 
-      // Theme is applied *after* header is loaded
-      applyTheme(getStoredTheme() || "light");
+/**
+ * Loads external HTML components like header and footer
+ * Applies theme and initializes mobile menu and theme toggle after header loads
+ */
+export async function componentsInit() {
+  await fetchAndInsertHTML('/components/header/header.html', 'header');
 
-      setTimeout(() => {
-        mobileMenuInit();
-      }, 0);
+  applyTheme(getStoredTheme() || "light");
 
-      const themeToggleButton = document.querySelector('.theme-toggle__button');
-      if (themeToggleButton) {
-        themeToggleButton.addEventListener('click', changeTheme);
-      }
-    })
-    .catch(error => console.error("Error loading header:", error));
+  // Initialize mobile menu after header is inserted
+  mobileMenuInit();
 
-  fetch('/components/footer/footer.html')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return response.text();
-    })
-    .then(data => {
-      document.getElementById('footer').innerHTML = data;
-    })
-    .catch(error => console.error("Error loading footer:", error));
+  const themeToggleButton = document.querySelector('.theme-toggle__button');
+  if (themeToggleButton) {
+    themeToggleButton.addEventListener('click', changeTheme);
+  }
+
+  await fetchAndInsertHTML('/components/footer/footer.html', 'footer');
 }
 
 /**
  * Loads project-specific components like project navigation
- * Uses async fetch and handles errors gracefully
+ * Initializes project page navigation after insertion
  */
-export function projectComponentsInit() {
-  fetch('/components/navigation/navigation.html')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return response.text();
-    })
-    .then(data => {
-      const navContainer = document.getElementById('projectNavigation');
-      if (navContainer) {
-        navContainer.innerHTML = data;
-        initProjectPageNavigation();
-      } else {
-        console.warn('projectNavigation container not found.');
-      }
-    })
-    .catch(error => console.error("Error loading project navigation:", error));
+export async function projectComponentsInit() {
+  await fetchAndInsertHTML('/components/navigation/navigation.html', 'projectNavigation');
+
+  const navContainer = document.getElementById('projectNavigation');
+  if (navContainer) {
+    initProjectPageNavigation();
+  }
 }
 
-// Set up event listeners for tag positioning
-window.addEventListener('DOMContentLoaded', () => {
+// Position project card tags if on home page (helper function assumed to exist)
+function positionTagsIfHome() {
   if (isHomePage()) {
     positionProjectCardTags();
   }
-});
+}
 
-window.addEventListener('resize', () => {
-  if (isHomePage()) {
-    positionProjectCardTags();
-  }
-});
+window.addEventListener('DOMContentLoaded', positionTagsIfHome);
+window.addEventListener('resize', positionTagsIfHome);
