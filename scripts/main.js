@@ -49,13 +49,15 @@ function initExperienceCarousel() {
 
   const centerCard = (index, smooth = true) => {
     const card = cards[index];
-    const gridWidth = grid.offsetWidth;
-    const cardWidth = card.offsetWidth;
-    const scrollX = card.offsetLeft - (gridWidth / 2) + (cardWidth / 2);
+    const gridRect = grid.getBoundingClientRect();
+    const cardRect = card.getBoundingClientRect();
+
+    // Calculate how much to scroll horizontally to center the card inside grid
+    const scrollX = grid.scrollLeft + (cardRect.left + cardRect.width / 2) - (gridRect.left + gridRect.width / 2);
 
     grid.scrollTo({
       left: scrollX,
-      behavior: smooth ? 'smooth' : 'auto'
+      behavior: smooth ? 'smooth' : 'auto',
     });
 
     cards.forEach((c, i) => {
@@ -66,6 +68,7 @@ function initExperienceCarousel() {
     updateArrows();
     updateDots();
   };
+
 
   const next = () => {
     if (currentIndex < cards.length - 1) {
