@@ -1,7 +1,7 @@
 import { applyTheme, getStoredTheme } from './theme.js';
 import { componentsInit, projectComponentsInit } from './components.js';
 import { contactFormInit } from './contact.js';
-import { projectLinksInit, isHomePage, headerNavigationInit, validateAndRedirect } from './navigation.js';
+import { projectLinksInit, isHomePage, headerNavigationInit } from './navigation.js';
 import { scrollAnimationInit, handleAnimationState } from './animations.js';
 
 // Handles content loading.
