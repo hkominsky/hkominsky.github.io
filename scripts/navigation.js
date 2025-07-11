@@ -6,21 +6,6 @@ const projectMap = [
 ];
 
 /**
- * Checks if the current URL path is allowed (home, 404, or known project page).
- * If not, redirects to the home page.
- */
-export function validateAndRedirect() {
-  const allowedPaths = ['', 'index.html', '404.html'];
-  const currentPath = window.location.pathname.replace(/^\/+|\/+$/g, '');
-  const normalizedProjectPaths = projectMap.map(p => p.path.replace(/\/+$/, ''));
-
-  if (allowedPaths.includes(currentPath)) return;
-  if (normalizedProjectPaths.includes(currentPath)) return;
-
-  window.location.replace('/');
-}
-
-/**
  * Navigates to a project using full URLs
  * @param {number} index - Index in the projectMap array
  */

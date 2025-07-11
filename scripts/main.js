@@ -4,9 +4,6 @@ import { contactFormInit } from './contact.js';
 import { projectLinksInit, isHomePage, headerNavigationInit, validateAndRedirect } from './navigation.js';
 import { scrollAnimationInit, handleAnimationState } from './animations.js';
 
-// Checks if the current url is valid. Redirects if not.
-validateAndRedirect();
-
 // Handles content loading.
 document.addEventListener("DOMContentLoaded", () => {
   // Applies global components and stylings
