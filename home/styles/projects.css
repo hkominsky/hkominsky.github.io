@@ -28,6 +28,7 @@
   aspect-ratio: 16 / 9;
   overflow: hidden;
   position: relative;
+  padding: var(--spacing-md);
   border-radius: var(--border-radius-xl);
 }
 
@@ -39,6 +40,7 @@
   top: 0;
   left: 0;
   transition: transform var(--transition-slow);
+  border-radius: var(--border-radius-xl);
 }
 
 .project-card__content {
