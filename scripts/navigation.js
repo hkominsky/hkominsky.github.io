@@ -21,7 +21,6 @@ const projectMap = [
 function goToProject(index) {
   const project = projectMap[index];
   if (project) {
-    // Navigate to full URL path
     window.location.href = '/' + project.path;
   }
 }
@@ -44,7 +43,6 @@ function goToProjectBySlug(slug) {
 function getCurrentProjectIndex() {
   const currentPath = window.location.pathname.replace(/^\/+/, '').replace(/\/+$/, '');
   
-  // Check if we're on the full path (e.g., /projects/pages/code-scout/)
   const pathMatch = currentPath.match(/^projects\/pages\/([^\/]+)/);
   if (pathMatch) {
     const folderName = pathMatch[1];
@@ -63,7 +61,6 @@ function getCurrentProjectIndex() {
 function configureNavButton(button, isActive, handler) {
   if (!button) return;
 
-  // Remove existing event listeners by cloning the button
   const newButton = button.cloneNode(true);
   button.parentNode.replaceChild(newButton, button);
 
@@ -105,16 +102,9 @@ export function initProjectPageNavigation() {
 
   const lastBtn = document.querySelector('.project-navigation--last');
   const nextBtn = document.querySelector('.project-navigation--next');
-  const homeBtn = document.querySelector('.project-navigation--home');
 
   configureNavButton(lastBtn, currentIndex > 0, () => goToProject(currentIndex - 1));
   configureNavButton(nextBtn, currentIndex < projectMap.length - 1, () => goToProject(currentIndex + 1));
-
-  if (homeBtn) {
-    homeBtn.addEventListener('click', () => {
-      window.location.href = '/';
-    });
-  }
 }
 
 
@@ -125,14 +115,12 @@ export function initProjectPageNavigation() {
 export function getProjectName() {
   const path = window.location.pathname.replace(/^\/+/, '').replace(/\/+$/, '');
   
-  // Check if we're on the full path (e.g., /projects/pages/code-scout/)
   const pathMatch = path.match(/^projects\/pages\/([^\/]+)/);
   if (pathMatch) {
     const folderName = pathMatch[1];
     return folderName;
   }
   
-  // Fallback: try to extract from filename (legacy support)
   const filename = path.split('/').pop();
   return filename.replace('.html', '');
 }
@@ -172,14 +160,12 @@ export function isHomePage() {
 export function headerNavigationInit() {
   const pageOffset = 110;
 
-  // On page load: if hash exists, scroll to it
   setTimeout(() => {
     if (window.location.hash) {
       scrollToSection(window.location.hash.substring(1), pageOffset);
     }
   }, 100);
 
-  // Click handler for anchors with hash
   document.addEventListener('click', (e) => {
     const anchor = e.target.closest("a[href^='#']");
     if (anchor) {
@@ -189,10 +175,8 @@ export function headerNavigationInit() {
       if (sectionId && document.getElementById(sectionId)) {
         e.preventDefault();
 
-        // Scroll smoothly to section
         scrollToSection(sectionId, pageOffset);
 
-        // Update the URL hash without jumping or reloading
         history.replaceState(null, '', `#${sectionId}`);
       }
     }
