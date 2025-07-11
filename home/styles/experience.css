@@ -95,3 +95,10 @@
     flex: 1 0 100%;
   }
 }
+
+/* Hover Styles */
+@media (hover: hover) {
+  .experience-card:hover {
+    transform: translateY(-15px);
+  }
+}

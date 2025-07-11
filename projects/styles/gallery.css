@@ -21,10 +21,6 @@
   transition: transform var(--transition-slow);
 }
 
-.gallery-item img:hover {
-  transform: scale(1.05);
-}
-
 .gallery-item .caption {
   position: absolute;
   bottom: 0;

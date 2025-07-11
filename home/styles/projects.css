@@ -42,10 +42,6 @@
   transition: transform var(--transition-slow);
 }
 
-.project-card:hover .project-card__image img {
-  transform: scale(1.05);
-}
-
 .project-card__content {
   position: relative;
   width: 100%;
@@ -65,10 +61,6 @@
   font-size: var(--font-size-body);
 }
 
-.project-card:hover .project-card__cta {
-  color: var(--color-accent);
-}
-
 .project-card:active .project-card__cta {
   color: var(--color-accent-hover);
 }
@@ -86,5 +78,16 @@
 @media (max-width: 768px) {
   .projects__grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Hover Styles */
+@media (hover: hover) {
+  .project-card:hover .project-card__image img {
+    transform: scale(1.05);
+  }
+
+  .project-card:hover .project-card__cta {
+    color: var(--color-accent);
   }
 }
