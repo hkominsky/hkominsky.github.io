@@ -47,7 +47,7 @@
   flex-grow: 1;
   position: relative;
   width: 100%;
-  padding: var(--spacing-lg) var(--spacing-lg);
+  padding: 0 var(--spacing-lg) var(--spacing-lg);
   box-sizing: border-box;
   text-align: left;
   display: flex;
@@ -77,13 +77,6 @@
   margin-left: var(--spacing-sm);
   position: relative;
   top: 2px;
-}
-
-@media (max-width: 768px) {
-.project-card__content p {
-  margin-bottom: 0;
-}
-
 }
 
 /* Hover Styles */
