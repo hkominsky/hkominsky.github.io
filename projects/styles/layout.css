@@ -30,7 +30,7 @@
   }
 
   .project-container section {
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-5xl);
   }
 
   .project-container .navigation {

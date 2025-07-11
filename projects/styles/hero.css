@@ -52,6 +52,7 @@
 @media (max-width: 768px) {
   .project-container .project-hero {
     height: auto;
+    min-height: 0;
     flex-direction: column;
     align-items: flex-start;
   }
