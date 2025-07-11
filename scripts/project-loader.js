@@ -163,7 +163,7 @@ function populatePage(data) {
  * Loads project data dynamically based on current URL and populates the page.
  * Handles errors by showing error UI and updating document title.
  */
-async function loadProjectData() {
+export async function loadProjectData() {
   const projectName = getProjectName();
 
   try {
@@ -179,6 +179,3 @@ async function loadProjectData() {
     document.title = 'Project Not Found';
   }
 }
-
-// Initialize page load
-document.addEventListener('DOMContentLoaded', loadProjectData);

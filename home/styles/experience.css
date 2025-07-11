@@ -36,7 +36,7 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
-  transition: ease 3s all;
+  transition: var(--transition-slow) all;
 }
 
 .experience-card__image figcaption {
@@ -140,7 +140,7 @@
     align-items: center;
     justify-content: center;
     touch-action: manipulation;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity var(--transition-fast), visibility var(--transition-fast);
   }
 
   .carousel-arrow svg {
@@ -224,19 +224,22 @@
     flex: 0 1 calc(33.333% - var(--spacing-lg));
     max-width: calc(33.333% - var(--spacing-lg));
     margin: 0;
-    opacity: 0.4;
-    transition: opacity 0.3s ease;
+    transition: transform var(--transition-fast);
   }
 
   .experience-card:hover {
     transform: translateY(-15px);
   }
 
-  .experience-card.active {
-    opacity: 1;
+  .experience-dots {
+    display: none;
   }
 
-  .experience-dots {
-    display: none !important;
+  .carousel-arrow.prev {
+    display: none;
+  }
+
+  .carousel-arrow.next {
+    display: none;
   }
 }
