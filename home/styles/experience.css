@@ -69,7 +69,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: var(--color-background-secondary);
+  background-color: var(--color-background-tertiary);
   color: var(--color-text-primary);
   text-align: center;
   padding: var(--spacing-sm);
