@@ -23,7 +23,6 @@
 
 .hero__text {
   flex: 1;
-  min-width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
