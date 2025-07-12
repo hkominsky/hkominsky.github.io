@@ -18,6 +18,7 @@
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .container {
+    gap: var(--spacing-sm);
     padding: 0 var(--spacing-xs) var(--spacing-xl);
   }
 

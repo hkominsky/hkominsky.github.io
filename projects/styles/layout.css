@@ -2,7 +2,7 @@
 .project-container {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-3xl);
+  gap: var(--spacing-xl);
   max-width: var(--container-max-width);
   margin: 0 auto;
   transition: max-width 0.5s ease-in-out;
@@ -26,6 +26,7 @@
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .project-container {
+    gap: var(--spacing-sm);
     padding: 0 var(--spacing-xs) var(--spacing-xl);
   }
 
