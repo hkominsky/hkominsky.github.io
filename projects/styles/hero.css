@@ -11,6 +11,12 @@
   flex: 1;
 }
 
+.project-hero-content h2 {
+  text-align: left;
+  display: block;
+  margin: 0 0 var(--spacing-xl) 0;
+}
+
 .project-stats {
   display: flex;
   gap: var(--spacing-2xl);

@@ -9,7 +9,7 @@ class ProjectPageComponent extends HTMLElement {
             <!-- Project Hero Section (default hidden until data loads) -->
             <div class="project-hero scroll-animate" id="hero-section">
               <div class="project-hero-content">
-                <h1 id="project-title"></h1>
+                <h2 id="project-title"></h2>
                 <p id="project-description"></p>
                 <div class="hero-divider"></div>
                 <div class="project-stats" id="project-stats"></div>
