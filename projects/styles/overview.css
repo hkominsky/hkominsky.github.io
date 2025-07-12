@@ -1,4 +1,8 @@
 /* Overview Styles*/
+.project-overview {
+  display: flow-root;
+}
+
 .project-overview__content {
   display: grid;
   grid-template-columns: 2fr 1fr;
