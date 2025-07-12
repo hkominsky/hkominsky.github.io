@@ -9,7 +9,6 @@
 }
 
 .section {
-  min-height: var(--main-content-height);
   padding: var(--spacing-xl) var(--spacing-lg);
   display: flex;
   flex-direction: column;
