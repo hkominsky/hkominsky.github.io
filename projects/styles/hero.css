@@ -64,6 +64,10 @@
     text-align: center;
   }
 
+  #project-description {
+    text-align: center;
+  }
+
   .hero-divider {
     display: none;
   }
