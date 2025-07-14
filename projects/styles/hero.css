@@ -13,7 +13,6 @@
 .project-hero-content h2 {
   text-align: left;
   display: block;
-  margin: 0 0 var(--spacing-xl) 0;
 }
 
 .project-stats {
@@ -58,10 +57,20 @@
     height: auto;
     min-height: 0;
     flex-direction: column;
-    align-items: flex-start;
+    gap: var(--spacing-sm);
   }
 
-  .hero__socials img {
-    width: 12px;
+  .project-hero-content h2 {
+    text-align: center;
+  }
+
+  .hero-divider {
+    display: none;
+  }
+
+  .project-stats {
+    margin: var(--spacing-md);
+    justify-content: center;
+    text-align: center;
   }
 }

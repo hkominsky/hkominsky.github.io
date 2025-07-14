@@ -5,7 +5,7 @@
   gap: var(--spacing-5xl);
   max-width: var(--container-max-width);
   margin: 0 auto;
-  padding: 0 var(--spacing-lg) var(--spacing-5xl);
+  padding: var(--spacing-3xl) var(--spacing-lg) var(--spacing-5xl);
   transition: max-width 0.5s ease-in-out;
   background-color: var(--color-background);
   color: var(--color-text-primary);
