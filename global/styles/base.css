@@ -31,7 +31,6 @@ h1, h2, h3, h4, h5, p {
 
 h1 {
   font-size: var(--font-size-h1);
-  margin-bottom: var(--spacing-sm);
   color: var(--color-accent);
 }
 

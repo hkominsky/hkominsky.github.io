@@ -84,10 +84,6 @@
     padding: 0 var(--spacing-xl);
   }
 
-  .hero__text .hero__socials {
-    margin-top: var(--spacing-lg);
-  }
-
   .hero__socials a {
     margin-top: 0;
     margin-bottom: 0;
