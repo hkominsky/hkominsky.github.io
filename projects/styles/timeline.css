@@ -93,6 +93,8 @@
   flex-direction: column;
 }
 
+
+/* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .timeline-entry.left .timeline-item,
   .timeline-entry.right .timeline-item {
