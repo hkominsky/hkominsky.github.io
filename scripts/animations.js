@@ -42,8 +42,8 @@ export function scrollAnimationInit() {
         }
       });
     }, {
-      threshold: 0.15,
-      rootMargin: isMobile ? '0px 0px -20% 0px' : '0px',
+      threshold: 0.25,
+      rootMargin: isMobile ? '0px 0px -5% 0px' : '0px 0px -10% 0px',
     });
 
     animateElements.forEach((el) => {
