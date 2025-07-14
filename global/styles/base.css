@@ -45,7 +45,7 @@ h2 {
   font-size: var(--font-size-h2);
   text-align: center;
   display: table;
-  margin: 0 auto var(--spacing-xl);
+  margin: 0 auto var(--spacing-md);
   line-height: var(--line-height-tight);
 }
 

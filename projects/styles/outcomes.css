@@ -1,14 +1,7 @@
 /* Outcomes Styles*/
 .project-outcomes {
-  padding-top: var(--spacing-4xl);
-  padding-bottom: var(--spacing-4xl);
-  padding-left: var(--spacing-3xl);
-  padding-right: var(--spacing-3xl);
   box-sizing: border-box;
-  max-width: var(--container-max-width);
-  margin: 0 auto;
 }
-
 
 .project-outcomes .outcome-divider {
   width: 120px;

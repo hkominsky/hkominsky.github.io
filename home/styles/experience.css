@@ -1,10 +1,7 @@
 /* Experience Styles */
 .experience__grid {
-  max-width: var(--content-max-width);
   display: flex;
-  margin: auto;
   overflow: hidden;
-  padding: var(--spacing-lg) var(--spacing-md);
   gap: var(--spacing-md);
 }
 
@@ -215,7 +212,6 @@
   .experience__grid {
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: var(--spacing-xl) 0;
     gap: var(--spacing-lg);
     overflow-x: visible;
   }
@@ -225,10 +221,6 @@
     max-width: calc(33.333% - var(--spacing-lg));
     margin: 0;
     transition: transform var(--transition-fast);
-  }
-
-  .experience-card:hover {
-    transform: translateY(-15px);
   }
 
   .experience-dots {

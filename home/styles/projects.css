@@ -2,9 +2,6 @@
 .projects__grid {
   display: grid;
   gap: var(--spacing-xl);
-  max-width: var(--content-max-width);
-  width: 100%;
-  margin: auto;
   grid-template-columns: repeat(2, 1fr);
 }
 
@@ -85,6 +82,11 @@
 
 /* Hover Styles */
 @media (hover: hover) {
+
+  .project-card {
+    transition: transform var(--transition-fast);
+  }
+
   .project-card:hover .project-card__cta {
     color: var(--color-accent-hover);
   }

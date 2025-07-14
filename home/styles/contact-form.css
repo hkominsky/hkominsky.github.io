@@ -1,8 +1,6 @@
 /* Contact Form Styles */
 .contact__form {
-  padding: 0 var(--spacing-xl);
   max-width: var(--form-max-width);
-  margin: auto;
   background-color: var(--color-background);
   transition: var(--transition-fast);
 }
