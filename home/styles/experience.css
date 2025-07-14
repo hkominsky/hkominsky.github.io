@@ -64,8 +64,8 @@
 }
 
 .experience-card__description {
-  margin-top: var(--spacing-lg);
-  margin-bottom: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
 }
 
 .experience-card__tech-stack {

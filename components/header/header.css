@@ -31,10 +31,6 @@ header {
   transition: transform var(--transition-slow);
 }
 
-.header__logo:hover {
-  color: var(--color-accent-hover);
-}
-
 .header__nav {
   display: flex;
 }
@@ -218,7 +214,11 @@ header {
   }
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) {
+  .header__logo:hover {
+    color: var(--color-accent-hover);
+  }
+
   .menu-toggle:hover {
     background-color: var(--color-background-tertiary);
   }

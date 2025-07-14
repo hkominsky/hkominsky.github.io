@@ -40,10 +40,6 @@
   transition: var(--transition-fast);
 }
 
-.form-button:hover {
-  background-color: var(--color-accent-hover);
-}
-
 .form-button:active {
   transform: scale(0.98);
 }
@@ -62,4 +58,10 @@
 
 .form-response--error {
   color: var(--color-error);
+}
+
+@media (hover: hover) {
+  .form-button:hover {
+    background-color: var(--color-accent-hover);
+  }
 }
