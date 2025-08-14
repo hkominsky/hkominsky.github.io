@@ -70,8 +70,7 @@
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .projects-grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-sm);
   }
 
   .project-card:active {
