@@ -4,8 +4,8 @@
  */
 export function mobileMenuInit() {
   const menuToggle = document.querySelector('.menu-toggle');
-  const menuToggleButton = document.querySelector('.menu-toggle__button');
-  const navMenu = document.querySelector('.nav__list');
+  const menuToggleButton = document.querySelector('.menu-toggle-button');
+  const navMenu = document.querySelector('.nav-list');
   const header = document.querySelector('header');
 
   if (!menuToggle || !menuToggleButton || !navMenu || !header) return;
@@ -19,7 +19,7 @@ export function mobileMenuInit() {
     menuToggleButton.blur();
   });
 
-  document.querySelectorAll('.nav__link').forEach(link => {
+  document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
       toggleMenu(menuToggle, navMenu, header, false);
       link.blur();
@@ -30,7 +30,7 @@ export function mobileMenuInit() {
     if (
       !navMenu.contains(event.target) &&
       !menuToggle.contains(event.target) &&
-      navMenu.classList.contains('nav__list--active')
+      navMenu.classList.contains('nav-list--active')
     ) {
       toggleMenu(menuToggle, navMenu, header, false);
     }
@@ -79,14 +79,14 @@ function setMenuHeight(navMenu, header) {
  * @param {boolean|null} [forceClose=null] - If true, forces menu closed; if false, forces open; if null, toggles
  */
 function toggleMenu(menuToggle, navMenu, header, forceClose = null) {
-  const isActive = navMenu.classList.contains('nav__list--active');
+  const isActive = navMenu.classList.contains('nav-list--active');
 
   if (forceClose === false || (forceClose === null && isActive)) {
-    navMenu.classList.remove('nav__list--active');
+    navMenu.classList.remove('nav-list--active');
     menuToggle.classList.remove('menu-toggle--active');
     document.body.classList.remove('no-scroll');
   } else {
-    navMenu.classList.add('nav__list--active');
+    navMenu.classList.add('nav-list--active');
     menuToggle.classList.add('menu-toggle--active');
     document.body.classList.add('no-scroll');
   }
@@ -97,7 +97,7 @@ function toggleMenu(menuToggle, navMenu, header, forceClose = null) {
  * Assumes a global `changeTheme` function is defined elsewhere.
  */
 export function themeToggleInit() {
-  const themeToggleButton = document.querySelector('.theme-toggle__button');
+  const themeToggleButton = document.querySelector('.theme-toggle-button');
   if (!themeToggleButton) return;
 
   themeToggleButton.addEventListener('click', (e) => {

@@ -42,7 +42,7 @@ function updateThemeImages(theme) {
     }
   };
 
-  updateImage('.theme-toggle__button img', 'theme');
+  updateImage('.theme-toggle-button img', 'theme');
 
   ["location", "resume", "linkedin", "github", "me"].forEach(id => {
     updateImage(document.getElementById(`${id}-icon`), id);

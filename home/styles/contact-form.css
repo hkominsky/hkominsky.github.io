@@ -1,5 +1,5 @@
 /* Contact Form Styles */
-.contact__form {
+.contact-form {
   max-width: var(--form-max-width);
   background-color: var(--color-background);
   transition: var(--transition-fast);

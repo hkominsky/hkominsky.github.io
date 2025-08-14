@@ -39,7 +39,7 @@ export async function componentsInit() {
   // Initialize mobile menu after header is inserted
   mobileMenuInit();
 
-  const themeToggleButton = document.querySelector('.theme-toggle__button');
+  const themeToggleButton = document.querySelector('.theme-toggle-button');
   if (themeToggleButton) {
     themeToggleButton.addEventListener('click', changeTheme);
   }
@@ -66,7 +66,7 @@ export async function projectComponentsInit() {
  * Automatically centers the active card and updates visual states.
  */
 export function initExperienceCarousel() {
-  const grid = document.querySelector('.experience__grid');
+  const grid = document.querySelector('.experience-grid');
   const cards = Array.from(grid.children);
   const prevBtn = document.querySelector('.carousel-arrow.prev');
   const nextBtn = document.querySelector('.carousel-arrow.next');

@@ -4,7 +4,7 @@
   max-width: var(--form-max-width);
 }
 
-.project-overview__timeline {
+.project-overview-timeline {
   position: relative;
   margin: 0 auto;
   padding: 0 40px;
@@ -13,7 +13,7 @@
   align-items: center;
 }
 
-.project-overview__timeline::before {
+.project-overview-timeline::before {
   content: '';
   position: absolute;
   top: 0;

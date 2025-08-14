@@ -29,14 +29,14 @@ class ProjectPageComponent extends HTMLElement {
           <div id="content-after-hero">
             <section class="project-overview scroll-animate stagger-children">
               <h2>Project Overview</h2>
-              <div class="project-overview__content">
-                <div class="project-overview__text" id="overview-text">
+              <div class="project-overview-content">
+                <div class="project-overview-text" id="overview-text">
                   <!-- Overview text will be populated here -->
                 </div>
 
-                <div class="project-overview__meta">
+                <div class="project-overview-meta">
                   <h4>Tech Stack:</h4>
-                  <div class="project-overview__tech-stack" id="tech-stack">
+                  <div class="project-overview-tech-stack" id="tech-stack">
                     <!-- Tech stack will be populated here -->
                   </div>
                 </div>
@@ -45,7 +45,7 @@ class ProjectPageComponent extends HTMLElement {
             
             <section class="project-timeline scroll-animate stagger-children">
               <h2>Timeline</h2>
-              <div class="project-overview__timeline" id="timeline-container">
+              <div class="project-overview-timeline" id="timeline-container">
                 <!-- Timeline items will be populated here -->
               </div>
             </section>
