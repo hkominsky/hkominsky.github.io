@@ -214,6 +214,7 @@ header {
   }
 }
 
+/* Hover Styles */
 @media (hover: hover) {
   .header-logo:hover {
     color: var(--color-accent-hover);

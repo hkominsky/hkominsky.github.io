@@ -45,10 +45,6 @@
   transition: var(--transition-fast);
 }
 
-.experience-card:hover .experience-card-divider {
-  width: 100px;
-}
-
 .experience-card-description {
   margin-top: var(--spacing-sm);
   margin-bottom: var(--spacing-md);
@@ -219,5 +215,12 @@
 
   .carousel-arrow.next {
     display: none;
+  }
+}
+
+/* Hover Styles */
+@media (hover: hover) {
+  .experience-card:hover .experience-card-divider {
+    width: 100px;
   }
 }
