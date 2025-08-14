@@ -54,7 +54,7 @@
 }
 
 .project-card-content p {
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
 }
 
 .project-card-cta {
@@ -82,9 +82,12 @@
 
 /* Hover Styles */
 @media (hover: hover) {
-
   .project-card {
     transition: transform var(--transition-fast);
+  }
+
+  .project-card:hover {
+    transform: translateY(-4px);
   }
 
   .project-card:hover .project-card-cta {
