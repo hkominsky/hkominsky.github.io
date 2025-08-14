@@ -78,6 +78,6 @@ function showResponseMessage(element, message, type = "") {
   element.textContent = message;
   element.style.display = "block";
   if (type) {
-    element.className = `form-response form-response--${type}`;
+    element.className = `form-response form-response-${type}`;
   }
 }

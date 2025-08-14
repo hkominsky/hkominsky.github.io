@@ -61,15 +61,15 @@
     fill: var(--color-background-secondary);
   }
 
-  .project-navigation--last:hover .project-nav-icon {
+  .project-navigation-last:hover .project-nav-icon {
     transform: translateX(-4px);
   }
 
-  .project-navigation--next:hover .project-nav-icon {
+  .project-navigation-next:hover .project-nav-icon {
     transform: translateX(4px);
   }
 
-  .project-navigation--home:hover .project-nav-icon {
+  .project-navigation-home:hover .project-nav-icon {
     transform: scale(1.1);
   }
 }

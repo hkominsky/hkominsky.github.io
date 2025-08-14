@@ -79,15 +79,15 @@ function setMenuHeight(navMenu, header) {
  * @param {boolean|null} [forceClose=null] - If true, forces menu closed; if false, forces open; if null, toggles
  */
 function toggleMenu(menuToggle, navMenu, header, forceClose = null) {
-  const isActive = navMenu.classList.contains('nav-list--active');
+  const isActive = navMenu.classList.contains('nav-list-active');
 
   if (forceClose === false || (forceClose === null && isActive)) {
-    navMenu.classList.remove('nav-list--active');
-    menuToggle.classList.remove('menu-toggle--active');
+    navMenu.classList.remove('nav-list-active');
+    menuToggle.classList.remove('menu-toggle-active');
     document.body.classList.remove('no-scroll');
   } else {
-    navMenu.classList.add('nav-list--active');
-    menuToggle.classList.add('menu-toggle--active');
+    navMenu.classList.add('nav-list-active');
+    menuToggle.classList.add('menu-toggle-active');
     document.body.classList.add('no-scroll');
   }
 }

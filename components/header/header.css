@@ -131,20 +131,20 @@ header {
     position: relative;
   }
 
-  .menu-toggle--active .menu-toggle-button .menu-toggle-bar:nth-child(1),
-  .menu-toggle--active .menu-toggle-button .menu-toggle-bar:nth-child(3) {
+  .menu-toggle-active .menu-toggle-button .menu-toggle-bar:nth-child(1),
+  .menu-toggle-active .menu-toggle-button .menu-toggle-bar:nth-child(3) {
     width: var(--spacing-lg);
   }
 
-  .menu-toggle--active .menu-toggle-button .menu-toggle-bar:nth-child(1) {
+  .menu-toggle-active .menu-toggle-button .menu-toggle-bar:nth-child(1) {
     transform: translateY(5.5px) rotate(45deg);
   }
 
-  .menu-toggle--active .menu-toggle-button .menu-toggle-bar:nth-child(2) {
+  .menu-toggle-active .menu-toggle-button .menu-toggle-bar:nth-child(2) {
     opacity: 0;
   }
 
-  .menu-toggle--active .menu-toggle-button .menu-toggle-bar:nth-child(3) {
+  .menu-toggle-active .menu-toggle-button .menu-toggle-bar:nth-child(3) {
     transform: translateY(-5.5px) rotate(-45deg);
   }
 
@@ -169,7 +169,7 @@ header {
     z-index: var(--z-dropdown);
   }
 
-  .nav-list--active {
+  .nav-list-active {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
@@ -209,7 +209,7 @@ header {
   .nav-list li:nth-child(9) { transition-delay: 0.45s; }
   .nav-list li:nth-child(10) { transition-delay: 0.5s; }
 
-  .nav-list--active li {
+  .nav-list-active li {
     opacity: 1;
   }
 }

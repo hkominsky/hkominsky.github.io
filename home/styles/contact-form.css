@@ -52,11 +52,11 @@
   color: var(--color-text-primary);
 }
 
-.form-response--success {
+.form-response-success {
   color: var(--color-accent);
 }
 
-.form-response--error {
+.form-response-error {
   color: var(--color-error);
 }
 

@@ -56,7 +56,7 @@ function configureNavButton(button, isActive, handler) {
 export function projectLinksInit() {
   const cards = document.querySelectorAll('.project-card');
   cards.forEach((card, index) => {
-    if (card.classList.contains('project-card--disabled')) return;
+    if (card.classList.contains('project-card-disabled')) return;
 
     card.style.cursor = "pointer";
     card.addEventListener('click', (e) => {
@@ -74,8 +74,8 @@ export function initProjectPageNavigation() {
 
   if (currentIndex === -1) return;
 
-  const lastBtn = document.querySelector('.project-navigation--last');
-  const nextBtn = document.querySelector('.project-navigation--next');
+  const lastBtn = document.querySelector('.project-navigation-last');
+  const nextBtn = document.querySelector('.project-navigation-next');
 
   configureNavButton(lastBtn, currentIndex > 0, () => goToProject(currentIndex - 1));
   configureNavButton(nextBtn, currentIndex < projectMap.length - 1, () => goToProject(currentIndex + 1));
