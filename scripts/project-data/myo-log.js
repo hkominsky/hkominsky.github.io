@@ -4,17 +4,17 @@ export default {
     "A Python application that automates workout data collection, processing, and visualization to deliver actionable fitness insights.",
   heroImage: {
     src: "/projects/images/myolog/dashboard.png",
-    alt: "MyoLog Dashboard"
+    alt: "MyoLog Dashboard Screenshot"
   },
   stats: [
-    { number: "12+", label: "Interactive Visualizations" },
-    { number: "18+", label: "Flask Endpoints" }
+    { number: "12", label: "Interactive Visualizations" },
+    { number: "18", label: "Flask Endpoints" }
   ],
   overview: [
-    "MyoLog is a full-stack data visualization platform that automatically scrapes workout logs from Hevy. "
-    + "The data is cleaned, transformed, and surfaced through dynamic, interactive dashboards. "
-    + "Users can explore their progress across muscles, exercises, and sessions, with responsive "
-    + "filtering and aggregation across multiple pages."
+    "MyoLog is a full-stack data visualization platform that automatically scrapes workout logs from Hevy. ",
+    "The data is cleaned, transformed, and surfaced through dynamic, interactive dashboards. ",
+    "Users can explore their progress across muscles, exercises, and sessions, with responsive ",
+    "filtering and aggregation across multiple pages."
   ],
   techStack: [
     "Python",

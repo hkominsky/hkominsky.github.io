@@ -4,7 +4,7 @@ export default {
     "Bring hypothetical NFL seasons to life through intuitive data tools.",
   heroImage: {
     src: "/projects/images/endzone-analytics/endzone-analytics.png",
-    alt: "Endzone Analytics"
+    alt: "Endzone Analytics Screenshot"
   },
   stats: [
     { number: "600+", label: "Players" },
@@ -32,22 +32,22 @@ export default {
   gallery: [
     {
       src: "/projects/images/endzone-analytics/teams.png",
-      alt: "Games Page",
+      alt: "Games Page Screenshot",
       caption: "Season Schedules"
     },
     {
       src: "/projects/images/endzone-analytics/player-stats.png",
-      alt: "Player Stats Page",
+      alt: "Player Stats Page Screenshot",
       caption: "Player Metrics"
     },
     {
       src: "/projects/images/endzone-analytics/draft.png",
-      alt: "Draft Board Page",
+      alt: "Draft Board Page Screenshot",
       caption: "Interactive Draft Board"
     },
     {
       src: "/projects/images/endzone-analytics/all-players.png",
-      alt: "All Players Page",
+      alt: "All Players Page Screenshot",
       caption: "Player Rankings"
     }
   ],

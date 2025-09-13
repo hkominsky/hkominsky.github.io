@@ -4,18 +4,15 @@ export default {
     "A fast-paced multiplayer indie game where mining meets combat.",
   heroImage: {
     src: "/projects/images/pickaxe-knockout/pickaxe-knockout.png",
-    alt: "Pickaxe Knockout"
+    alt: "Pickaxe Knockout Screenshot"
   },
   stats: [
     { number: "1,200+", label: "Unique Players" },
     { number: "28 Minute", label: "Average Retention" }
   ],
   overview: [
-    "Independetly developed and deployed, the game features custom arenas, "
-    + "unique cosmetics, and over <strong>30 distinct power-ups</strong> designed around "
-    + "pickaxe-based combat.",
-    "The game balances competitive mechanics and rewards with laid-back enjoyment, keeping "
-    + "the experience both rewarding and fun."
+    "Independetly developed and deployed, the game features custom arenas, unique cosmetics, and over <strong>30 distinct power-ups</strong> designed around pickaxe-based combat.",
+    "The game balances competitive mechanics and rewards with laid-back enjoyment, keeping the experience both rewarding and fun."
   ],
   techStack: [
     "Unreal Engine 5", 
@@ -26,22 +23,22 @@ export default {
   gallery: [
     {
       src: "/projects/images/pickaxe-knockout/map.png",
-      alt: "Arena",
+      alt: "Arena Screenshot",
       caption: "Custom Map"
     },
     {
       src: "/projects/images/pickaxe-knockout/blender.png",
-      alt: "Blender",
+      alt: "Blender Screenshot",
       caption: "Asset Creation"
     },
     {
       src: "/projects/images/pickaxe-knockout/uefn.png",
-      alt: "UEFN Editor",
+      alt: "UEFN Editor Screenshot",
       caption: "Developing World"
     },
     {
       src: "/projects/images/pickaxe-knockout/code.png",
-      alt: "Code",
+      alt: "Code Screenshot",
       caption: "Programming Mechanics"
     }
   ],

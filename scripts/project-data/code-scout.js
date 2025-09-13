@@ -12,9 +12,7 @@ export default {
   ],
   overview: [
     "Code Scout is a Q&A platform inspired by Stack Overflow.",
-    "Users can ask questions, post answers, leave comments, vote, "
-    + "chat, endorse replies, report inappropriate content, get "
-    + "notifications, apply to be a moderator, and handle reports if approved."
+    "Users can ask questions, post answers, leave comments, vote, chat, endorse replies, report inappropriate content, get notifications, apply to be a moderator, and handle reports if approved."
   ],
   techStack: [
     "React",
