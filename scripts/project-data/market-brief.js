@@ -25,11 +25,6 @@ export default {
     "TypeScript",
     "HTML",
     "CSS",
-    "SendGrid",
-    "EDGAR API",
-    "Finnhub API",
-    "Alpha Vantage API",
-    "yFinance"
   ],
     timeline: [
     { date: "July 2025", description: "Set up webhook system to trigger emails on SEC filings." },
@@ -73,9 +68,9 @@ export default {
     cards: [
         {
             icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v2H4zm0 5h16v2H4zm0 5h10v2H4zm0 5h10v2H4z"/></svg>',
-            title: "Automated Pipeline",
+            title: "API Integration",
             description:
-              "Designed webhook-triggered pipelines in Python to fetch, clean, and aggregate financial, market, and sentiment data from multiple APIs."
+              "Utilized multiple APIs including SendGrid, Twitter Developer, Finnhub, and Alpha Vantage to create each email report."
         },
         {
             icon: `
