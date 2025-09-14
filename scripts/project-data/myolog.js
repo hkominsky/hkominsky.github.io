@@ -3,7 +3,7 @@ export default {
   description:
     "A Python application that automates workout data collection, processing, and visualization to deliver actionable fitness insights.",
   heroImage: {
-    src: "/projects/images/myolog/dashboard.png",
+    src: "/projects/images/myolog/myolog.png",
     alt: "MyoLog Dashboard Screenshot"
   },
   stats: [
@@ -12,21 +12,17 @@ export default {
   ],
   overview: [
     "MyoLog is a full-stack data visualization platform that automatically scrapes workout logs from Hevy. ",
-    "The data is cleaned, transformed, and surfaced through dynamic, interactive dashboards. ",
-    "Users can explore their progress across muscles, exercises, and sessions, with responsive ",
-    "filtering and aggregation across multiple pages."
+    "Users can explore their progress across muscles, exercises, and sessions, with responsive filtering and aggregation across multiple pages."
   ],
   techStack: [
     "Python",
     "Selenium",
     "Flask",
-    "Pandas",
     "JavaScript",
     "HTML",
     "CSS"
   ],
   timeline: [
-    { date: "June 2025", description: "Defined user stories and scoped the MVP." },
     { date: "June 2025", description: "Built automated web scraping pipeline for workout data." },
     { date: "July 2025", description: "Developed data cleaning and transformation pipelines with Pandas." },
     { date: "July 2025", description: "Implemented overview dashboard and core Flask endpoints." },
@@ -37,31 +33,31 @@ export default {
   ],
   gallery: [
     {
-      src: "/projects/images/myolog/overview.png",
+      src: "/projects/images/work-in-progress/placeholder.png",
       alt: "Overview Dashboard",
       caption: "Overview Page"
     },
     {
-      src: "/projects/images/myolog/muscles.png",
+      src: "/projects/images/work-in-progress/placeholder.png",
       alt: "Muscle Analytics",
       caption: "Muscles Page"
     },
     {
-      src: "/projects/images/myolog/exercises.png",
+      src: "/projects/images/work-in-progress/placeholder.png",
       alt: "Exercise Analytics",
       caption: "Exercises Page"
     },
     {
-      src: "/projects/images/myolog/scraping.png",
+      src: "/projects/images/work-in-progress/placeholder.png",
       alt: "Data Pipeline",
       caption: "Automated Scraping & Processing"
     }
   ],
   outcomes: {
-    intro: [
-      "MyoLog emphasized building production-ready data workflows and intuitive data exploration tools.",
-      "Key outcomes include:"
-    ],
+  intro: [
+    "MyoLog started as a desire to optimize my training routine, built into a solution that uses data-driven metrics, production-ready workflows, and intuitive exploration tools.",
+    "Key outcomes include:"
+  ],
     cards: [
       {
         icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v2H4zm0 5h16v2H4zm0 5h10v2H4zm0 5h10v2H4z"/></svg>',

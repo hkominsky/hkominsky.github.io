@@ -3,18 +3,18 @@ export default {
   description:
     "An automated market intelligence platform that delivers real-time financial briefings via email, integrating data from multiple APIs with a full Python-to-React pipeline.",
   heroImage: {
-    src: "/projects/images/market-brief/dashboard.png",
+    src: "/projects/images/work-in-progress/placeholder.png",
     alt: "Market Brief Dashboard Screenshot"
   },
   stats: [
-    { number: "9", label: "Database Tables" },
+    { number: "10", label: "Database Tables" },
     { number: "4", label: "External APIs Integrated" }
   ],
   overview: [
     "Market Brief is an automated reporting system that runs on webhooks triggered by SEC quarterly filings for specified stock tickers.",
     "Once triggered, the system aggregates company financials, calculated metrics, recent news stories, corporate and retail sentiment, sector analysis, and annual stock performance charts.",
-    "Each report is formatted and sent as an automated email using SendGrid, with all underlying data stored in a PostgreSQL database across nine structured tables.",
-    "A FastAPI backend and React frontend provide user authentication, mailing list management, and customizable webhook subscriptions."
+    "Each report is formatted and sent as an automated email using SendGrid, with all underlying data stored in a PostgreSQL database.",
+    "A FastAPI backend and React frontend provide user authentication, mailing list management, and customizable ticker updates."
   ],
   techStack: [
     "Python",
@@ -31,46 +31,45 @@ export default {
     "Alpha Vantage API",
     "yFinance"
   ],
-  timeline: [
-    { date: "July 2025", description: "Set up webhook system to trigger automated emails when quarterly filings were made for tracked tickers." },
-    { date: "Aug 2025", description: "Integrated EDGAR, Finnhub, Alpha Vantage, and yFinance APIs to pull company financials, metrics, and market data." },
-    { date: "Aug 2025", description: "Created email templates and connected SendGrid for automated delivery of reports." },
-    { date: "Aug. 2025", description: "Added calculated financial ratios and performance metrics to the email pipeline." },
-    { date: "Aug. 2025", description: "Integrated corporate and retail sentiment analysis, sector comparisons, and yearly stock chart visualizations." },
-    { date: "Aug. 2025", description: "Finalized full automated email composition with all content sections populated." },
-    { date: "Sep. 2025", description: "Designed PostgreSQL schema with 9 dedicated tables to store financials, metrics, sentiment, sector data, and news." },
-    { date: "Sep. 2025", description: "Implemented data persistence so each generated email was logged and retrievable from the database." },
-    { date: "Sep. 2025", description: "Developed FastAPI backend for authentication, user signup/login, and ticker webhook management." },
-    { date: "Sep. 2025", description: "Built React frontend to allow users to register, subscribe/unsubscribe, and configure tickers for email alerts." },
-    { date: "Oct. 2025", description: "Completed testing, polished UI/UX, and deployed Market Brief as a fully automated platform." }
-  ],
+    timeline: [
+    { date: "July 2025", description: "Set up webhook system to trigger emails on SEC filings." },
+    { date: "Aug 2025", description: "Integrated EDGAR, Finnhub, Alpha Vantage, and yFinance APIs." },
+    { date: "Aug 2025", description: "Created email templates and connected SendGrid for automation." },
+    { date: "Aug 2025", description: "Added financial ratios, metrics, and performance charts to reports." },
+    { date: "Aug 2025", description: "Integrated corporate/retail sentiment and sector comparisons." },
+    { date: "Sep 2025", description: "Designed PostgreSQL schema with tables for all data." },
+    { date: "Sep 2025", description: "Implemented data persistence for all generated emails." },
+    { date: "Sep 2025", description: "Built FastAPI backend for authentication and webhook management." },
+    { date: "Sep 2025", description: "Developed React frontend for user and ticker management." },
+    { date: "Oct 2025", description: "Completed testing, polished UI/UX, and deployed platform." }
+    ],
   gallery: [
     {
-      src: "/projects/images/market-brief/email.png",
+      src: "/projects/images/work-in-progress/placeholder.png",
       alt: "Automated Email Screenshot",
-      caption: "Sample Market Brief Email"
+      caption: "Sample Email"
     },
     {
-      src: "/projects/images/market-brief/db.png",
-      alt: "Database Schema",
-      caption: "PostgreSQL Database with 9 Tables"
+      src: "/projects/images/work-in-progress/placeholder.png",
+      alt: "Database Screenshot",
+      caption: "PostgreSQL Database"
     },
     {
-      src: "/projects/images/market-brief/frontend.png",
-      alt: "Frontend Interface",
-      caption: "React Frontend for Ticker & User Management"
+      src: "/projects/images/work-in-progress/placeholder.png",
+      alt: "Frontend Screenshot",
+      caption: "React Frontend"
     },
     {
-      src: "/projects/images/market-brief/pipeline.png",
-      alt: "Data Pipeline Diagram",
+      src: "/projects/images/work-in-progress/placeholder.png",
+      alt: "Data Pipeline Screenshot",
       caption: "Webhook-Driven Python Pipeline"
     }
   ],
   outcomes: {
-    intro: [
-      "Market Brief emphasized production-ready automation, API integration, and full-stack engineering practices.",
-      "Key outcomes include:"
-    ],
+  intro: [
+    "Market Brief grew out of my need to track company financials with a busy schedule, built into a streamlined solution with automation, API integration, and full-stack practices.",
+    "Key outcomes include:"
+  ],
     cards: [
         {
             icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v2H4zm0 5h16v2H4zm0 5h10v2H4zm0 5h10v2H4z"/></svg>',

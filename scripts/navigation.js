@@ -2,7 +2,10 @@
 const projectMap = [
   { path: 'projects/pages/pickaxe-knockout/' },
   { path: 'projects/pages/code-scout/' },
-  { path: 'projects/pages/endzone-analytics/' }
+  { path: 'projects/pages/endzone-analytics/' },
+  { path: 'projects/pages/myolog/' },
+  { path: 'projects/pages/market-brief/' },
+  { path: 'projects/pages/perks-ffa/' }
 ];
 
 /**
