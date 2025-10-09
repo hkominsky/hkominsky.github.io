@@ -6,7 +6,7 @@ class ProjectPageComponent extends HTMLElement {
       <main>
         <div class="project-container">
           <section class="showcase-container">
-            <!-- Project Hero Section (default hidden until data loads) -->
+            <!-- Project Hero (default hidden until data loads) -->
             <div class="project-hero scroll-animate" id="hero-section">
               <div class="project-hero-content">
                 <h2 id="project-title"></h2>
@@ -31,13 +31,13 @@ class ProjectPageComponent extends HTMLElement {
               <h2>Project Overview</h2>
               <div class="project-overview-content">
                 <div class="project-overview-text" id="overview-text">
-                  <!-- Overview text will be populated here -->
+                  <!-- Overview text -->
                 </div>
 
                 <div class="project-overview-meta">
                   <h4>Tech Stack:</h4>
                   <div class="project-overview-tech-stack" id="tech-stack">
-                    <!-- Tech stack will be populated here -->
+                    <!-- Tech stack -->
                   </div>
                 </div>
               </div>
@@ -46,14 +46,14 @@ class ProjectPageComponent extends HTMLElement {
             <section class="project-timeline scroll-animate stagger-children">
               <h2>Timeline</h2>
               <div class="project-overview-timeline" id="timeline-container">
-                <!-- Timeline items will be populated here -->
+                <!-- Timeline items -->
               </div>
             </section>
 
             <section class="gallery scroll-animate stagger-children">
               <h2>Gallery</h2>
               <div class="gallery-grid" id="gallery-grid">
-                <!-- Gallery items will be populated here -->
+                <!-- Gallery items -->
               </div>
             </section>
 
@@ -61,11 +61,11 @@ class ProjectPageComponent extends HTMLElement {
               <h2>Outcomes</h2>
               <div class="outcomes-content">
                 <div class="outcomes-intro" id="outcomes-intro">
-                  <!-- Outcomes intro will be populated here -->
+                  <!-- Outcomes intro -->
                 </div>
 
                 <div class="outcomes-grid" id="outcomes-grid">
-                  <!-- Outcome cards will be populated here -->
+                  <!-- Outcome cards -->
                 </div>
               </div>
             </section>

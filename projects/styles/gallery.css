@@ -9,7 +9,7 @@
   position: relative;
   border-radius: var(--border-radius-lg);
   overflow: hidden;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 8;
 }
 
 .gallery-item img {

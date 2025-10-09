@@ -1,10 +1,10 @@
-import { getProjectName } from '/scripts/navigation.js';
+import { getProjectName } from '/scripts/navigation/navigation.js';
 
 /**
  * Populates title and description sections of the project page.
- * @param {Object} data
- * @param {string} data.title
- * @param {string} data.description
+ * @param {Object} data - The project data object
+ * @param {string} data.title - The project title to display
+ * @param {string} data.description - The project description text
  */
 function populateTitleAndDescription(data) {
   document.getElementById('page-title').textContent = data.title;
@@ -14,7 +14,9 @@ function populateTitleAndDescription(data) {
 
 /**
  * Populates the hero image section.
- * @param {{src: string, alt: string}} heroImage
+ * @param {Object} heroImage - The hero image object
+ * @param {string} heroImage.src - The image source URL
+ * @param {string} heroImage.alt - The image alt text for accessibility
  */
 function populateHeroImage(heroImage) {
   const heroImg = document.getElementById('hero-image');
@@ -24,7 +26,7 @@ function populateHeroImage(heroImage) {
 
 /**
  * Populates the project stats section.
- * @param {Array<{number: string|number, label: string}>} stats
+ * @param {Array<{number: string|number, label: string}>} stats - Array of stat objects
  */
 function populateStats(stats) {
   const statsContainer = document.getElementById('project-stats');
@@ -38,7 +40,7 @@ function populateStats(stats) {
 
 /**
  * Populates the overview text section.
- * @param {string[]} overview
+ * @param {string[]} overview - Array of paragraph text strings
  */
 function populateOverview(overview) {
   const overviewContainer = document.getElementById('overview-text');
@@ -47,7 +49,7 @@ function populateOverview(overview) {
 
 /**
  * Populates the technology stack section.
- * @param {string[]} techStack
+ * @param {string[]} techStack - Array of technology names
  */
 function populateTechStack(techStack) {
   const techStackContainer = document.getElementById('tech-stack');
@@ -58,7 +60,7 @@ function populateTechStack(techStack) {
 
 /**
  * Populates the timeline section, or shows a fallback message.
- * @param {Array<{date: string, description: string}>} timeline
+ * @param {Array<{date: string, description: string}>} timeline - Array of timeline event objects
  */
 function populateTimeline(timeline) {
   const timelineContainer = document.getElementById('timeline-container');
@@ -94,7 +96,7 @@ function populateTimeline(timeline) {
 
 /**
  * Populates the gallery section.
- * @param {Array<{src: string, alt: string, caption: string}>} gallery
+ * @param {Array<{src: string, alt: string, caption: string}>} gallery - Array of gallery image objects
  */
 function populateGallery(gallery) {
   const galleryContainer = document.getElementById('gallery-grid');
@@ -108,7 +110,8 @@ function populateGallery(gallery) {
 
 /**
  * Populates the outcomes intro section.
- * @param {{intro: string[]}} outcomes
+ * @param {Object} outcomes - The outcomes object
+ * @param {string[]} outcomes.intro - Array of two intro paragraph strings
  */
 function populateOutcomesIntro(outcomes) {
   const outcomesIntro = document.getElementById('outcomes-intro');
@@ -121,7 +124,7 @@ function populateOutcomesIntro(outcomes) {
 
 /**
  * Populates the outcomes grid section.
- * @param {Array<{icon: string, title: string, description: string}>} cards
+ * @param {Array<{icon: string, title: string, description: string}>} cards - Array of outcome card objects
  */
 function populateOutcomesGrid(cards) {
   const outcomesGrid = document.getElementById('outcomes-grid');
@@ -144,7 +147,7 @@ function showContentAfterHero() {
 
 /**
  * Main function to populate all page sections.
- * @param {Object} data - The project data object
+ * @param {Object} data - The project data object containing all section data
  */
 function populatePage(data) {
   populateTitleAndDescription(data);
@@ -161,7 +164,6 @@ function populatePage(data) {
 
 /**
  * Loads project data dynamically based on current URL and populates the page.
- * Handles errors by showing error UI and updating document title.
  */
 export async function loadProjectData() {
   const projectName = getProjectName();
