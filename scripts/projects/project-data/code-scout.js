@@ -35,23 +35,23 @@ export default {
   gallery: [
     {
       src: "/projects/images/code-scout/login.png",
-      alt: "Login Page UI",
-      caption: "Login Page"
+      alt: "Login Page Screenshot",
+      caption: "Login"
     },
     {
       src: "/projects/images/code-scout/notifications.png",
-      alt: "Live Notifications UI",
-      caption: "Live Notification System"
+      alt: "Notifications Screenshot",
+      caption: "Notifications"
     },
     {
       src: "/projects/images/code-scout/class-diagram.png",
-      alt: "Class Diagram Overview",
+      alt: "Class Diagram Screenshot",
       caption: "Class Diagram"
     },
     {
       src: "/projects/images/code-scout/messaging.png",
-      alt: "Real-time Messaging Feature UI",
-      caption: "Live Messaging Feature"
+      alt: "Messaging Screenshot",
+      caption: "Messaging System"
     }
   ],
   outcomes: {

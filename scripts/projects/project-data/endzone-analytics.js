@@ -32,22 +32,22 @@ export default {
   gallery: [
     {
       src: "/projects/images/endzone-analytics/teams.png",
-      alt: "Games Page Screenshot",
+      alt: "Season Screenshot",
       caption: "Season Schedules"
     },
     {
       src: "/projects/images/endzone-analytics/player-stats.png",
-      alt: "Player Stats Page Screenshot",
+      alt: "Player Metrics Screenshot",
       caption: "Player Metrics"
     },
     {
       src: "/projects/images/endzone-analytics/draft.png",
-      alt: "Draft Board Page Screenshot",
+      alt: "Draft Board Screenshot",
       caption: "Interactive Draft Board"
     },
     {
       src: "/projects/images/endzone-analytics/all-players.png",
-      alt: "All Players Page Screenshot",
+      alt: "Player Rankings Screenshot",
       caption: "Player Rankings"
     }
   ],

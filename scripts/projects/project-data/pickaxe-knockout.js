@@ -24,7 +24,7 @@ export default {
     {
       src: "/projects/images/pickaxe-knockout/map.png",
       alt: "Arena Screenshot",
-      caption: "Custom Map"
+      caption: "Custom Arena"
     },
     {
       src: "/projects/images/pickaxe-knockout/blender.png",

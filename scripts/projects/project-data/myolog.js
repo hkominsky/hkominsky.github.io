@@ -36,22 +36,22 @@ export default {
   gallery: [
     {
       src: "/projects/images/myolog/export.png",
-      alt: "Data Pipeline",
+      alt: "Automated Scraping Screenshot",
       caption: "Automated Scraping"
     },
     {
       src: "/projects/images/myolog/overview.png",
-      alt: "Overview Dashboard",
+      alt: "Overview Page Screenshot",
       caption: "Overview Page"
     },
     {
       src: "/projects/images/myolog/muscles.png",
-      alt: "Muscle Analytics",
+      alt: "Muscle Page Screenshot",
       caption: "Muscles Page"
     },
     {
       src: "/projects/images/myolog/exercises.png",
-      alt: "Exercise Analytics",
+      alt: "Exercise Page Screenshot",
       caption: "Exercises Page"
     }
   ],
