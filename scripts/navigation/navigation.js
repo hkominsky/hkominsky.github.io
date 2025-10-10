@@ -1,10 +1,10 @@
 // Centralized project list with full URL paths
 const projectMap = [
   { path: 'projects/pages/pickaxe-knockout/' },
+  { path: 'projects/pages/bullseye/' },
   { path: 'projects/pages/code-scout/' },
   { path: 'projects/pages/endzone-analytics/' },
   { path: 'projects/pages/myolog/' },
-  { path: 'projects/pages/bullseye/' },
   { path: 'projects/pages/perks-ffa/' }
 ];
 
