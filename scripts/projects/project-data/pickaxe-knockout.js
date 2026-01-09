@@ -1,7 +1,7 @@
 export default {
   title: "Pickaxe Knockout",
   description:
-    "A fast-paced multiplayer indie game where mining meets combat.",
+    "A fast-paced multiplayer indie game where mining becomes deadly.",
   heroImage: {
     src: "/projects/images/pickaxe-knockout/pickaxe-knockout.png",
     alt: "Pickaxe Knockout Screenshot"
