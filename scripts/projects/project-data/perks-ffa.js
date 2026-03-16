@@ -30,22 +30,22 @@ export default {
   ],
   gallery: [
     {
-      src: "/projects/images/perks-ffa/perks-ffa.png",
+      src: "/projects/images/perks-ffa/map.png",
       alt: "Perks FFA Gameplay",
       caption: "Core Gameplay & Perk System"
     },
     {
-      src: "/projects/images/perks-ffa/perks-ffa.png",
+      src: "/projects/images/perks-ffa/uefn.png",
       alt: "Custom UI",
       caption: "Hand-Built Menus, Shop, and Progression UI"
     },
     {
-      src: "/projects/images/perks-ffa/perks-ffa.png",
+      src: "/projects/images/perks-ffa/blender.png",
       alt: "Custom Assets",
       caption: "Custom Blender Models & Cosmetics"
     },
     {
-      src: "/projects/images/perks-ffa/perks-ffa.png",
+      src: "/projects/images/perks-ffa/code.png",
       alt: "Systems Code",
       caption: "Large-Scale Systems & UI Code"
     }

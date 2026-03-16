@@ -9,12 +9,12 @@ export default {
   info: [
     {
       type: "link",
-      label: "GitHub",
+      label: "GitHub ↗",
       url: "https://github.com/siondw/Endzone-Analytics"
     },
     {
       type: "link",
-      label: "Demo",
+      label: "Demo ↗",
       url: "https://youtu.be/YfkxJAHMxl8?si=ULGkTm5Ee3WTUvpP"
     }
   ],
