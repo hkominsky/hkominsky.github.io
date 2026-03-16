@@ -10,7 +10,6 @@ class ProjectPageComponent extends HTMLElement {
             <div class="project-hero scroll-animate" id="hero-section">
               <div class="project-hero-content">
                 <h2 id="project-title"></h2>
-                <p id="project-description"></p>
                 <div class="hero-divider"></div>
                 <div class="project-stats" id="project-stats"></div>
               </div>

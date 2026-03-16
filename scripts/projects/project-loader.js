@@ -9,7 +9,6 @@ import { getProjectName } from '/scripts/navigation/navigation.js';
 function populateTitleAndDescription(data) {
   document.getElementById('page-title').textContent = data.title;
   document.getElementById('project-title').textContent = data.title;
-  document.getElementById('project-description').textContent = data.description;
 }
 
 /**

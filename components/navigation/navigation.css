@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   gap: var(--spacing-lg);
-  margin-top: var(--spacing-3xl);
 }
 
 .project-navigation {
