@@ -9,7 +9,7 @@ export default {
   info: [
     {
       type: "link",
-      label: "Demo ↗",
+      label: "Demo",
       url: "https://youtu.be/YfkxJAHMxl8?si=ULGkTm5Ee3WTUvpP"
     }
   ],

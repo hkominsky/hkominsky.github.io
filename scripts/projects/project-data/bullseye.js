@@ -9,7 +9,7 @@ export default {
   info: [
     {
       type: "link",
-      label: "GitHub ↗",
+      label: "GitHub",
       url: "https://github.com/hkominsky/bullseye"
     },
   ],

@@ -9,7 +9,7 @@ export default {
   info: [
     {
       type: "link",
-      label: "GitHub ↗",
+      label: "GitHub",
       url: "https://github.com/neu-cs4530/fall24-project-fall24-team-project-group-108"
     },
   ],

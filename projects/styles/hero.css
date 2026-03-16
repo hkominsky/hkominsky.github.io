@@ -33,7 +33,6 @@
 
 .info-link {
   font-weight: 700;
-  font-size: var(--font-size-h3);
   color: var(--color-text);
   text-decoration: none;
   transition: opacity 0.2s ease;
