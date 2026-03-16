@@ -9,13 +9,8 @@ export default {
   info: [
     {
       type: "metric",
-      value: "2,000+",
-      label: "Unique Players"
-    },
-    {
-      type: "metric",
-      value: "32 Min",
-      label: "Avg Retention"
+      value: "5415-9495-1857",
+      label: "Island Code"
     }
   ],
   overview: [
