@@ -24,19 +24,59 @@ function populateHeroImage(heroImage) {
 }
 
 /**
- * Populates the project stats section.
- * @param {Array<{number: string|number, label: string}>} stats - Array of stat objects
+ * Creates HTML for a metric-style info box.
+ *
+ * @param {Object} item - Info item object
  */
-function populateStats(stats) {
-  const statsContainer = document.getElementById('project-stats');
-  statsContainer.innerHTML = stats.map(stat => `
-    <div class="stat-box">
-      <h3 class="stat-number">${stat.number}</h3>
-      <p class="stat-label">${stat.label}</p>
+function createMetricInfo(item) {
+  return `
+    <div class="info-box">
+      <h3 class="info-number">${item.value}</h3>
+      <p class="info-label">${item.label}</p>
     </div>
-  `).join('');
+  `;
 }
 
+/**
+ * Creates HTML for a link-style info box.
+ *
+ * @param {Object} item - Info item object
+ */
+function createLinkInfo(item) {
+  return `
+    <div class="info-box">
+      <a
+        class="info-link"
+        href="${item.url}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ${item.label}
+      </a>
+    </div>
+  `;
+}
+
+/**
+ * Populates the project info section with metrics or links.
+ *
+ * Supported types:
+ * - "metric": displays a numeric/statistic highlight
+ * - "link": displays an external link
+ *
+ * @param {Array<Object>} info - Array of info objects
+ */
+function populateInfo(info) {
+  const container = document.getElementById("project-info");
+
+  container.innerHTML = info
+    .map(item =>
+      item.type === "metric"
+        ? createMetricInfo(item)
+        : createLinkInfo(item)
+    )
+    .join("");
+}
 /**
  * Populates the overview text section.
  * @param {string[]} overview - Array of paragraph text strings
@@ -123,7 +163,7 @@ function showContentAfterHero() {
 function populatePage(data) {
   populateTitleAndDescription(data);
   populateHeroImage(data.heroImage);
-  populateStats(data.stats);
+  populateInfo(data.info);
   populateOverview(data.overview);
   populateTechStack(data.techStack);
   populateGallery(data.gallery);

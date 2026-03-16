@@ -6,9 +6,17 @@ export default {
     src: "/projects/images/perks-ffa/perks-ffa.png",
     alt: "Perks FFA"
   },
-  stats: [
-    { number: "2,000+", label: "Unique Players" },
-    { number: "32 Minute", label: "Average Session" }
+  info: [
+    {
+      type: "metric",
+      value: "2,000+",
+      label: "Unique Players"
+    },
+    {
+      type: "metric",
+      value: "32 Min",
+      label: "Avg Retention"
+    }
   ],
   overview: [
     "Perks FFA is a solo-developed indie project where I designed and built everything from the <strong>gameplay systems</strong> to the <strong>menus, progression, and UI</strong>. The game features <strong>40+ unique perks</strong> alongside a large web of unlocks, secrets, and player-driven discovery.",

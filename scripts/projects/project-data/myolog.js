@@ -6,9 +6,12 @@ export default {
     src: "/projects/images/myolog/myolog.png",
     alt: "MyoLog Dashboard Screenshot"
   },
-  stats: [
-    { number: "12", label: "Interactive Visualizations" },
-    { number: "18", label: "Flask Endpoints" }
+  info: [
+    {
+      type: "link",
+      label: "Demo",
+      url: "https://youtu.be/YfkxJAHMxl8?si=ULGkTm5Ee3WTUvpP"
+    }
   ],
   overview: [
     "MyoLog is a full-stack data visualization platform that automatically scrapes workout logs from Hevy. ",

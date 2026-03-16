@@ -6,10 +6,17 @@ export default {
     src: "/projects/images/endzone-analytics/endzone-analytics.png",
     alt: "Endzone Analytics Screenshot"
   },
-  stats: [
-    { number: "600+", label: "Players" },
-    { number: "250+", label: "Games" },
-    { number: "32", label: "Teams" }
+  info: [
+    {
+      type: "link",
+      label: "GitHub",
+      url: "https://github.com/siondw/Endzone-Analytics"
+    },
+    {
+      type: "link",
+      label: "Demo",
+      url: "https://youtu.be/YfkxJAHMxl8?si=ULGkTm5Ee3WTUvpP"
+    }
   ],
   overview: [
     "Endzone Analytics is a full-stack application built to explore and visualize data from a hypothetical NFL season.",

@@ -6,9 +6,12 @@ export default {
     src: "/projects/images/bullseye/bullseye.png",
     alt: "Bullseye Screenshot"
   },
-  stats: [
-    { number: "10", label: "Database Tables" },
-    { number: "4", label: "External APIs Integrated" }
+  info: [
+    {
+      type: "link",
+      label: "GitHub",
+      url: "https://github.com/hkominsky/bullseye"
+    },
   ],
   overview: [
     "Bullseye allows users to track stock tickers and generate on-demand email reports.",

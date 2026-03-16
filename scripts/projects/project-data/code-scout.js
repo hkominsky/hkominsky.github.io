@@ -6,9 +6,12 @@ export default {
     src: "/projects/images/code-scout/code-scout.png",
     alt: "Code Scout Dashboard Screenshot"
   },
-  stats: [
-    { number: "A+", label: "Project Grade" },
-    { number: "4", label: "Team Members" }
+  info: [
+    {
+      type: "link",
+      label: "GitHub",
+      url: "https://github.com/neu-cs4530/fall24-project-fall24-team-project-group-108"
+    },
   ],
   overview: [
     "Code Scout is a Q&A platform inspired by Stack Overflow.",

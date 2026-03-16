@@ -15,20 +15,31 @@
   display: block;
 }
 
-.project-stats {
+.project-info {
   display: flex;
   gap: var(--spacing-2xl);
   margin-top: var(--spacing-xl);
 }
 
-.stat-box {
+.info-box {
   display: flex;
   flex-direction: column;
 }
 
-.stat-number {
+.info-number {
   font-weight: 700;
   color: var(--color-accent);
+}
+
+.info-link {
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.info-link:hover {
+  opacity: 0.7;
 }
 
 .project-hero-image {
@@ -68,7 +79,7 @@
     display: none;
   }
 
-  .project-stats {
+  .project-info {
     margin: var(--spacing-md);
     justify-content: center;
     text-align: center;

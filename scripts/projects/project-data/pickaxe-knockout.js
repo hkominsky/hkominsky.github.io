@@ -6,9 +6,17 @@ export default {
     src: "/projects/images/pickaxe-knockout/pickaxe-knockout.png",
     alt: "Pickaxe Knockout Screenshot"
   },
-  stats: [
-    { number: "1,200+", label: "Unique Players" },
-    { number: "28 Minute", label: "Average Retention" }
+  info: [
+    {
+      type: "metric",
+      value: "1,200+",
+      label: "Unique Players"
+    },
+    {
+      type: "metric",
+      value: "28 Min",
+      label: "Avg Retention"
+    }
   ],
   overview: [
     "Independetly developed and deployed, the game features custom arenas, unique cosmetics, and over <strong>30 distinct power-ups</strong> designed around pickaxe-based combat.",

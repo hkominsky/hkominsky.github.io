@@ -11,7 +11,7 @@ class ProjectPageComponent extends HTMLElement {
               <div class="project-hero-content">
                 <h2 id="project-title"></h2>
                 <div class="hero-divider"></div>
-                <div class="project-stats" id="project-stats"></div>
+                <div class="project-info" id="project-info"></div>
               </div>
               <div class="project-hero-image">
                 <img id="hero-image" src="" alt="" />
