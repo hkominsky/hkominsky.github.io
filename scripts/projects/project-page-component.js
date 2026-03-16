@@ -42,6 +42,13 @@ class ProjectPageComponent extends HTMLElement {
                 </div>
               </div>
             </section>
+
+            <section class="gallery scroll-animate stagger-children">
+              <h2>Gallery</h2>
+              <div class="gallery-grid" id="gallery-grid">
+                <!-- Gallery items -->
+              </div>
+            </section>
             
             <section class="project-timeline scroll-animate stagger-children">
               <h2>Timeline</h2>
@@ -50,25 +57,6 @@ class ProjectPageComponent extends HTMLElement {
               </div>
             </section>
 
-            <section class="gallery scroll-animate stagger-children">
-              <h2>Gallery</h2>
-              <div class="gallery-grid" id="gallery-grid">
-                <!-- Gallery items -->
-              </div>
-            </section>
-
-            <section class="project-outcomes scroll-animate stagger-children">
-              <h2>Outcomes</h2>
-              <div class="outcomes-content">
-                <div class="outcomes-intro" id="outcomes-intro">
-                  <!-- Outcomes intro -->
-                </div>
-
-                <div class="outcomes-grid" id="outcomes-grid">
-                  <!-- Outcome cards -->
-                </div>
-              </div>
-            </section>
           </div>
 
           <section class="navigation scroll-animate">

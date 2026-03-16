@@ -59,6 +59,21 @@ function populateTechStack(techStack) {
 }
 
 /**
+ * Populates the gallery section.
+ * @param {Array<{src: string, alt: string, caption: string}>} gallery - Array of gallery image objects
+ */
+function populateGallery(gallery) {
+  const galleryContainer = document.getElementById('gallery-grid');
+  galleryContainer.innerHTML = gallery.map(item => `
+    <div class="gallery-item">
+      <img src="${item.src}" alt="${item.alt}" />
+      <p class="caption">${item.caption}</p>
+    </div>
+  `).join('');
+}
+
+
+/**
  * Populates the timeline section, or shows a fallback message.
  * @param {Array<{date: string, description: string}>} timeline - Array of timeline event objects
  */
@@ -95,49 +110,6 @@ function populateTimeline(timeline) {
 }
 
 /**
- * Populates the gallery section.
- * @param {Array<{src: string, alt: string, caption: string}>} gallery - Array of gallery image objects
- */
-function populateGallery(gallery) {
-  const galleryContainer = document.getElementById('gallery-grid');
-  galleryContainer.innerHTML = gallery.map(item => `
-    <div class="gallery-item">
-      <img src="${item.src}" alt="${item.alt}" />
-      <p class="caption">${item.caption}</p>
-    </div>
-  `).join('');
-}
-
-/**
- * Populates the outcomes intro section.
- * @param {Object} outcomes - The outcomes object
- * @param {string[]} outcomes.intro - Array of two intro paragraph strings
- */
-function populateOutcomesIntro(outcomes) {
-  const outcomesIntro = document.getElementById('outcomes-intro');
-  outcomesIntro.innerHTML = `
-    <p>${outcomes.intro[0]}</p>
-    <div class="outcome-divider"></div>
-    <p>${outcomes.intro[1]}</p>
-  `;
-}
-
-/**
- * Populates the outcomes grid section.
- * @param {Array<{icon: string, title: string, description: string}>} cards - Array of outcome card objects
- */
-function populateOutcomesGrid(cards) {
-  const outcomesGrid = document.getElementById('outcomes-grid');
-  outcomesGrid.innerHTML = cards.map(card => `
-    <div class="outcome-card">
-      <div class="outcome-icon">${card.icon}</div>
-      <h4>${card.title}</h4>
-      <p>${card.description}</p>
-    </div>
-  `).join('');
-}
-
-/**
  * Shows the main content sections after the hero.
  */
 function showContentAfterHero() {
@@ -155,10 +127,8 @@ function populatePage(data) {
   populateStats(data.stats);
   populateOverview(data.overview);
   populateTechStack(data.techStack);
-  populateTimeline(data.timeline);
   populateGallery(data.gallery);
-  populateOutcomesIntro(data.outcomes);
-  populateOutcomesGrid(data.outcomes.cards);
+  populateTimeline(data.timeline);
   showContentAfterHero();
 }
 
