@@ -1,6 +1,5 @@
 /* Hero Styles */
 .hero {
-  margin-top: var(--spacing-xl);
   display: flex;
   justify-content: center;
   align-items: center;
