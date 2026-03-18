@@ -57,6 +57,10 @@
   animation-delay: 0.6s;
 }
 
+.hero-socials a:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
 .hero-location {
   display: inline-flex;
   align-items: baseline;

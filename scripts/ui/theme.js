@@ -44,7 +44,7 @@ function updateThemeImages(theme) {
 
   updateImage('.theme-toggle-button img', 'theme');
 
-  ["location", "resume", "linkedin", "github"].forEach(id => {
+  ["location", "resume", "linkedin", "github", "mail"].forEach(id => {
     updateImage(document.getElementById(`${id}-icon`), id);
   });
 
