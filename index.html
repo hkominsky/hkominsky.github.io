@@ -21,9 +21,9 @@
   <link rel="stylesheet" href="/global/styles/footer.css">
   <link rel="stylesheet" href="/home/styles/layout.css">
   <link rel="stylesheet" href="/home/styles/hero.css">
+  <link rel="stylesheet" href="/home/styles/about.css">
   <link rel="stylesheet" href="/home/styles/experience.css">
   <link rel="stylesheet" href="/home/styles/projects.css">
-  <link rel="stylesheet" href="/home/styles/contact-form.css">
   <script type="module" src="/scripts/setup/main.js"></script>
 </head>
 
@@ -35,9 +35,9 @@
       </a>
       <nav class="header-nav">
         <ul class="nav-list">
+          <li><a href="/#about" class="nav-link" data-target="about">About</a></li>
           <li><a href="/#experience" class="nav-link" data-target="experience">Experience</a></li>
           <li><a href="/#projects" class="nav-link" data-target="projects">Projects</a></li>
-          <li><a href="/#contact" class="nav-link" data-target="contact">Contact</a></li>
         </ul>
         <div class="menu-toggle">
           <button class="menu-toggle-button" aria-label="Toggle menu">
@@ -64,9 +64,9 @@
           </div>
           <div class="hero-text">
             <div class="hero-content-text">
-              <h1><small>Hi, I'm </small>Hugh</h1>
+              <h1><small>Hi, I'm </small>Hugh<small>!</small></h1>
               <p>
-                An aspiring software engineer with full-stack development experience in financial systems
+                Studying CS & Finance @ Northeastern 🐾
               </p>
             </div>
             <div class="hero-socials">
@@ -88,6 +88,57 @@
         </div>
       </section>
 
+      <section id="about" class="section">
+    <div class="about scroll-animate stagger-children">
+      <h2>About Me</h2>
+      <div class="about-layout">
+  
+        <div class="about-bio">
+          <p>
+            Hey!
+          </p>
+          <p>
+            I'm passionate about building out ideas into usable end products.
+            In particular, I enjoy working collaboratively to innovate the financial industry.
+          </p>
+          <p>
+            Outside of working you'll find me watching Eagles games, hitting the gym,
+            hopefully not doomscrolling, and experimenting with new recipes.
+          </p>
+        </div>
+  
+        <div class="about-skills">
+          <div class="skills-tags">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">SQL</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Spring Boot</span>
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">FastAPI</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">Oracle SQL</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">Redis</span>
+            <span class="tech-tag">Git</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">JUnit</span>
+            <span class="tech-tag">Pytest</span>
+            <span class="tech-tag">Excel</span>
+            <span class="tech-tag">Maven</span>
+            <span class="tech-tag">Gradle</span>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
       <section id="experience" class="section">
         <div class="experience scroll-animate stagger-children">
           <h2>Experience</h2>
@@ -103,45 +154,20 @@
                 <figure class="experience-card-image">
                   <img src="/home/images/experience/scotia.png" alt="Scotiabank" width="100%">
                 </figure>
-                <h3>Equity Derivatives SWE Co-op</h3>
+                <h3>Trading Desk SWE Co-op</h3>
                 <h4>Scotiabank</h4>
                 <h4>Dec. 2024 – June 2025</h4>
                 <h4>New York City, NY</h4>
-                <div class="experience-card-divider"></div>
-                <p class="experience-card-description">
-                  Extended a full-stack web application to automate client
-                  request for quotation pricing, slashing turnaround by 90%
-                </p>
-                <div class="experience-card-tech-stack">
-                  <span class="tech-tag">Java</span>
-                  <span class="tech-tag">Gradle</span>
-                  <span class="tech-tag">Oracle SQL</span>
-                  <span class="tech-tag">Maven</span>
-                  <span class="tech-tag">VBA</span>
-                  <span class="tech-tag">Spring Boot</span>
-                </div>
               </article>
 
               <article class="experience-card">
                 <figure class="experience-card-image">
                   <img src="/home/images/experience/mmc.png" alt="Marsh McLennan" width="100%">
                 </figure>
-                <h3>Risk Modeler Co-op</h3>
+                <h3>Reinsurance Modeling Co-op</h3>
                 <h4>Marsh McLennan</h4>
                 <h4>Jan. 2024 – June 2024</h4>
                 <h4>Philadelphia, PA</h4>
-                <div class="experience-card-divider"></div>
-                <p class="experience-card-description">
-                  Analyzed 50+ client portfolios to refine proprietary risk models and
-                  summarize risk exposure across policy types
-                </p>
-                <div class="experience-card-tech-stack">
-                  <span class="tech-tag">Python</span>
-                  <span class="tech-tag">MySQL</span>
-                  <span class="tech-tag">Excel</span>
-                  <span class="tech-tag">RiskLink</span>
-                  <span class="tech-tag">Verisk AIR</span>
-                </div>
               </article>
 
               <article class="experience-card">
@@ -152,18 +178,6 @@
                 <h4>J&K Seminars</h4>
                 <h4>Apr. 2023 – July 2023</h4>
                 <h4>Philadelphia, PA</h4>
-                <div class="experience-card-divider"></div>
-                <p class="experience-card-description">
-                  Automated Zoom webinar data analysis, and assisted
-                  in migrating existing databases from MS Access to SQL
-                </p>
-                <div class="experience-card-tech-stack">
-                  <span class="tech-tag">Python</span>
-                  <span class="tech-tag">PostgreSQL</span>
-                  <span class="tech-tag">Tableau</span>
-                  <span class="tech-tag">Excel</span>
-                  <span class="tech-tag">Docker</span>
-                </div>
               </article>
             </div>
 
@@ -219,7 +233,7 @@
               <div class="project-card-content">
                 <p>
                   A fitness analytics app that transforms scraped workout logs
-                  into analysis and visualizations for optimal training
+                  into analysis and visualizations
                 </p>
                 <h4 class="project-card-cta">Learn More...</h4>
               </div>
@@ -264,25 +278,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section">
-        <div class="contact scroll-animate stagger-children">
-          <h2>Let's Connect</h2>
-          <form id="contactForm" class="contact-form">
-            <div class="form-group">
-              <p>
-                I'm actively seeking full-time software engineering opportunities beginning June 2026!
-                For direct inquiries, reach me at <span class="accent-text">hugh.kominsky@gmail.com</span>
-              </p>
-              <input id="name" type="text" name="name" required placeholder="Name" class="form-input">
-              <input id="email" type="email" name="email" required placeholder="E-Mail" class="form-input">
-              <textarea id="message" rows="10" name="message" required placeholder="Your Message" class="form-textarea"></textarea>
-              <button class="form-button">Submit</button>
-            </div>
-            <div id="apiResponse" class="form-response"></div>
-          </form>
         </div>
       </section>
     </div>
