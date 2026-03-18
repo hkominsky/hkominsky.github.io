@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +17,8 @@
   <link rel="stylesheet" href="/global/styles/animations.css">
   <link rel="stylesheet" href="/global/styles/base.css">
   <link rel="stylesheet" href="/global/styles/variables.css">
+  <link rel="stylesheet" href="/global/styles/header.css">
+  <link rel="stylesheet" href="/global/styles/footer.css">
   <link rel="stylesheet" href="/home/styles/layout.css">
   <link rel="stylesheet" href="/home/styles/hero.css">
   <link rel="stylesheet" href="/home/styles/experience.css">
@@ -23,8 +26,34 @@
   <link rel="stylesheet" href="/home/styles/contact-form.css">
   <script type="module" src="/scripts/setup/main.js"></script>
 </head>
+
 <body>
-  <header id="header"></header>
+  <header id="header">
+    <div class="header-content">
+      <a href="/" class="header-logo">
+        Hugh Kominsky
+      </a>
+      <nav class="header-nav">
+        <ul class="nav-list">
+          <li><a href="/#experience" class="nav-link" data-target="experience">Experience</a></li>
+          <li><a href="/#projects" class="nav-link" data-target="projects">Projects</a></li>
+          <li><a href="/#contact" class="nav-link" data-target="contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">
+          <button class="menu-toggle-button" aria-label="Toggle menu">
+            <span class="menu-toggle-bar"></span>
+            <span class="menu-toggle-bar"></span>
+            <span class="menu-toggle-bar"></span>
+          </button>
+        </div>
+        <div class="theme-toggle">
+          <button id="theme-toggle-btn" class="theme-toggle-button">
+            <img src="/images/icons/theme-light.png" alt="☀️">
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
 
   <main>
     <div class="container">
@@ -37,7 +66,7 @@
             <div class="hero-content-text">
               <h1><small>Hi, I'm </small>Hugh</h1>
               <p>
-                An aspiring software engineer with full-stack development experience in financial systems.
+                An aspiring software engineer with full-stack development experience in financial systems
               </p>
             </div>
             <div class="hero-socials">
@@ -50,11 +79,11 @@
               <a href="https://github.com/hkominsky" target="_blank">
                 <img id="github-icon" alt="GitHub">
               </a>
-            </div> 
+            </div>
             <div class="hero-location">
               <img id="location-icon" alt="Location" width="14">
               <p>Philadelphia, PA</p>
-            </div> 
+            </div>
           </div>
         </div>
       </section>
@@ -74,14 +103,14 @@
                 <figure class="experience-card-image">
                   <img src="/home/images/experience/scotia.png" alt="Scotiabank" width="100%">
                 </figure>
-                <h3>Quant Dev Co-op</h3>
+                <h3>Equity Derivatives SWE Co-op</h3>
                 <h4>Scotiabank</h4>
                 <h4>Dec. 2024 – June 2025</h4>
                 <h4>New York City, NY</h4>
                 <div class="experience-card-divider"></div>
                 <p class="experience-card-description">
-                  Extended a full-stack web application to automate client 
-                  request for quotation pricing, slashing turnaround by 90%.
+                  Extended a full-stack web application to automate client
+                  request for quotation pricing, slashing turnaround by 90%
                 </p>
                 <div class="experience-card-tech-stack">
                   <span class="tech-tag">Java</span>
@@ -103,8 +132,8 @@
                 <h4>Philadelphia, PA</h4>
                 <div class="experience-card-divider"></div>
                 <p class="experience-card-description">
-                  Analyzed 50+ client portfolios to refine proprietary risk models and 
-                  summarize risk exposure across policy types.
+                  Analyzed 50+ client portfolios to refine proprietary risk models and
+                  summarize risk exposure across policy types
                 </p>
                 <div class="experience-card-tech-stack">
                   <span class="tech-tag">Python</span>
@@ -114,7 +143,7 @@
                   <span class="tech-tag">Verisk AIR</span>
                 </div>
               </article>
-              
+
               <article class="experience-card">
                 <figure class="experience-card-image">
                   <img src="/home/images/experience/j&k.png" alt="J&K Seminars" width="100%">
@@ -126,7 +155,7 @@
                 <div class="experience-card-divider"></div>
                 <p class="experience-card-description">
                   Automated Zoom webinar data analysis, and assisted
-                  in migrating existing databases from Access to SQL.
+                  in migrating existing databases from MS Access to SQL
                 </p>
                 <div class="experience-card-tech-stack">
                   <span class="tech-tag">Python</span>
@@ -157,15 +186,14 @@
         <div class="projects scroll-animate stagger-children">
           <h2>Projects</h2>
           <div class="projects-grid">
-
             <div class="project-card">
               <div class="project-card-image">
                 <img src="/projects/images/perks-ffa/perks-ffa.png" alt="Perks FFA">
               </div>
               <div class="project-card-content">
                 <p>
-                  An innovative free-for-all arena featuring unique power-ups and 
-                  advanced particle effects.
+                  An innovative free-for-all arena featuring unique power-ups and
+                  advanced particle effects
                 </p>
                 <h4 class="project-card-cta">Learn More...</h4>
               </div>
@@ -177,8 +205,8 @@
               </div>
               <div class="project-card-content">
                 <p>
-                  A full-stack portfolio optimizer that selects stocks and
-                  provides a live dashbaord with market data, news, and sentiment.
+                  A full-stack market intelligence tool with a real-time stock dashboard and
+                  on demand email reports
                 </p>
                 <h4 class="project-card-cta">Learn More...</h4>
               </div>
@@ -190,8 +218,8 @@
               </div>
               <div class="project-card-content">
                 <p>
-                  A fitness analytics app that transforms scraped workout logs 
-                  into analysis and visualizations for optimal training.
+                  A fitness analytics app that transforms scraped workout logs
+                  into analysis and visualizations for optimal training
                 </p>
                 <h4 class="project-card-cta">Learn More...</h4>
               </div>
@@ -204,7 +232,7 @@
               <div class="project-card-content">
                 <p>
                   A Q&A platform with real-time chatting, moderation tools, and
-                  database inspired by Stack Overflow.
+                  database inspired by Stack Overflow
                 </p>
                 <h4 class="project-card-cta">Learn More...</h4>
               </div>
@@ -216,8 +244,8 @@
               </div>
               <div class="project-card-content">
                 <p>
-                  A pickaxe-based multiplayer combat game featuring custom 
-                  mechanics and rewarding player progression.
+                  A pickaxe-based multiplayer combat game featuring custom
+                  mechanics and rewarding player progression
                 </p>
                 <h4 class="project-card-cta">Learn More...</h4>
               </div>
@@ -229,13 +257,12 @@
               </div>
               <div class="project-card-content">
                 <p>
-                  A comprehensive sports analytics platform to generate 
-                  actionable insights for coaches, players, and fans.
+                  A comprehensive sports analytics platform to generate
+                  actionable insights for coaches, players, and fans
                 </p>
                 <h4 class="project-card-cta">Learn More...</h4>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -247,7 +274,7 @@
             <div class="form-group">
               <p>
                 I'm actively seeking full-time software engineering opportunities beginning June 2026!
-                For direct inquiries, reach me at <span class="accent-text">hugh.kominsky@gmail.com</span>.
+                For direct inquiries, reach me at <span class="accent-text">hugh.kominsky@gmail.com</span>
               </p>
               <input id="name" type="text" name="name" required placeholder="Name" class="form-input">
               <input id="email" type="email" name="email" required placeholder="E-Mail" class="form-input">
@@ -260,6 +287,9 @@
       </section>
     </div>
   </main>
-  <div id="footer"></div>  
+
+  <footer id="footer">
+    © 2025 Hugh Kominsky | All Rights Reserved
+  </footer>
 </body>
 </html>

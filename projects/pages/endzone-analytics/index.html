@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="/global/styles/animations.css">
   <link rel="stylesheet" href="/global/styles/base.css">
   <link rel="stylesheet" href="/global/styles/variables.css">
+  <link rel="stylesheet" href="/global/styles/header.css">
+  <link rel="stylesheet" href="/global/styles/footer.css">
   <link rel="stylesheet" href="/projects/styles/layout.css" />
   <link rel="stylesheet" href="/projects/styles/hero.css" />
   <link rel="stylesheet" href="/projects/styles/overview.css" />
@@ -22,10 +24,37 @@
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header id="header"></header>
-  
+  <header id="header">
+    <div class="header-content">
+      <a href="/" class="header-logo">
+        Hugh Kominsky
+      </a>
+      <nav class="header-nav">
+        <ul class="nav-list">
+          <li><a href="/#experience" class="nav-link" data-target="experience">Experience</a></li>
+          <li><a href="/#projects" class="nav-link" data-target="projects">Projects</a></li>
+          <li><a href="/#contact" class="nav-link" data-target="contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">
+          <button class="menu-toggle-button" aria-label="Toggle menu">
+            <span class="menu-toggle-bar"></span>
+            <span class="menu-toggle-bar"></span>
+            <span class="menu-toggle-bar"></span>
+          </button>
+        </div>
+        <div class="theme-toggle">
+          <button id="theme-toggle-btn" class="theme-toggle-button">
+            <img src="/images/icons/theme-light.png" alt="☀️">
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
   <project-page></project-page>
-  
-  <div id="footer"></div>
+
+  <footer id="footer">
+    © 2025 Hugh Kominsky | All Rights Reserved
+  </footer>
 </body>
 </html>
