@@ -10,12 +10,7 @@ export default {
     {
       type: "link",
       label: "GitHub",
-      url: "https://github.com/siondw/Endzone-Analytics"
-    },
-    {
-      type: "link",
-      label: "Demo",
-      url: "https://youtu.be/YfkxJAHMxl8?si=ULGkTm5Ee3WTUvpP"
+      url: "https://github.com/hkominsky/options-pricer"
     }
   ],
   overview: [

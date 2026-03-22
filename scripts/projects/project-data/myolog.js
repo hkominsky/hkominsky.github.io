@@ -1,5 +1,5 @@
 export default {
-  title: "MyoLog",
+  title: "Myolog",
   description:
     "A Python application that automates workout data collection, processing, and visualization to deliver actionable fitness insights.",
   heroImage: {
@@ -7,6 +7,11 @@ export default {
     alt: "MyoLog Dashboard Screenshot"
   },
   info: [
+    {
+      type: "link",
+      label: "Live Site",
+      url: "https://www.myolog.fit"
+    },
     {
       type: "link",
       label: "Demo",
@@ -36,6 +41,8 @@ export default {
     { date: "July 2025", description: "Added responsive styling for mobile viewing" },
     { date: "Aug 2025", description: "Created a SQLite database to store scraped data" },
     { date: "Aug 2025", description: "Conducted UI/UX overhaul, optimized Flask routes, and deployed final build" },
+    { date: "Sept 2025", description: "Converted database to PostgreSQL and hosted on Supabase" },
+    { date: "Sept 2025", description: "Implemented GitHub Actions to automate scraping and hosted front end on Render" }
   ],
   gallery: [
     {
