@@ -4,6 +4,7 @@ const projectMap = [
   { path: 'projects/pages/bullseye/' },
   { path: 'projects/pages/myolog/' },
   { path: 'projects/pages/code-scout/' },
+  { path: 'projects/pages/options-pricer/' },
   { path: 'projects/pages/pickaxe-knockout/' },
   { path: 'projects/pages/endzone-analytics/' }
 ];
