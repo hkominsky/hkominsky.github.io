@@ -2,7 +2,7 @@
 .projects-grid {
   display: grid;
   gap: var(--spacing-xl);
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .project-card {
