@@ -74,7 +74,7 @@ export function projectLinksInit() {
 /**
  * Initializes navigation buttons on project pages
  */
-export function initProjectPageNavigation() {
+export async function projectPageNavigationInit() {
   const currentIndex = getCurrentProjectIndex();
 
   if (currentIndex === -1) return;

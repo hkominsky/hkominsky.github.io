@@ -1,4 +1,4 @@
-import { initProjectPageNavigation } from '../navigation/navigation.js';
+import { projectPageNavigationInit } from '../navigation/navigation.js';
 import { applyTheme, getStoredTheme, changeTheme } from '../ui/theme.js';
 import { mobileMenuInit } from '../ui/mobile-menu.js';
 
@@ -27,14 +27,4 @@ export function componentsInit() {
   initializeTheme();
   mobileMenuInit();
   setupThemeToggle();
-}
-
-/**
- * Loads project-specific components like project navigation
- */
-export async function projectComponentsInit() {
-  const navContainer = document.getElementById('projectNavigation');
-  if (navContainer) {
-    initProjectPageNavigation();
-  }
 }
