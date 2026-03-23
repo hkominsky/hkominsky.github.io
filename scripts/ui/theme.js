@@ -22,35 +22,6 @@ export function applyTheme(theme) {
     themeToggleContainer.classList.toggle("active", theme === "dark");
   }
 
-  updateThemeImages(theme);
-}
-
-/**
- * Updates images/icons on the page to match the current theme.
- * @param {string} theme - The active theme ("light" or "dark").
- */
-function updateThemeImages(theme) {
-  /**
-   * Updates a single image source based on theme.
-   * @param {string|Element} selector - CSS selector string or DOM element for the image.
-   * @param {string} imageId - The base ID/name of the image file.
-   */
-  const updateImage = (selector, imageId) => {
-    const element = typeof selector === 'string' ? document.querySelector(selector) : selector;
-    if (element) {
-      element.src = `/global/images/icons/${imageId}-${theme}.png`;
-    }
-  };
-
-  updateImage('.theme-toggle-button img', 'theme');
-
-  ["location", "resume", "linkedin", "github", "mail"].forEach(id => {
-    updateImage(document.getElementById(`${id}-icon`), id);
-  });
-
-  document.querySelectorAll(".card-icon img").forEach(img => {
-    img.src = `images/icons/code-${theme}.svg`;
-  });
 }
 
 /**
