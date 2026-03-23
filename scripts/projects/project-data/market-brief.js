@@ -3,7 +3,7 @@ export default {
   description:
     "A full-stack web application for analyzing earnings call transcripts. Upload a transcript or audio file and get a structured breakdown including a plain-English summary, key financial metrics, sentiment analysis, and an AI chat interface grounded in the full transcript.",
   heroImage: {
-    src: "/projects/images/market-brief/market-brief.png",
+    src: "/projects/pages/market-brief/images/market-brief.png",
     alt: "Market Brief Screenshot"
   },
   info: [
@@ -45,22 +45,22 @@ export default {
   ],
   gallery: [
       {
-        src: "/projects/images/market-brief/upload-empty.png",
+        src: "/projects/pages/market-brief/images/upload-empty.png",
         alt: "MarketBrief Empty Upload Form",
         caption: "Upload Form"
       },
       {
-        src: "/projects/images/market-brief/upload-filled.png",
+        src: "/projects/pages/market-brief/images/upload-filled.png",
         alt: "MarketBrief Upload Form with Content",
         caption: "Upload Form with Transcript"
       },
       {
-        src: "/projects/images/market-brief/dashboard-top.png",
+        src: "/projects/pages/market-brief/images/dashboard-top.png",
         alt: "MarketBrief Dashboard Top Half",
         caption: "Dashboard — Summary + KPIs"
       },
       {
-        src: "/projects/images/market-brief/dashboard-bottom.png",
+        src: "/projects/pages/market-brief/images/dashboard-bottom.png",
         alt: "MarketBrief Dashboard Bottom Half",
         caption: "Dashboard — Sentiment + Q&A"
       }

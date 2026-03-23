@@ -3,7 +3,7 @@ export default {
   description:
     "A feature-rich indie free-for-all game built around custom perks, deep progression, handmade 3D assets, and a fully custom UI packed with secrets to discover.",
   heroImage: {
-    src: "/projects/images/perks-ffa/perks-ffa.png",
+    src: "/projects/pages/perks-ffa/images/perks-ffa.png",
     alt: "Perks FFA"
   },
   info: [
@@ -26,22 +26,22 @@ export default {
   ],
   gallery: [
     {
-      src: "/projects/images/perks-ffa/map.png",
+      src: "/projects/pages/perks-ffa/images/map.png",
       alt: "Perks FFA Gameplay",
       caption: "Core Gameplay & Perk System"
     },
     {
-      src: "/projects/images/perks-ffa/uefn.png",
+      src: "/projects/pages/perks-ffa/images/uefn.png",
       alt: "Custom UI",
       caption: "Hand-Built Menus, Shop, and Progression UI"
     },
     {
-      src: "/projects/images/perks-ffa/blender.png",
+      src: "/projects/pages/perks-ffa/images/blender.png",
       alt: "Custom Assets",
       caption: "Custom Blender Models & Cosmetics"
     },
     {
-      src: "/projects/images/perks-ffa/code.png",
+      src: "/projects/pages/perks-ffa/images/code.png",
       alt: "Systems Code",
       caption: "Large-Scale Systems & UI Code"
     }

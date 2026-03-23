@@ -3,7 +3,7 @@ export default {
   description:
     "A comprehensive market intelligence platform made simple.",
   heroImage: {
-    src: "/projects/images/bullseye/bullseye.png",
+    src: "/projects/pages/bullseye/images/bullseye.png",
     alt: "Bullseye Screenshot"
   },
   info: [
@@ -42,22 +42,22 @@ export default {
   ],
   gallery: [
     {
-      src: "/projects/images/bullseye/login.png",
+      src: "/projects/pages/bullseye/images/login.png",
       alt: "Login Page Screenshot",
       caption: "Login Page"
     },
     {
-      src: "/projects/images/bullseye/dashboard.png",
+      src: "/projects/pages/bullseye/images/dashboard.png",
       alt: "Dashboard Screenshot",
       caption: "Dashboard"
     },
     {
-      src: "/projects/images/bullseye/database.png",
+      src: "/projects/pages/bullseye/images/database.png",
       alt: "Database Screenshot",
       caption: "PostgreSQL Database"
     },
     {
-      src: "/projects/images/bullseye/email.png",
+      src: "/projects/pages/bullseye/images/email.png",
       alt: "Email Screenshot",
       caption: "Sample Email"
     }

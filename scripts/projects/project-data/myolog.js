@@ -3,7 +3,7 @@ export default {
   description:
     "A Python application that automates workout data collection, processing, and visualization to deliver actionable fitness insights.",
   heroImage: {
-    src: "/projects/images/myolog/myolog.png",
+    src: "/projects/pages/myolog/images/myolog.png",
     alt: "MyoLog Dashboard Screenshot"
   },
   info: [
@@ -46,22 +46,22 @@ export default {
   ],
   gallery: [
     {
-      src: "/projects/images/myolog/export.png",
+      src: "/projects/pages/myolog/images/export.png",
       alt: "Automated Scraping Screenshot",
       caption: "Automated Scraping"
     },
     {
-      src: "/projects/images/myolog/overview.png",
+      src: "/projects/pages/myolog/images/overview.png",
       alt: "Overview Page Screenshot",
       caption: "Overview Page"
     },
     {
-      src: "/projects/images/myolog/muscles.png",
+      src: "/projects/pages/myolog/images/muscles.png",
       alt: "Muscle Page Screenshot",
       caption: "Muscles Page"
     },
     {
-      src: "/projects/images/myolog/exercises.png",
+      src: "/projects/pages/myolog/images/exercises.png",
       alt: "Exercise Page Screenshot",
       caption: "Exercises Page"
     }

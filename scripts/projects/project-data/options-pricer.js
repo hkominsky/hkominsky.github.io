@@ -3,7 +3,7 @@ export default {
   description:
     "A Jupyter notebook that prices European call options using Black-Scholes and Monte Carlo simulation, with live market data and an implied volatility solver.",
   heroImage: {
-    src: "/projects/images/options-pricer/pricing.png",
+    src: "/projects/pages/options-pricer/images/pricing.png",
     alt: "Options Pricer Screenshot"
   },
   info: [
@@ -35,12 +35,12 @@ export default {
   ],
   gallery: [
     {
-      src: "/projects/images/options-pricer/pricing.png",
+      src: "/projects/pages/options-pricer/images/pricing.png",
       alt: "Monte Carlo vs Black-Scholes Screenshot",
       caption: "Monte Carlo vs Black-Scholes"
     },
     {
-      src: "/projects/images/options-pricer/implied-vol.png",
+      src: "/projects/pages/options-pricer/images/implied-vol.png",
       alt: "Implied Volatility Solver Screenshot",
       caption: "Implied Vol Solver"
     }

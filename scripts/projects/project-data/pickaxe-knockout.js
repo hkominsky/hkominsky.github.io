@@ -3,7 +3,7 @@ export default {
   description:
     "A fast-paced multiplayer indie game where mining becomes deadly.",
   heroImage: {
-    src: "/projects/images/pickaxe-knockout/pickaxe-knockout.png",
+    src: "/projects/pages/pickaxe-knockout/images/pickaxe-knockout.png",
     alt: "Pickaxe Knockout Screenshot"
   },
   info: [
@@ -25,22 +25,22 @@ export default {
   ],
   gallery: [
     {
-      src: "/projects/images/pickaxe-knockout/map.png",
+      src: "/projects/pages/pickaxe-knockout/images/map.png",
       alt: "Arena Screenshot",
       caption: "Custom Arena"
     },
     {
-      src: "/projects/images/pickaxe-knockout/blender.png",
+      src: "/projects/pages/pickaxe-knockout/images/blender.png",
       alt: "Blender Screenshot",
       caption: "Asset Creation"
     },
     {
-      src: "/projects/images/pickaxe-knockout/uefn.png",
+      src: "/projects/pages/pickaxe-knockout/images/uefn.png",
       alt: "UEFN Editor Screenshot",
       caption: "Developing World"
     },
     {
-      src: "/projects/images/pickaxe-knockout/code.png",
+      src: "/projects/pages/pickaxe-knockout/images/code.png",
       alt: "Code Screenshot",
       caption: "Programming Mechanics"
     }
