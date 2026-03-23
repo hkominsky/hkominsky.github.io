@@ -69,17 +69,24 @@ header {
   margin-left: var(--spacing-lg);
 }
 
-.theme-toggle img{
-  width: var(--header-icons-size);
-  height: auto;
-}
-
 .theme-toggle-button {
+  position: relative;
   background-color: transparent;
-  padding: 6px var(--spacing-sm) var(--spacing-xs);
   border: none;
   cursor: pointer;
   line-height: var(--line-height-none);
+  width: calc(var(--header-icons-size) + var(--spacing-sm) * 2);
+  height: calc(var(--header-icons-size) + 2px + var(--spacing-xs));
+  padding: var(--spacing-sm) var(--spacing-xs);
+}
+
+.theme-toggle img {
+  width: var(--header-icons-size);
+  height: var(--header-icons-size);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .menu-toggle {
