@@ -21,7 +21,6 @@
   <link rel="stylesheet" href="/global/styles/footer.css">
   <link rel="stylesheet" href="/styles/layout.css">
   <link rel="stylesheet" href="/styles/hero.css">
-  <link rel="stylesheet" href="/styles/about.css">
   <link rel="stylesheet" href="/styles/experience.css">
   <link rel="stylesheet" href="/styles/projects.css">
   <script type="module" src="/scripts/setup/main.js"></script>
@@ -67,7 +66,8 @@
             <div class="hero-content-text">
               <h1><small>Hi, I'm </small>Hugh<small>!</small></h1>
               <p>
-                Studying CS & Finance @ Northeastern
+                I'm passionate about working innovating the financial industry.
+                Outside of working you'll find me watching the Eagles or lifting!
               </p>
             </div>
           <div class="hero-socials">
@@ -92,112 +92,70 @@
         </div>
       </section>
 
-      <section id="about" class="section">
-    <div class="about scroll-animate stagger-children">
-      <h2>About Me</h2>
-      <div class="about-layout">
-  
-        <div class="about-bio">
-          <p>
-            Hey!
-          </p>
-          <p>
-            I'm passionate about building out ideas into usable end products.
-            In particular, I enjoy working collaboratively to innovate the financial industry
-          </p>
-          <p>
-            Outside of working you'll find me watching Eagles games, hitting the gym,
-            hopefully not doomscrolling, and experimenting with new recipes
-          </p>
-        </div>
-  
-        <div class="about-skills">
-          <div class="skills-section">
-            <h4>Languages</h4>
-            <div class="skills-tags">
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">SQL</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">TypeScript</span>
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">CSS</span>
-              <span class="tech-tag">Verse</span>
-            </div>
-          </div>
-          <div class="skills-section">
-            <h4>Technologies</h4>
-            <div class="skills-tags">
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">Flask</span>
-              <span class="tech-tag">FastAPI</span>
-              <span class="tech-tag">Redis</span>
-              <span class="tech-tag">MongoDB</span>
-              <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">Alteryx</span>
-              <span class="tech-tag">Tailwind</span>
-            </div>
-          </div>
-        </div>
-  
-      </div>
-    </div>
-  </section>
-
       <section id="experience" class="section">
         <div class="experience scroll-animate stagger-children">
           <h2>Experience</h2>
-          <div class="experience-carousel">
-            <button class="carousel-arrow prev" aria-label="Previous">
-              <svg class="project-nav-icon" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
-              </svg>
-            </button>
 
-            <div class="experience-grid">
-              <article class="experience-card">
-                <figure class="experience-card-image">
-                  <img src="/global/images/experience/scotia.png" alt="Scotiabank" width="100%">
-                </figure>
-                <h3>Quantitative Developer Co-op</h3>
-                <h4>Scotiabank</h4>
-                <h4>Dec. 2024 – June 2025</h4>
-                <h4>New York City, NY</h4>
-              </article>
-
-              <article class="experience-card">
-                <figure class="experience-card-image">
-                  <img src="/global/images/experience/mmc.png" alt="Marsh McLennan" width="100%">
-                </figure>
-                <h3>Reinsurance Modeling Co-op</h3>
-                <h4>Marsh McLennan</h4>
-                <h4>Jan. 2024 – June 2024</h4>
-                <h4>Philadelphia, PA</h4>
-              </article>
-
-              <article class="experience-card">
-                <figure class="experience-card-image">
-                  <img src="/global/images/experience/j&k.png" alt="J&K Seminars" width="100%">
-                </figure>
-                <h3>Software Engineer Intern</h3>
-                <h4>J&K Seminars</h4>
-                <h4>Apr. 2023 – July 2023</h4>
-                <h4>Wyncote, PA</h4>
-              </article>
+          <article class="experience-card">
+            <figure class="experience-card-image">
+              <img src="/global/images/experience/vanguard.png" alt="Vanguard" width="100%">
+            </figure>
+            <div class="experience-card-content">
+              <div class="experience-card-header">
+                <h4>Vanguard</h4>
+                <h5>•</h5>
+                <h5 class="experience-role">Investment Systems Software Engineer</h5>
+              </div>
+              <h5>Aug 2026 in Malvern, PA</h5>
+              <p class="experience-card-description">Incoming full time rotational analyst</p>
             </div>
+          </article>
 
-            <button class="carousel-arrow next" aria-label="Next">
-              <svg class="project-nav-icon" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                <path d="M4 11h12.17l-5.59-5.59L12 4l8 8-8 8-1.41-1.41L16.17 13H4v-2z"/>
-              </svg>
-            </button>
-          </div>
+          <article class="experience-card">
+            <figure class="experience-card-image">
+              <img src="/global/images/experience/scotia.png" alt="Scotiabank">
+            </figure>
+            <div class="experience-card-content">
+              <div class="experience-card-header">
+                <h4>Scotiabank</h4>
+                <h5>•</h5>
+                <h5 class="experience-role">Quantitative Developer Co-op</h5>
+              </div>
+              <h5>Dec 2024 – June 2025 in New York, NY</h5>
+              <p class="experience-card-description">Developing quantitative models and trading systems</p>
+            </div>
+          </article>
 
-          <div class="experience-dots" aria-label="Experience navigation dots" role="tablist">
-            <button class="dot active" aria-selected="true" role="tab" aria-controls="experience-card-0" tabindex="0"></button>
-            <button class="dot" aria-selected="false" role="tab" aria-controls="experience-card-1" tabindex="-1"></button>
-            <button class="dot" aria-selected="false" role="tab" aria-controls="experience-card-2" tabindex="-1"></button>
-          </div>
+          <article class="experience-card">
+            <figure class="experience-card-image">
+              <img src="/global/images/experience/mmc.png" alt="Marsh McLennan">
+            </figure>
+            <div class="experience-card-content">
+              <div class="experience-card-header">
+                <h4>Marsh McLennan</h4>
+                <h5>•</h5>
+                <h5 class="experience-role">Reinsurance Modeling Co-op</h5>
+              </div>
+              <h5>Jan 2024 – June 2024 in Philadelphia, PA</h5>
+              <p class="experience-card-description">Built reinsurance modeling solutions</p>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <figure class="experience-card-image">
+              <img src="/global/images/experience/j&k.png" alt="J&K Seminars">
+            </figure>
+            <div class="experience-card-content">
+              <div class="experience-card-header">
+                <h4>J&K Seminars</h4>
+                <h5>•</h5>
+                <h5 class="experience-role">Software Engineer Intern</h5>
+              </div>
+              <h5>Apr 2023 – July 2023 in Wyncote, PA</h5>
+              <p class="experience-card-description">Developed web applications and features</p>
+            </div>
+          </article>
+
         </div>
       </section>
 
