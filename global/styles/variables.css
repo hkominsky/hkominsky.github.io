@@ -68,6 +68,7 @@
   --experience-icons-size: 64px;
 
   --icon-filter: invert(0);
+  --explore-icon-filter: invert(1);
 }
 
 /* Dark Mode Styles */
@@ -84,6 +85,7 @@
   --color-header-bg: rgba(24, 24, 24, 0.95);
   --shadow-card: 0 8px 20px rgba(0, 0, 0, 0.35);
   --icon-filter: invert(1);
+  --explore-icon-filter: invert(0);
 }
 
 /* Mobile Responsive Styles */

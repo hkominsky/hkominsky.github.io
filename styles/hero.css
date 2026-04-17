@@ -72,6 +72,18 @@
   display: block;
 }
 
+img[id$="-icon"] {
+  width: var(--icons-size);
+  height: var(--icons-size);
+  filter: var(--icon-filter);
+}
+
+#me-icon {
+  width: 100%;
+  height: auto;
+  filter: none;
+}
+
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .hero-content {

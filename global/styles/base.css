@@ -69,29 +69,6 @@ p {
   font-size: var(--font-size-body); 
 }
 
-/* Icon Styles */
-img[id$="-icon"] {
-  width: var(--icons-size);
-  height: var(--icons-size);
-  filter: var(--icon-filter);
-}
-
-#me-icon {
-  width: 100%;
-  height: auto;
-  filter: none;
-}
-
-.icon-dark { display: none; }
-
-[page-theme="dark"] .icon-light { 
-  display: none; 
-}
-
-[page-theme="dark"] .icon-dark { 
-  display: block;
-  filter: brightness(0) invert(1);
-}
 
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
