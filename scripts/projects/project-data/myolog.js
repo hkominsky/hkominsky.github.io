@@ -11,11 +11,6 @@ export default {
       type: "link",
       label: "Live Site",
       url: "https://www.myolog.fit"
-    },
-    {
-      type: "link",
-      label: "Demo",
-      url: "https://youtu.be/YfkxJAHMxl8?si=ULGkTm5Ee3WTUvpP"
     }
   ],
   overview: [
