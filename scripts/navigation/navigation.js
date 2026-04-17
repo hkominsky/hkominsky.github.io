@@ -108,7 +108,6 @@ export function getProjectName() {
  */
 export function isHomePage() {
   const homeElements = [
-    '#about',
     '#projects',
     '.project-card'
   ];
