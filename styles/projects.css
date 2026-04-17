@@ -11,7 +11,6 @@
   border-radius: var(--border-radius-xl);
   background: var(--color-background-secondary);
   overflow: hidden;
-  cursor: pointer;
 }
 
 .project-card-header {
@@ -44,7 +43,7 @@
 }
 
 .project-card-footer {
-  padding: 0 var(--spacing-lg) var(--spacing-md);
+  padding: var(--spacing-xs) var(--spacing-lg) var(--spacing-md);
   display: flex;
   justify-content: flex-end;
 }
@@ -61,6 +60,7 @@
   transition: transform var(--transition-fast), background-color var(--transition-fast);
   width: fit-content;
   margin: 0;
+  cursor: pointer;
 }
 
 .cta-icon {
