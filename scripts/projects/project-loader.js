@@ -46,12 +46,13 @@ function createLinkInfo(item) {
   return `
     <div class="info-box">
       <a
-        class="info-link"
+        class="project-card-cta"
         href="${item.url}"
         target="_blank"
         rel="noopener noreferrer"
       >
         ${item.label}
+        <img src="/global/images/icons/navigate.svg" alt="" class="cta-icon">
       </a>
     </div>
   `;

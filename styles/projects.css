@@ -48,42 +48,6 @@
   justify-content: flex-end;
 }
 
-.project-card-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-xs);
-  padding: var(--spacing-xs) var(--spacing-md);
-  border-radius: var(--border-radius-md);
-  background-color: var(--color-accent);
-  color: var(--color-background);
-  font-size: var(--font-size-body);
-  transition: transform var(--transition-fast), background-color var(--transition-fast);
-  width: fit-content;
-  margin: 0;
-  cursor: pointer;
-}
-
-.cta-icon {
-  width: var(--header-icons-size);
-  height: var(--header-icons-size);
-  display: inline-block;
-  transition: transform var(--transition-fast);
-  margin-bottom: var(--spacing-xs);
-  filter: var(--explore-icon-filter);
-}
-
-.project-card:active .project-card-cta {
-  background-color: var(--color-accent-hover);
-  transform: scale(0.94);
-}
-
-/* Hover Styles */
-@media (hover: hover) {
-  .project-card-cta:hover {
-    background-color: var(--color-accent-hover);
-  }
-}
-
 /* Mobile Styles */
 @media (max-width: 768px) {
   .projects-grid {
