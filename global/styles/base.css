@@ -30,11 +30,13 @@ h1, h2, h3, h4, h5, p {
 }
 
 h1 {
+  line-height: 1;
   font-size: var(--font-size-h1);
   color: var(--color-accent);
 }
 
 h1 small {
+  line-height: 1;
   color: var(--color-text-primary);
   font-weight: var(--font-weight-light);
   font-size: var(--font-size-h1-small);
@@ -72,12 +74,6 @@ img[id$="-icon"] {
   width: var(--icons-size);
   height: var(--icons-size);
   filter: var(--icon-filter);
-}
-
-#location-icon {
-  margin-bottom: var(--spacing-sm);
-  width: var(--spacing-lg);
-  height: var(--spacing-lg);
 }
 
 #me-icon {

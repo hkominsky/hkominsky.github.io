@@ -8,7 +8,12 @@
 .hero-content {
   display: flex;
   max-width: var(--content-max-width);
-  gap: var(--spacing-xl);
+}
+
+.hero-content-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
 }
 
 .hero-image {
@@ -29,7 +34,7 @@
 }
 
 .hero-socials {
-  margin-top: var(--spacing-sm);
+  margin-top: var(--spacing-md);
   margin-bottom: var(--spacing-sm);
 }
 
