@@ -11,7 +11,6 @@
   border-radius: var(--border-radius-xl);
   background: var(--color-background-secondary);
   overflow: hidden;
-  cursor: pointer;
 }
 
 .project-card-header {
@@ -50,38 +49,34 @@
 }
 
 .project-card-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--border-radius-md);
   margin: 0;
-  color: var(--color-accent);
+  background-color: var(--color-accent);
+  color: var(--color-background);
   font-size: var(--font-size-body);
+  transition: var(--transition-fast);
+  cursor: pointer;
 }
 
 .project-card:active .project-card-cta {
-  color: var(--color-accent-hover);
+  background-color: var(--color-accent-hover);
+  transform: scale(0.94);
+}
+
+/* Hover Styles */
+@media (hover: hover) {
+  .project-card-cta:hover {
+    background-color: var(--color-accent-hover);
+  }
 }
 
 /* Mobile Styles */
 @media (max-width: 768px) {
   .projects-grid {
-    gap: var(--spacing-sm);
-  }
-
-  .project-card:active {
-    transform: scale(0.95);
-    transition: transform var(--transition-fast);
-  }
-}
-
-/* Hover Styles */
-@media (hover: hover) {
-  .project-card {
-    transition: transform var(--transition-fast);
-  }
-
-  .project-card:hover {
-    transform: translateY(-4px);
-  }
-
-  .project-card:hover .project-card-cta {
-    color: var(--color-accent-hover);
+    gap: var(--spacing-md);
   }
 }

@@ -59,13 +59,12 @@ function configureNavButton(button, isActive, handler) {
  * Maps grid project cards to detail page clicks
  */
 export function projectLinksInit() {
-  const cards = document.querySelectorAll('.project-card');
-  cards.forEach((card, index) => {
-    if (card.classList.contains('project-card-disabled')) return;
+  const buttons = document.querySelectorAll('.project-card-cta');
 
-    card.style.cursor = "pointer";
-    card.addEventListener('click', (e) => {
+  buttons.forEach((btn, index) => {
+    btn.addEventListener('click', (e) => {
       e.preventDefault();
+      e.stopPropagation();
       goToProject(index);
     });
   });
