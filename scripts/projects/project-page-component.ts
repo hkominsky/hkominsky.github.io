@@ -1,4 +1,6 @@
-// Creates the project page component
+/**
+ * Creates the project page component
+ */
 class ProjectPageComponent extends HTMLElement {
   constructor() {
     super();
