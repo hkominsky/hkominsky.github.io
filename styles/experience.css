@@ -23,11 +23,6 @@
   white-space: nowrap;
 }
 
-.experience-card:hover {
-  background-color: var(--color-background-secondary);
-  border-color: var(--color-background-muted);
-}
-
 .experience-card-image {
   flex-shrink: 0;
   width: var(--experience-icons-size);
@@ -60,7 +55,6 @@
 .experience-card h4 {
   color: var(--color-accent);
   font-weight: var(--font-weight-bold);
-
 }
 
 .experience-card h5 {
@@ -69,6 +63,14 @@
 
 .experience-card p {
   color: var(--color-text-muted);
+}
+
+/* Hover Styles */
+@media (hover: hover) {
+  .experience-card:hover {
+    background-color: var(--color-background-secondary);
+    border-color: var(--color-background-muted);
+  }
 }
 
 /** Mobile Styles **/
