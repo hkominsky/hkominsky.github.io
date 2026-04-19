@@ -70,3 +70,21 @@
 .experience-card p {
   color: var(--color-text-muted);
 }
+
+/** Mobile Styles **/
+@media (max-width: 768px) {
+  .experience-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+
+  .experience-role {
+    white-space: normal;
+  }
+
+  .experience-card-image {
+    width: 48px;
+    height: 48px;
+  }
+}
