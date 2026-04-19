@@ -93,6 +93,7 @@ img[id$="-icon"] {
     justify-items: center;
     padding: var(--spacing-xl) var(--spacing-xl);
     margin-bottom: var(--spacing-3xl);
+    gap: var(--spacing-lg);
   }
   
   .hero-image {

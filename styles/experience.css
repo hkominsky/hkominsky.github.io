@@ -78,13 +78,4 @@
     align-items: flex-start;
     gap: var(--spacing-md);
   }
-
-  .experience-role {
-    white-space: normal;
-  }
-
-  .experience-card-image {
-    width: 48px;
-    height: 48px;
-  }
 }
