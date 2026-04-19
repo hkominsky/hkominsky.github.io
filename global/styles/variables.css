@@ -69,6 +69,10 @@
 
   --icon-filter: invert(0);
   --explore-icon-filter: invert(1);
+
+  --experience-layout-direction: row;
+  --experience-role-wrap: nowrap;
+  --experience-image-size: 64px;
 }
 
 /* Dark Mode Styles */
@@ -111,5 +115,7 @@
     --container-max-width: 100%;
     --content-max-width: 100vw;
     --form-max-width: 90vw;
+
+    --experience-image-size: 48px;
   }
 }
