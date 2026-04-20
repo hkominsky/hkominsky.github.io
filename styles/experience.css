@@ -19,10 +19,6 @@
   gap: var(--spacing-sm);
 }
 
-.experience-role {
-  white-space: nowrap;
-}
-
 .experience-card-image {
   flex-shrink: 0;
   width: var(--experience-icons-size);
